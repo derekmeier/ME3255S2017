@@ -2,7 +2,8 @@
 
 1. The first assignment is to fork the course syllabus and assignment. 
 
-    a. Sign into your UConn github account via [github.uconn.edu](github.uconn.edu). 
+    a. Sign into your UConn github account via
+    [github.uconn.edu](https://github.uconn.edu/). 
 
     b. Go to
     [https://github.uconn.edu/rcc02007/ME3255S2017.git](https://github.uconn.edu/rcc02007/ME3255S2017.git)
