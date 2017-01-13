@@ -5,9 +5,9 @@
     a. Sign into your UConn github account via
     [github.uconn.edu](https://github.uconn.edu/). 
 
-![Step 1](g1.png)
+![Step 1][g1.png]
 
-![Step 2](g2.png)
+![Step 2][g2.png]
 
 
     b. Go to
