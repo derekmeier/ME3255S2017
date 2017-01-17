@@ -52,5 +52,6 @@
 
 ![Step 8](g8.png)
 
-        vii. Paste this into the Homework #1 Google form reponse. 
+        vii. Paste this into the Homework #1 Google form reponse.
+        (https://goo.gl/forms/jINjsioRLwQOiYtl2)[https://goo.gl/forms/jINjsioRLwQOiYtl2]
 
