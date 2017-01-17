@@ -1,4 +1,4 @@
-# Extra Credit #1
+# Extra Credit #1 (due 1/23/17)
 ## Worth 1 point toward Final Grade
 
 Print out the polar coordinate chart place the center of the chart on a dart board. Throw
