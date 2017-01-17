@@ -1,5 +1,6 @@
 # Computational Mechanics
 ## ME 3255 Spring 2017
+### Github page: [https://github.uconn.edu/rcc02007/ME3255S2017.git]
 
 ### Course Description
 This course introduces students to scientific programming utilizing Matlab/Octave.
@@ -32,11 +33,19 @@ Scientists* 3rd edition.
 ## Grading
 
 | Item | Percent | Requirement |
-|---|---|---|
-| Homework | 50 % | Turn in homeworks one week after assigned |
+|---|---|---------------------------|
+| Homework | 50 % | Turn in homeworks by assigned due date|
 | Midterm Exam | 10 % | One midterm exam |
 | Final Project | 30 % | A final project that will consist of code and documentation |
 | Participation | 10 % | During class online form will be sent out, you must submit form with your user ID to get credit |
+
+### Note on Homework and online forms
+
+The Homeworks are graded based upon effort and completeness. The forms are not graded at
+all, if they are completed you get credit. It is *your* responsibility to make sure your
+answers are correct. Use the homeworks and forms as a study guide for the exams. In
+general, I will not post homework solutions. 
+
 
 ## Academic Integrity: 
 - The instructors of this class have a zero-tolerance policy for academic misconduct, that

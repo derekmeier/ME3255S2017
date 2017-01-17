@@ -1,4 +1,5 @@
 # Homework #1
+## due 1/24/17
 
 1. The first assignment is to fork the course syllabus and assignment. 
 
