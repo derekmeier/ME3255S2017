@@ -106,4 +106,6 @@ plot(t,v_analytical,'-',t,v_numerical,'o-')
 
 ![plot of
 velocities](https://github.uconn.edu/rcc02007/ME3255S2017/blob/master/lecture_01/output_10_0.svg)
+<img
+src="https://github.uconn.edu/rcc02007/ME3255S2017/blob/master/lecture_01/output_10_0.svg">
 
