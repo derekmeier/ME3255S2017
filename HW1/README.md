@@ -55,3 +55,7 @@
         vii. Paste this into the Homework #1 Google form reponse.
         (https://goo.gl/forms/jINjsioRLwQOiYtl2)[https://goo.gl/forms/jINjsioRLwQOiYtl2]
 
+![Step 9](g9.png)
+
+        viii. Click on the gear for "Settings" then "Collaborators" on the left menu. Add
+        `rcc02007` (Ryan C. Cooper) as a collaborator. 
