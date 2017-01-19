@@ -19,7 +19,7 @@ matlab/octave functions and programming best practices.
 
 **Instructor**: Prof. Ryan C. Cooper (ryan.c.cooper@uconn.edu)
 
-**Office hours**: Fridays 10am-12pm in Engineering II room 315
+**Office hours**: Mon 2:30-4:30pm and Thur 11am-1pm in Engineering II room 315
 
 ## Teaching Assistants:
 - Graduate: **TBD**
