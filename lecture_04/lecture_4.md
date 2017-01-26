@@ -1,11 +1,41 @@
 
+## When using the command prompt, anything in your path or working directory can be run either as a script, function or class (to define objects)
+
+Questions from last class:
+- I downloaded GitHub to my desktop but I cannot sign into my UConn account like I can online. 
+- I checked my grades on HuskyCt recently and I received a 0 / 100 for Homework 1.
+- It is very hard to tell if what I'm doing on github is right or wrong.
+- How often will be using our laptops during the lecture?
+- How many frogs would it take to move a car that is stuck in the snow? And what would be the approximate cost to do so
+
+$m_{frog}$=22.7 g (https://en.wikipedia.org/wiki/Common_frog)
+
+$v_{frog}$=17 kph = 4.72 m/s (http://purelyfacts.com/question/14/is-a-toad-faster-than-a-frog?DDA=113&DDB=40)
+
+$m_{car}$=1000 kg (reasonable guess)
+
+conservation of momentum:
+
+$mv_{1} +mv_{2} = mv_{1}'+mv_{2}' = m_{total}v_{2}'$
+
 
 ```matlab
-## When using the command prompt, anything in your path or working directory can be run either as a script, function or class (to define objects)
+number_of_frogs = 1;
+v2=0;
+while v2 < 1 % 1 m/s
+    m_frogs=number_of_frogs*22.7e-3;
+    number_of_frogs=number_of_frogs+1;
+    p1=(m_frogs)*4.72; % momentum 1
+    v2=p1/(m_frogs+1000); % p2=p1, so v2=p1/m_total
+end
+number_of_frogs
+    
 ```
 
-    [0;31mError: The input character is not valid in MATLAB statements or expressions.
-    [0m
+    number_of_frogs =
+    
+           11844
+
 
 
 ```matlab
@@ -43,7 +73,7 @@ ylabel('displacement (m)')
 ```
 
 
-![png](output_5_0.png)
+![png](lecture_4_files/lecture_4_7_0.png)
 
 
 #EOL
@@ -140,7 +170,7 @@ contour(X,Y,Z)
 ```
 
 
-![png](output_10_0.png)
+![png](lecture_4_files/lecture_4_12_0.png)
 
 
 
@@ -149,7 +179,7 @@ mesh(X,Y,Z)
 ```
 
 
-![png](output_11_0.png)
+![png](lecture_4_files/lecture_4_13_0.png)
 
 
 
@@ -158,7 +188,7 @@ pcolor(X,Y,Z)
 ```
 
 
-![png](output_12_0.png)
+![png](lecture_4_files/lecture_4_14_0.png)
 
 
 ## Functions
@@ -253,7 +283,7 @@ xlabel('time')
 ```
 
 
-![png](output_20_0.png)
+![png](lecture_4_files/lecture_4_22_0.png)
 
 
 Now, create a new function that calls 'my_function' called, `my_caller.m`
@@ -292,7 +322,7 @@ axis([0,10,0,3])
 ```
 
 
-![png](output_24_0.png)
+![png](lecture_4_files/lecture_4_26_0.png)
 
 
 
