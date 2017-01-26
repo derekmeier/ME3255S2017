@@ -96,6 +96,7 @@ help counting_function
 9. After file is 'committed', 'push' the changes to your github account
 
 for the command-line git user, this is steps 8 and 9:
+
 1. `$ git add *`
 2. `$ git commit -m 'added file nitrogen_pressure.m'`
 3. `$ git push -u origin master
