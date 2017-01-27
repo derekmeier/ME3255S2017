@@ -26,5 +26,5 @@ height is 1.72 m.
     ```
 
     In addition to the output of `h`-height at 2.37 m-plot the path of the object from its
-    initial position its position at 2.37 m away from the start. *Note: use your
+    initial position to its position at 2.37 m away from the start. *Note: use your
     `setdefaults.m` to set the plot defaults before outputting the result.*
