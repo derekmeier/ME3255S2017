@@ -13,7 +13,13 @@ script that will set default plotting parameters. In this file, add the followin
 
     Commit the changes to your repository. 
 
-2. Clone your 'homework_1' repository to your own computer. Create a function,
+![projectile(v_mag,theta) predicts the height of the projectile based upon initial
+velocity and position, as see in the Figure](projectile.png)
+
+2. Clone your 'homework_1' repository to your own computer. Now, we want to create a
+function that uses kinematic formulas to predict the path of a projectile. The dimensions
+are taken from official dart board dimensions
+[darts](http://dartbrokers.com/dartboard-height.html). Create a function,
 `projectile.m` that will calculate the location of an object with an initial velocity. The
 function inputs are v_mag (initial speed), theta (initial angle). The output is the height
 of the object 2.37 m from its starting position. Assume g=9.81 m/s^2 and its initial
