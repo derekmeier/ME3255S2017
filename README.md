@@ -31,7 +31,7 @@ matlab/octave functions and programming best practices.
 **Textbook:** Chapra, Steven, *Applied Numerical Methods with MATLAB for Engineers and
 Scientists* 3rd edition. 
 
-**Tools used:** Matlab, Octave, Github. 
+**Tools used:** [Matlab](https://www.mathworks.com/products/matlab.html), Octave, Github. 
 
 **Recommended tools:** Github Desktop, git, Atom (text editor), Vim (text editor), 
 Jupiter notebook (with matlab or octave kernel) 
