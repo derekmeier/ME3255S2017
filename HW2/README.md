@@ -13,7 +13,7 @@ script that will set default plotting parameters. In this file, add the followin
 
     Commit the changes to your repository. 
 
-![projectile(v_mag,theta) predicts the height of the projectile based upon initial
+    ![projectile(v_mag,theta) predicts the height of the projectile based upon initial
 velocity and position, as see in the Figure](projectile.png)
 
 2. Clone your 'homework_1' repository to your own computer. Now, we want to create a
