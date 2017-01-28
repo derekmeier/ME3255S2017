@@ -25,6 +25,7 @@ matlab/octave functions and programming best practices.
 - Graduate: Peiyu Zhang <peiyu.zhang@uconn.edu>
 - Office hours: 2 hours / week 
 
+## Course Information
 **Prerequisite:** CE 3110, MATH 2410Q 
 
 **Textbook:** Chapra, Steven, *Applied Numerical Methods with MATLAB for Engineers and
