@@ -23,7 +23,7 @@ matlab/octave functions and programming best practices.
 
 ## Teaching Assistants:
 - Graduate: Peiyu Zhang <peiyu.zhang@uconn.edu>
-- Office hours: 2 hours / week 
+- Office hours: Friday 9:00-11:00am in Engineering II room 315
 
 ## Course Information
 **Prerequisite:** CE 3110, MATH 2410Q 
