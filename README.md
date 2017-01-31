@@ -23,12 +23,19 @@ matlab/octave functions and programming best practices.
 
 ## Teaching Assistants:
 - Graduate: Peiyu Zhang <peiyu.zhang@uconn.edu>
-- Office hours: 2 hours / week 
+- Office hours: Friday 9:00-11:00am in Engineering II room 315
 
+## Course Information
 **Prerequisite:** CE 3110, MATH 2410Q 
 
 **Textbook:** Chapra, Steven, *Applied Numerical Methods with MATLAB for Engineers and
 Scientists* 3rd edition. 
+
+**Tools used:** [Matlab](https://www.mathworks.com/products/matlab.html), 
+[Octave](https://www.gnu.org/software/octave/) , [Github](https://github.com). 
+
+**Recommended tools:** Github Desktop, git, Atom (text editor), Vim (text editor), 
+Jupiter notebook (with matlab or octave kernel) 
 
 ## Grading
 
