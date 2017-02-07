@@ -26,16 +26,12 @@ f= @(x) exp(-x)-x;
 df= @(x) -exp(-x)-1;
 
 x_i= 0;
-c
 error_approx = abs((x_r-x_i)/x_r)
-x_i=x_r;
+x_r=x_i;
 
 ```
 
-    error: 'c' undefined near line 1 column 1
-    error: 'x_r' undefined near line 1 column 21
-    error: evaluating argument list element number 1
-    error: 'x_r' undefined near line 1 column 5
+    error_approx =  1
 
 
 
@@ -135,12 +131,12 @@ Amt_numerical=mod_secant(@(A) car_payments(A,30000,0.05,5),1e-6,50,0.001)
 car_payments(Amt,30000,0.05,5)
 ```
 
-    Amt_numerical =  563.79
-    ans = -160.42
-
-
-
-![svg](lecture_07_files/lecture_07_14_1.svg)
+    error: 'plot_bool' undefined near line 12 column 6
+    error: called from
+        car_payments at line 12 column 3
+        mod_secant at line 22 column 8
+    error: 'Amt' undefined near line 1 column 14
+    error: evaluating argument list element number 1
 
 
 
@@ -148,7 +144,7 @@ car_payments(Amt,30000,0.05,5)
 Amt*12*5
 ```
 
-    ans =    3.3968e+04
+    error: 'Amt' undefined near line 1 column 1
 
 
 Amortization calculation makes the same calculation for the monthly payment amount, A, paying off the principle amount, P, over n pay periods with monthly interest rate, r. 
@@ -295,17 +291,21 @@ ea_ms
 
     ea_ms =
     
-     Columns 1 through 7:
+     Columns 1 through 6:
     
-       43.43883    0.00000    0.00000    0.00000    0.00000    0.00000    0.00000
+       2.3382e+03   1.9171e-14   1.9171e-14   1.9171e-14   1.9171e-14   1.9171e-14
     
-     Columns 8 through 14:
+     Columns 7 through 12:
     
-        0.00000    0.00000    0.00000    0.00000    0.00000    0.00000    0.00000
+       1.9171e-14   1.9171e-14   1.9171e-14   1.9171e-14   1.9171e-14   1.9171e-14
     
-     Columns 15 through 20:
+     Columns 13 through 18:
     
-        0.00000    0.00000    0.00000    0.00000    0.00000    0.00000
+       1.9171e-14   1.9171e-14   1.9171e-14   1.9171e-14   1.9171e-14   1.9171e-14
+    
+     Columns 19 and 20:
+    
+       1.9171e-14   1.9171e-14
     
 
 
