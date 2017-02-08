@@ -18,7 +18,7 @@ $f'(x_{i})=\frac{f(x_{i})-0}{x_{i}-x_{i+1}}$
 
 $x_{i+1}=x_{i}-\frac{f(x_{i})}{f'(x_{i})}$
 
-Use Newton-Raphson to find solution when $e^{x}=x$
+Use Newton-Raphson to find solution when $e^{-x}=x$
 
 
 ```octave
@@ -26,19 +26,10 @@ f= @(x) exp(-x)-x;
 df= @(x) -exp(-x)-1;
 
 x_i= 0;
-error_approx = abs((x_r-x_i)/x_r)
-x_r=x_i;
-
-```
-
-    error_approx =  1
-
-
-
-```octave
 x_r = x_i-f(x_i)/df(x_i)
 error_approx = abs((x_r-x_i)/x_r)
 x_i=x_r;
+
 ```
 
     x_r =  0.50000
@@ -67,6 +58,17 @@ x_i=x_r;
     error_approx =  0.0014673
 
 
+
+```octave
+x_r = x_i-f(x_i)/df(x_i)
+error_approx = abs((x_r-x_i)/x_r)
+x_i=x_r;
+```
+
+    x_r =  0.56714
+    error_approx =    2.2106e-07
+
+
 In the bungee jumper example, we created a function f(m) that when f(m)=0, then the mass had been chosen such that at t=4 s, the velocity is 36 m/s. 
 
 $f(m)=\sqrt{\frac{gm}{c_{d}}}\tanh(\sqrt{\frac{gc_{d}}{m}}t)-v(t)$.
@@ -90,10 +92,12 @@ df_m = @(m) 1/2*sqrt(g./m/c_d).*tanh(sqrt(g*c_d./m)*t)-g/2./m*sech(sqrt(g*c_d./m
 
 
 ```octave
-newtraph(f_m,df_m,140,0.00001)
+[root,ea,iter]=newtraph(f_m,df_m,140,0.00001)
 ```
 
-    ans =  142.74
+    root =  142.74
+    ea =    8.0930e-06
+    iter =  48
 
 
 ## Secant Methods
@@ -119,32 +123,46 @@ $x_{i+1}=x_{i}-\frac{f(x_{i})(\delta x_{i})}{f(x_{i}+\delta x_{i})-f(x_{i})}$
 
 
 ```octave
-mod_secant(f_m,1e-6,50,0.00001)
+[root,ea,iter]=mod_secant(f_m,1,50,0.00001)
 ```
 
-    ans =  142.74
+    root =  142.74
+    ea =    3.0615e-07
+    iter =  7
 
 
 
 ```octave
-Amt_numerical=mod_secant(@(A) car_payments(A,30000,0.05,5),1e-6,50,0.001)
-car_payments(Amt,30000,0.05,5)
+car_payments(400,30000,0.05,5,1)
 ```
 
-    error: 'plot_bool' undefined near line 12 column 6
-    error: called from
-        car_payments at line 12 column 3
-        mod_secant at line 22 column 8
-    error: 'Amt' undefined near line 1 column 14
-    error: evaluating argument list element number 1
+    ans =    1.1185e+04
+
+
+
+![svg](lecture_07_files/lecture_07_15_1.svg)
 
 
 
 ```octave
-Amt*12*5
+Amt_numerical=mod_secant(@(A) car_payments(A,700000,0.0875,30,0),1e-6,50,0.001)
+car_payments(Amt_numerical,700000,0.0875,30,1)
 ```
 
-    error: 'Amt' undefined near line 1 column 1
+    Amt_numerical =  5467.0
+    ans =    3.9755e-04
+
+
+
+![svg](lecture_07_files/lecture_07_16_1.svg)
+
+
+
+```octave
+Amt_numerical*12*30
+```
+
+    ans =    1.9681e+06
 
 
 Amortization calculation makes the same calculation for the monthly payment amount, A, paying off the principle amount, P, over n pay periods with monthly interest rate, r. 
@@ -257,12 +275,13 @@ ea_ms=zeros(1,N); % appr error Modified Secant
 ea_fp=zeros(1,N); % appr error false point method
 ea_bs=zeros(1,N); % appr error bisect method
 for i=1:length(iterations)
-    [root_nr,ea_nr(i),iter_nr]=newtraph(f_m,df_m,200,0,iterations(i));
+    [root_nr,ea_nr(i),iter_nr]=newtraph(f_m,df_m,300,0,iterations(i));
     [root_ms,ea_ms(i),iter_ms]=mod_secant(f_m,1e-6,300,0,iterations(i));
     [root_fp,ea_fp(i),iter_fp]=falsepos(f_m,1,300,0,iterations(i));
     [root_bs,ea_bs(i),iter_bs]=bisect(f_m,1,300,0,iterations(i));
 end
-        
+
+setdefaults
 semilogy(iterations,abs(ea_nr),iterations,abs(ea_ms),iterations,abs(ea_fp),iterations,abs(ea_bs))
 legend('newton-raphson','mod-secant','false point','bisection')
 ```
@@ -281,31 +300,27 @@ legend('newton-raphson','mod-secant','false point','bisection')
 
 
 
-![svg](lecture_07_files/lecture_07_22_1.svg)
+![svg](lecture_07_files/lecture_07_24_1.svg)
 
 
 
 ```octave
-ea_ms
+ea_nr
 ```
 
-    ea_ms =
+    ea_nr =
     
-     Columns 1 through 6:
+     Columns 1 through 8:
     
-       2.3382e+03   1.9171e-14   1.9171e-14   1.9171e-14   1.9171e-14   1.9171e-14
+       6.36591   0.06436   0.00052   0.00000   0.00000   0.00000   0.00000   0.00000
     
-     Columns 7 through 12:
+     Columns 9 through 16:
     
-       1.9171e-14   1.9171e-14   1.9171e-14   1.9171e-14   1.9171e-14   1.9171e-14
+       0.00000   0.00000   0.00000   0.00000   0.00000   0.00000   0.00000   0.00000
     
-     Columns 13 through 18:
+     Columns 17 through 20:
     
-       1.9171e-14   1.9171e-14   1.9171e-14   1.9171e-14   1.9171e-14   1.9171e-14
-    
-     Columns 19 and 20:
-    
-       1.9171e-14   1.9171e-14
+       0.00000   0.00000   0.00000   0.00000
     
 
 
@@ -344,32 +359,28 @@ legend('newton-raphson','mod-secant','false point','bisection')
 
 
 
-![svg](lecture_07_files/lecture_07_24_1.svg)
+![svg](lecture_07_files/lecture_07_26_1.svg)
 
 
 
 ```octave
-ea_bs
+ea_nr
 newtraph(f,df,0.5,0,12)
 ```
 
-    ea_bs =
+    ea_nr =
     
-     Columns 1 through 6:
+     Columns 1 through 7:
     
-       9.5357e+03  -4.7554e-01  -2.1114e-01   6.0163e-02  -2.4387e-03   6.1052e-04
+       99.03195   11.11111   11.11111   11.11111   11.11111   11.11111   11.11111
     
-     Columns 7 through 12:
+     Columns 8 through 14:
     
-       2.2891e-04  -9.5367e-06   2.3842e-06   8.9407e-07  -2.2352e-07   9.3132e-09
+       11.11111   11.11111   11.11111   11.11109   11.11052   11.10624   10.99684
     
-     Columns 13 through 18:
+     Columns 15 through 20:
     
-      -2.3283e-09  -8.7311e-10   3.6380e-11  -9.0949e-12  -3.4106e-12   8.5265e-13
-    
-     Columns 19 and 20:
-    
-      -3.5527e-14   8.8818e-15
+        8.76956    2.12993    0.00000    0.00000    0.00000    0.00000
     
     ans =  16.208
 
@@ -380,6 +391,55 @@ df(300)
 ```
 
     ans =    1.9683e+23
+
+
+
+```octave
+% our class function
+f= @(x) tan(x)-(x-1).^2
+mod_secant(f,1e-3,1)
+```
+
+    f =
+    
+    @(x) tan (x) - (x - 1) .^ 2
+    
+    ans =  0.37375
+
+
+
+```octave
+f(ans)
+```
+
+    ans =   -3.5577e-13
+
+
+
+```octave
+tan(0.37375)
+(0.37375-1)^2
+```
+
+    ans =  0.39218
+    ans =  0.39219
+
+
+
+```octave
+f([0:10])
+```
+
+    ans =
+    
+     Columns 1 through 8:
+    
+       -1.0000    1.5574   -3.1850   -4.1425   -7.8422  -19.3805  -25.2910  -35.1286
+    
+     Columns 9 through 11:
+    
+      -55.7997  -64.4523  -80.3516
+    
 
 
 
