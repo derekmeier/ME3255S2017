@@ -12,7 +12,7 @@
     *Disable the plotting routine for the solvers*
 
     d. Use the four solvers `falsepos.m`, `incsearch.m`, `newtraph.m` and `mod_secant.m`
-    to solve for the angle needed to reach h=1.72 m, with an initial speed of 1.5 m/s. 
+    to solve for the angle needed to reach h=1.72 m, with an initial speed of 15 m/s. 
 
     e. The `newtraph.m` function needs a derivative, calculate the derivative of your
     function with respect to theta, `dprojectile_dtheta.m`. This function should
@@ -29,7 +29,7 @@
         | solver | initial guess(es) | ea | number of iterations|
         | --- | --- | --- | --- |
         |falsepos   |  |  |  |
-        |incsearch  |  |  |  |
+        |bisect     |  |  |  |
         |newtraph   |  |  |  |
         |mod_secant |  |  |  |
         ```
@@ -49,7 +49,7 @@ using the numerical solvers, `newtraph.m` and `mod_secant.m`, there are certain 
 guesses that do not converge. 
 
     a. Calculate the first 5 iterations for the Newton-Raphson method with an initial
-    guess of x_i=2. 
+    guess of x_i=2 for f(x)=x*exp(-x^2).
 
     b. Add the results to a table in the `README.md` with:
 
