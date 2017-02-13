@@ -70,5 +70,4 @@ guesses that do not converge.
     'divergence' to 'convergence')
 
 3. Commit your changes to your repository. Sync your local repository with github. Then
-copy and paste the "clone URL" into the following Google Form [Homework
-#3](https://goo.gl/forms/UJBGwp0fQcSxImkq2)
+copy and paste the "clone URL" into the following Google Form [Homework 3](https://goo.gl/forms/UJBGwp0fQcSxImkq2)
