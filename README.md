@@ -74,8 +74,8 @@ general, I will not post homework solutions.
 |3|1/31||Consistent Coding habits|
 |   |2/2|5|Root Finding| 
 |4|2/7|6|Root Finding con’d|      
-|   |2/9|7|Optimization|      
-|5|2/14||Intro to Linear Algebra|
+|   |2/9|7| **Snow Day**|      
+|5|2/14|| Optimization |
 |   |2/16|8|Linear Algebra|
 |6|2/21|9|Linear systems: Gauss elimination|
 |   |2/23|10|Linear Systems: LU factorization|
