@@ -19,7 +19,7 @@ Considering a 1-D gold chain, we can calculate the bond length, $x_{b}$, with no
 Computational Tools to Study and Predict the Long-Term Stability of Nanowires.
 By Martin E. Zoloff Michoff, Patricio Vélez, Sergio A. Dassie and Ezequiel P. M. Leiva 
 
-![Model of Gold chain, from molecular dynamics simulation](Auchain_model.gif)
+![Model of Gold chain, from molecular dynamics simulation](Auchain_model.png)
 
 [Single atom gold chain mechanics](http://www.uam.es/personal_pdi/ciencias/agrait/)
 
