@@ -11,7 +11,7 @@
     c. Copy your `projectile.m` function into the 'roots_and_optimization' folder.
     *Disable the plotting routine for the solvers*
 
-    d. Use the four solvers `falsepos.m`, `incsearch.m`, `newtraph.m` and `mod_secant.m`
+    d. Use the four solvers `falsepos.m`, `bisect.m`, `newtraph.m` and `mod_secant.m`
     to solve for the angle needed to reach h=1.72 m, with an initial speed of 15 m/s. 
 
     e. The `newtraph.m` function needs a derivative, calculate the derivative of your
