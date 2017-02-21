@@ -13,13 +13,13 @@ heading `# Homework #4` in your `README.md` file
 
     The spring is unstretched when x_C=0.5 m. The potential energy due to gravity is:
 
-    PE_g=m x_C*g*sin(theta)
+    PE_g=m x_C\*g\*sin(theta)
 
     where m=0.5 kg, and g is the acceleration due to gravity, 
 
     and the potential energy due to the spring is:
 
-    PE_s=1/2*K *(DL)^2$
+    PE_s=1/2\*K \*(DL)^2
 
     where DL = 0.5 - sqrt(0.5^2+(0.5-x_C)^2)
 
