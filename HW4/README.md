@@ -9,7 +9,7 @@ heading `# Homework #4` in your `README.md` file
     potential energy of a collar connected to a spring and sliding on a rod. As shown in
     the figure given a position, xc, and angle, theta:
 
-    ![Collar-mass on an inclined rod](collar_mass.svg)
+    ![Collar-mass on an inclined rod](collar_mass.png)
 
     The spring is unstretched when $x_{C}=0.5$. The potential energy due to gravity is:
 
