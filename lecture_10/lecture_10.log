@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2017.1.11)  20 FEB 2017 17:21
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2017.1.11)  21 FEB 2017 11:46
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -772,28 +772,27 @@ Underfull \hbox (badness 10000) in paragraph at lines 323--324
 
  []
 
-[2 <./lecture_10_files/lecture_10_3_0.pdf>]
-LaTeX Font Info:    Try loading font information for TS1+cmtt on input line 359
+LaTeX Font Info:    Try loading font information for TS1+cmtt on input line 327
 .
-
 (/usr/share/texlive/texmf-dist/tex/latex/base/ts1cmtt.fd
 File: ts1cmtt.fd 2014/09/29 v2.5h Standard LaTeX font definitions
-)
-<lecture_10_files/lecture_10_5_1.pdf, id=62, 449.68pt x 337.26pt>
-File: lecture_10_files/lecture_10_5_1.pdf Graphic file (type pdf)
+) [2 <./lecture_10_files/lecture_10_3_0.pdf>]
+<lecture_10_files/lecture_10_6_0.pdf, id=63, 449.68pt x 337.26pt>
+File: lecture_10_files/lecture_10_6_0.pdf Graphic file (type pdf)
 
-<use lecture_10_files/lecture_10_5_1.pdf>
-Package pdftex.def Info: lecture_10_files/lecture_10_5_1.pdf used on input line
- 371.
+<use lecture_10_files/lecture_10_6_0.pdf>
+Package pdftex.def Info: lecture_10_files/lecture_10_6_0.pdf used on input line
+ 382.
 (pdftex.def)             Requested size: 449.6789pt x 337.25917pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 373--374
+Underfull \hbox (badness 10000) in paragraph at lines 384--385
 
  []
 
+[3 <./lecture_10_files/lecture_10_6_0.pdf>]
 LaTeX Font Info:    Font shape `T1/ppl/bx/n' in size <12> not available
-(Font)              Font shape `T1/ppl/b/n' tried instead on input line 378.
-[3 <./lecture_10_files/lecture_10_5_1.pdf>]
+(Font)              Font shape `T1/ppl/b/n' tried instead on input line 389.
+
 
 ! LaTeX Error: Unknown graphics extension: .svg.
 
@@ -801,10 +800,10 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.433 ...egraphics{../lecture_09/mass_springs.svg}
+l.444 ...egraphics{../lecture_09/mass_springs.svg}
                                                   
 ? 
-[4] [5] [6] [7]
+[4] [5] [6] [7] [8]
 
 ! LaTeX Error: Unknown graphics extension: .svg.
 
@@ -812,45 +811,45 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.712 ...egraphics{../lecture_09/mass_springs.svg}
+l.735 ...egraphics{../lecture_09/mass_springs.svg}
                                                   
 ? 
-[8] [9]
+[9] [10]
 LaTeX Font Info:    Font shape `T1/cmtt/bx/n' in size <10.95> not available
-(Font)              Font shape `T1/cmtt/m/n' tried instead on input line 812.
- [10]
-<lecture_10_files/lecture_10_27_0.pdf, id=112, 449.68pt x 337.26pt>
-File: lecture_10_files/lecture_10_27_0.pdf Graphic file (type pdf)
+(Font)              Font shape `T1/cmtt/m/n' tried instead on input line 843.
+ <lecture_10_files/lecture_10_29_0.pdf, id=113, 449.68pt x 337.26pt>
+File: lecture_10_files/lecture_10_29_0.pdf Graphic file (type pdf)
 
-<use lecture_10_files/lecture_10_27_0.pdf>
-Package pdftex.def Info: lecture_10_files/lecture_10_27_0.pdf used on input lin
-e 839.
+<use lecture_10_files/lecture_10_29_0.pdf>
+Package pdftex.def Info: lecture_10_files/lecture_10_29_0.pdf used on input lin
+e 871.
 (pdftex.def)             Requested size: 449.6789pt x 337.25917pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 841--842
+ [11]
+Underfull \hbox (badness 10000) in paragraph at lines 873--874
 
  []
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 852.
-[11 <./lecture_10_files/lecture_10_27_0.pdf>]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 852.
+[12 <./lecture_10_files/lecture_10_29_0.pdf>]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 933.
+ [13]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 933.
  (./lecture_10.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 852.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 852.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 933.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 933.
 Package rerunfilecheck Info: File `lecture_10.out' has not changed.
 (rerunfilecheck)             Checksum: F41F49C8B1F4406369908EBDD24F2572;629.
 
 
 LaTeX Warning: There were multiply-defined labels.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 852.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 933.
  ) 
 Here is how much of TeX's memory you used:
- 10939 strings out of 493029
- 163764 string characters out of 6136234
- 273062 words of memory out of 5000000
- 14225 multiletter control sequences out of 15000+600000
- 35480 words of font info for 90 fonts, out of 8000000 for 9000
+ 10943 strings out of 493029
+ 163805 string characters out of 6136234
+ 273063 words of memory out of 5000000
+ 14226 multiletter control sequences out of 15000+600000
+ 35779 words of font info for 91 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  36i,8n,77p,494b,465s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-ts1.enc}{/usr/share/texli
@@ -863,10 +862,10 @@ fb></usr/share/texmf/fonts/type1/public/cm-super/sfit1095.pfb></usr/share/texmf
 type1/urw/palatino/uplb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/pa
 latino/uplr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/palatino/uplri
 8a.pfb>
-Output written on lecture_10.pdf (11 pages, 162693 bytes).
+Output written on lecture_10.pdf (13 pages, 190161 bytes).
 PDF statistics:
- 165 PDF objects out of 1000 (max. 8388607)
- 133 compressed objects within 2 object streams
- 27 named destinations out of 1000 (max. 500000)
+ 176 PDF objects out of 1000 (max. 8388607)
+ 142 compressed objects within 2 object streams
+ 29 named destinations out of 1000 (max. 500000)
  80 words of extra memory for PDF output out of 10000 (max. 10000000)
 

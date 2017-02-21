@@ -277,11 +277,11 @@
 
     
     \begin{Verbatim}[commandchars=\\\{\}]
-{\color{incolor}In [{\color{incolor}14}]:} \PY{c}{\PYZpc{}plot \PYZhy{}\PYZhy{}format svg}
+{\color{incolor}In [{\color{incolor}1}]:} \PY{c}{\PYZpc{}plot \PYZhy{}\PYZhy{}format svg}
 \end{Verbatim}
 
     \begin{Verbatim}[commandchars=\\\{\}]
-{\color{incolor}In [{\color{incolor}15}]:} \PY{n}{setdefaults}
+{\color{incolor}In [{\color{incolor}2}]:} \PY{n}{setdefaults}
 \end{Verbatim}
 
     \section{Gauss Elimination}\label{gauss-elimination}
@@ -310,11 +310,11 @@ The solution for \(x_{1}\) and \(x_{2}\) is the intersection of two
 lines:
 
     \begin{Verbatim}[commandchars=\\\{\}]
-{\color{incolor}In [{\color{incolor}16}]:} \PY{n}{x21}\PY{p}{=}\PY{p}{[}\PY{o}{\PYZhy{}}\PY{l+m+mi}{2}\PY{p}{:}\PY{l+m+mi}{2}\PY{p}{]}\PY{p}{;}
-         \PY{n}{x11}\PY{p}{=}\PY{l+m+mi}{1}\PY{o}{\PYZhy{}}\PY{l+m+mi}{3}\PY{o}{*}\PY{n}{x21}\PY{p}{;}
-         \PY{n}{x21}\PY{p}{=}\PY{p}{[}\PY{o}{\PYZhy{}}\PY{l+m+mi}{2}\PY{p}{:}\PY{l+m+mi}{2}\PY{p}{]}\PY{p}{;}
-         \PY{n}{x22}\PY{p}{=}\PY{l+m+mi}{1}\PY{o}{\PYZhy{}}\PY{l+m+mi}{2}\PY{o}{*}\PY{n}{x21}\PY{p}{;}
-         \PY{n+nb}{plot}\PY{p}{(}\PY{n}{x11}\PY{p}{,}\PY{n}{x21}\PY{p}{,}\PY{n}{x21}\PY{p}{,}\PY{n}{x22}\PY{p}{)}
+{\color{incolor}In [{\color{incolor}3}]:} \PY{n}{x21}\PY{p}{=}\PY{p}{[}\PY{o}{\PYZhy{}}\PY{l+m+mi}{2}\PY{p}{:}\PY{l+m+mi}{2}\PY{p}{]}\PY{p}{;}
+        \PY{n}{x11}\PY{p}{=}\PY{l+m+mi}{1}\PY{o}{\PYZhy{}}\PY{l+m+mi}{3}\PY{o}{*}\PY{n}{x21}\PY{p}{;}
+        \PY{n}{x21}\PY{p}{=}\PY{p}{[}\PY{o}{\PYZhy{}}\PY{l+m+mi}{2}\PY{p}{:}\PY{l+m+mi}{2}\PY{p}{]}\PY{p}{;}
+        \PY{n}{x22}\PY{p}{=}\PY{l+m+mi}{1}\PY{o}{\PYZhy{}}\PY{l+m+mi}{2}\PY{o}{*}\PY{n}{x21}\PY{p}{;}
+        \PY{n+nb}{plot}\PY{p}{(}\PY{n}{x11}\PY{p}{,}\PY{n}{x21}\PY{p}{,}\PY{n}{x21}\PY{p}{,}\PY{n}{x22}\PY{p}{)}
 \end{Verbatim}
 
     \begin{center}
@@ -322,7 +322,21 @@ lines:
     \end{center}
     { \hspace*{\fill} \\}
     
-    For a $3\times3$ matrix, the solution is the intersection of the 3
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}4}]:} \PY{n}{A}\PY{p}{=}\PY{p}{[}\PY{l+m+mi}{1}\PY{p}{,}\PY{l+m+mi}{3}\PY{p}{;}\PY{l+m+mi}{2}\PY{p}{,}\PY{l+m+mi}{1}\PY{p}{]}\PY{p}{;} \PY{n}{y}\PY{p}{=}\PY{p}{[}\PY{l+m+mi}{1}\PY{p}{;}\PY{l+m+mi}{1}\PY{p}{]}\PY{p}{;}
+        \PY{n}{A}\PY{o}{\PYZbs{}}\PY{n}{y} \PY{c}{\PYZpc{} matlab\PYZsq{}s Ax=y solution for x}
+\end{Verbatim}
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+ans =
+
+   0.40000
+   0.20000
+
+
+    \end{Verbatim}
+
+    For a \(3\times3\) matrix, the solution is the intersection of the 3
 planes.
 
 \(10x_{1}+2x_{2}+x_{3}=1\)
@@ -331,44 +345,41 @@ planes.
 
 \(x_{1}+2x_{2}+10x_{3}=1\)
 
-$\left[ \begin{array}{ccc} 10 & 2 & 1 \\ 2 & 1 & 1 \\ 1 & 2 & 10\end{array} \right]
+$\left[ \begin{array}{ccc} 10 & 2 & 1\\ 2 & 1 & 1 \\ 1 & 2 & 10\end{array} \right]
   \left[\begin{array}{c} x_{1} \\ x_{2} \\ x_{3} \end{array}\right]=
     \left[\begin{array}{c} 1 \\ 1 \\ 1\end{array}\right]$
 
     \begin{Verbatim}[commandchars=\\\{\}]
-{\color{incolor}In [{\color{incolor}17}]:} \PY{n}{x11}\PY{p}{=}\PY{n+nb}{linspace}\PY{p}{(}\PY{o}{\PYZhy{}}\PY{l+m+mi}{2}\PY{p}{,}\PY{l+m+mi}{2}\PY{p}{,}\PY{l+m+mi}{5}\PY{p}{)}\PY{p}{;}
-         \PY{n}{x12}\PY{p}{=}\PY{n+nb}{linspace}\PY{p}{(}\PY{o}{\PYZhy{}}\PY{l+m+mi}{2}\PY{p}{,}\PY{l+m+mi}{2}\PY{p}{,}\PY{l+m+mi}{5}\PY{p}{)}\PY{p}{;}
-         \PY{p}{[}\PY{n}{X11}\PY{p}{,}\PY{n}{X12}\PY{p}{]}\PY{p}{=}\PY{n+nb}{meshgrid}\PY{p}{(}\PY{n}{x11}\PY{p}{,}\PY{n}{x12}\PY{p}{)}\PY{p}{;}
-         \PY{n}{X13}\PY{p}{=}\PY{l+m+mi}{1}\PY{o}{\PYZhy{}}\PY{l+m+mi}{10}\PY{o}{*}\PY{n}{X11}\PY{o}{\PYZhy{}}\PY{l+m+mi}{2}\PY{o}{*}\PY{n}{X22}\PY{p}{;}
-         
-         \PY{n}{x21}\PY{p}{=}\PY{n+nb}{linspace}\PY{p}{(}\PY{o}{\PYZhy{}}\PY{l+m+mi}{2}\PY{p}{,}\PY{l+m+mi}{2}\PY{p}{,}\PY{l+m+mi}{5}\PY{p}{)}\PY{p}{;}
-         \PY{n}{x22}\PY{p}{=}\PY{n+nb}{linspace}\PY{p}{(}\PY{o}{\PYZhy{}}\PY{l+m+mi}{2}\PY{p}{,}\PY{l+m+mi}{2}\PY{p}{,}\PY{l+m+mi}{5}\PY{p}{)}\PY{p}{;}
-         \PY{p}{[}\PY{n}{X21}\PY{p}{,}\PY{n}{X22}\PY{p}{]}\PY{p}{=}\PY{n+nb}{meshgrid}\PY{p}{(}\PY{n}{x21}\PY{p}{,}\PY{n}{x22}\PY{p}{)}\PY{p}{;}
-         \PY{n}{X23}\PY{p}{=}\PY{l+m+mi}{1}\PY{o}{\PYZhy{}}\PY{l+m+mi}{2}\PY{o}{*}\PY{n}{X11}\PY{o}{\PYZhy{}}\PY{n}{X22}\PY{p}{;}
-         
-         \PY{n}{x31}\PY{p}{=}\PY{n+nb}{linspace}\PY{p}{(}\PY{o}{\PYZhy{}}\PY{l+m+mi}{2}\PY{p}{,}\PY{l+m+mi}{2}\PY{p}{,}\PY{l+m+mi}{5}\PY{p}{)}\PY{p}{;}
-         \PY{n}{x32}\PY{p}{=}\PY{n+nb}{linspace}\PY{p}{(}\PY{o}{\PYZhy{}}\PY{l+m+mi}{2}\PY{p}{,}\PY{l+m+mi}{2}\PY{p}{,}\PY{l+m+mi}{5}\PY{p}{)}\PY{p}{;}
-         \PY{p}{[}\PY{n}{X31}\PY{p}{,}\PY{n}{X32}\PY{p}{]}\PY{p}{=}\PY{n+nb}{meshgrid}\PY{p}{(}\PY{n}{x31}\PY{p}{,}\PY{n}{x32}\PY{p}{)}\PY{p}{;}
-         \PY{n}{X33}\PY{p}{=}\PY{l+m+mi}{1}\PY{o}{/}\PY{l+m+mi}{10}\PY{o}{*}\PY{p}{(}\PY{l+m+mi}{1}\PY{o}{\PYZhy{}}\PY{n}{X31}\PY{o}{\PYZhy{}}\PY{l+m+mi}{2}\PY{o}{*}\PY{n}{X32}\PY{p}{)}\PY{p}{;}
-         
-         \PY{n+nb}{mesh}\PY{p}{(}\PY{n}{X11}\PY{p}{,}\PY{n}{X12}\PY{p}{,}\PY{n}{X13}\PY{p}{)}\PY{p}{;}
-         \PY{n+nb}{hold} \PY{n}{on}\PY{p}{;}
-         \PY{n+nb}{mesh}\PY{p}{(}\PY{n}{X21}\PY{p}{,}\PY{n}{X22}\PY{p}{,}\PY{n}{X23}\PY{p}{)}
-         \PY{n+nb}{mesh}\PY{p}{(}\PY{n}{X31}\PY{p}{,}\PY{n}{X32}\PY{p}{,}\PY{n}{X33}\PY{p}{)}
-         \PY{n}{x}\PY{p}{=}\PY{p}{[}\PY{l+m+mi}{10}\PY{p}{,}\PY{l+m+mi}{2}\PY{p}{,} \PY{l+m+mi}{1}\PY{p}{;}\PY{l+m+mi}{2}\PY{p}{,}\PY{l+m+mi}{1}\PY{p}{,} \PY{l+m+mi}{1}\PY{p}{;} \PY{l+m+mi}{1}\PY{p}{,} \PY{l+m+mi}{2}\PY{p}{,} \PY{l+m+mi}{10}\PY{p}{]}\PY{o}{\PYZbs{}}\PY{p}{[}\PY{l+m+mi}{1}\PY{p}{;}\PY{l+m+mi}{1}\PY{p}{;}\PY{l+m+mi}{1}\PY{p}{]}\PY{p}{;}
-         \PY{n}{plot3}\PY{p}{(}\PY{n}{x}\PY{p}{(}\PY{l+m+mi}{1}\PY{p}{)}\PY{p}{,}\PY{n}{x}\PY{p}{(}\PY{l+m+mi}{2}\PY{p}{)}\PY{p}{,}\PY{n}{x}\PY{p}{(}\PY{l+m+mi}{3}\PY{p}{)}\PY{p}{,}\PY{l+s}{\PYZsq{}}\PY{l+s}{o\PYZsq{}}\PY{p}{)}
-         \PY{n+nb}{view}\PY{p}{(}\PY{l+m+mi}{45}\PY{p}{,}\PY{l+m+mi}{45}\PY{p}{)}
+{\color{incolor}In [{\color{incolor}9}]:} \PY{n}{N}\PY{p}{=}\PY{l+m+mi}{25}\PY{p}{;}
+        \PY{n}{x11}\PY{p}{=}\PY{n+nb}{linspace}\PY{p}{(}\PY{o}{\PYZhy{}}\PY{l+m+mi}{2}\PY{p}{,}\PY{l+m+mi}{2}\PY{p}{,}\PY{n}{N}\PY{p}{)}\PY{p}{;}
+        \PY{n}{x12}\PY{p}{=}\PY{n+nb}{linspace}\PY{p}{(}\PY{o}{\PYZhy{}}\PY{l+m+mi}{2}\PY{p}{,}\PY{l+m+mi}{2}\PY{p}{,}\PY{n}{N}\PY{p}{)}\PY{p}{;}
+        \PY{p}{[}\PY{n}{X11}\PY{p}{,}\PY{n}{X12}\PY{p}{]}\PY{p}{=}\PY{n+nb}{meshgrid}\PY{p}{(}\PY{n}{x11}\PY{p}{,}\PY{n}{x12}\PY{p}{)}\PY{p}{;}
+        \PY{n}{X13}\PY{p}{=}\PY{l+m+mi}{1}\PY{o}{\PYZhy{}}\PY{l+m+mi}{10}\PY{o}{*}\PY{n}{X11}\PY{o}{\PYZhy{}}\PY{l+m+mi}{2}\PY{o}{*}\PY{n}{X12}\PY{p}{;}
+        
+        \PY{n}{x21}\PY{p}{=}\PY{n+nb}{linspace}\PY{p}{(}\PY{o}{\PYZhy{}}\PY{l+m+mi}{2}\PY{p}{,}\PY{l+m+mi}{2}\PY{p}{,}\PY{n}{N}\PY{p}{)}\PY{p}{;}
+        \PY{n}{x22}\PY{p}{=}\PY{n+nb}{linspace}\PY{p}{(}\PY{o}{\PYZhy{}}\PY{l+m+mi}{2}\PY{p}{,}\PY{l+m+mi}{2}\PY{p}{,}\PY{n}{N}\PY{p}{)}\PY{p}{;}
+        \PY{p}{[}\PY{n}{X21}\PY{p}{,}\PY{n}{X22}\PY{p}{]}\PY{p}{=}\PY{n+nb}{meshgrid}\PY{p}{(}\PY{n}{x21}\PY{p}{,}\PY{n}{x22}\PY{p}{)}\PY{p}{;}
+        \PY{n}{X23}\PY{p}{=}\PY{l+m+mi}{1}\PY{o}{\PYZhy{}}\PY{l+m+mi}{2}\PY{o}{*}\PY{n}{X11}\PY{o}{\PYZhy{}}\PY{n}{X22}\PY{p}{;}
+        
+        \PY{n}{x31}\PY{p}{=}\PY{n+nb}{linspace}\PY{p}{(}\PY{o}{\PYZhy{}}\PY{l+m+mi}{2}\PY{p}{,}\PY{l+m+mi}{2}\PY{p}{,}\PY{n}{N}\PY{p}{)}\PY{p}{;}
+        \PY{n}{x32}\PY{p}{=}\PY{n+nb}{linspace}\PY{p}{(}\PY{o}{\PYZhy{}}\PY{l+m+mi}{2}\PY{p}{,}\PY{l+m+mi}{2}\PY{p}{,}\PY{n}{N}\PY{p}{)}\PY{p}{;}
+        \PY{p}{[}\PY{n}{X31}\PY{p}{,}\PY{n}{X32}\PY{p}{]}\PY{p}{=}\PY{n+nb}{meshgrid}\PY{p}{(}\PY{n}{x31}\PY{p}{,}\PY{n}{x32}\PY{p}{)}\PY{p}{;}
+        \PY{n}{X33}\PY{p}{=}\PY{l+m+mi}{1}\PY{o}{/}\PY{l+m+mi}{10}\PY{o}{*}\PY{p}{(}\PY{l+m+mi}{1}\PY{o}{\PYZhy{}}\PY{n}{X31}\PY{o}{\PYZhy{}}\PY{l+m+mi}{2}\PY{o}{*}\PY{n}{X32}\PY{p}{)}\PY{p}{;}
+        
+        \PY{n+nb}{mesh}\PY{p}{(}\PY{n}{X11}\PY{p}{,}\PY{n}{X12}\PY{p}{,}\PY{n}{X13}\PY{p}{)}\PY{p}{;}
+        \PY{n+nb}{hold} \PY{n}{on}\PY{p}{;}
+        \PY{n+nb}{mesh}\PY{p}{(}\PY{n}{X21}\PY{p}{,}\PY{n}{X22}\PY{p}{,}\PY{n}{X23}\PY{p}{)}
+        \PY{n+nb}{mesh}\PY{p}{(}\PY{n}{X31}\PY{p}{,}\PY{n}{X32}\PY{p}{,}\PY{n}{X33}\PY{p}{)}
+        \PY{n}{x}\PY{p}{=}\PY{p}{[}\PY{l+m+mi}{10}\PY{p}{,}\PY{l+m+mi}{2}\PY{p}{,} \PY{l+m+mi}{1}\PY{p}{;}\PY{l+m+mi}{2}\PY{p}{,}\PY{l+m+mi}{1}\PY{p}{,} \PY{l+m+mi}{1}\PY{p}{;} \PY{l+m+mi}{1}\PY{p}{,} \PY{l+m+mi}{2}\PY{p}{,} \PY{l+m+mi}{10}\PY{p}{]}\PY{o}{\PYZbs{}}\PY{p}{[}\PY{l+m+mi}{1}\PY{p}{;}\PY{l+m+mi}{1}\PY{p}{;}\PY{l+m+mi}{1}\PY{p}{]}\PY{p}{;}
+        \PY{n}{plot3}\PY{p}{(}\PY{n}{x}\PY{p}{(}\PY{l+m+mi}{1}\PY{p}{)}\PY{p}{,}\PY{n}{x}\PY{p}{(}\PY{l+m+mi}{2}\PY{p}{)}\PY{p}{,}\PY{n}{x}\PY{p}{(}\PY{l+m+mi}{3}\PY{p}{)}\PY{p}{,}\PY{l+s}{\PYZsq{}}\PY{l+s}{o\PYZsq{}}\PY{p}{)}
+        \PY{n+nb}{xlabel}\PY{p}{(}\PY{l+s}{\PYZsq{}}\PY{l+s}{x1\PYZsq{}}\PY{p}{)}
+        \PY{n+nb}{ylabel}\PY{p}{(}\PY{l+s}{\PYZsq{}}\PY{l+s}{x2\PYZsq{}}\PY{p}{)}
+        \PY{n+nb}{zlabel}\PY{p}{(}\PY{l+s}{\PYZsq{}}\PY{l+s}{x3\PYZsq{}}\PY{p}{)}
+        \PY{n+nb}{view}\PY{p}{(}\PY{l+m+mi}{10}\PY{p}{,}\PY{l+m+mi}{45}\PY{p}{)}
 \end{Verbatim}
 
-    \begin{Verbatim}[commandchars=\\\{\}]
-error: 'X22' undefined near line 1 column 16
-error: 'X13' undefined near line 1 column 14
-error: evaluating argument list element number 3
-
-    \end{Verbatim}
-
     \begin{center}
-    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{lecture_10_files/lecture_10_5_1.pdf}
+    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{lecture_10_files/lecture_10_6_0.pdf}
     \end{center}
     { \hspace*{\fill} \\}
     
@@ -416,13 +427,13 @@ $\left[
 10 & 2 & 1 & 1\\
 0 & 3/5 & 4/5  & 4/5 \\
 0 & 0 & 7.5 & -1.5\end{array}
-\right] $
+\right]$
 
 now, \(7.5x_{3}=-1.5\) so \(x_{3}=-\frac{1}{5}\)
 
 then, \(3/5x_{2}+4/5(-1/5)=1\) so \(x_{2}=\frac{8}{5}\)
 
-finally, \$10x\_\{1\}+2(8/5)
+finally, \(10x_{1}+2(8/5)+1(-\frac{1}{5})=1\)
 
     Consider the problem again from the intro to Linear Algebra, 4 masses
 are connected in series to 4 springs with K=10 N/m. What are the final
@@ -450,7 +461,7 @@ in matrix form:
 \(\left[ \begin{array}{cccc} 2k & -k & 0 & 0 \\ -k & 2k & -k & 0 \\ 0 & -k & 2k & -k \\ 0 & 0 & -k & k \end{array} \right] \left[ \begin{array}{c} x_{1} \\ x_{2} \\ x_{3} \\ x_{4} \end{array} \right]= \left[ \begin{array}{c} m_{1}g \\ m_{2}g \\ m_{3}g \\ m_{4}g \end{array} \right]\)
 
     \begin{Verbatim}[commandchars=\\\{\}]
-{\color{incolor}In [{\color{incolor}18}]:} \PY{n}{k}\PY{p}{=}\PY{l+m+mi}{10}\PY{p}{;} \PY{c}{\PYZpc{} N/m}
+{\color{incolor}In [{\color{incolor}10}]:} \PY{n}{k}\PY{p}{=}\PY{l+m+mi}{10}\PY{p}{;} \PY{c}{\PYZpc{} N/m}
          \PY{n}{m1}\PY{p}{=}\PY{l+m+mi}{1}\PY{p}{;} \PY{c}{\PYZpc{} kg}
          \PY{n}{m2}\PY{p}{=}\PY{l+m+mi}{2}\PY{p}{;}
          \PY{n}{m3}\PY{p}{=}\PY{l+m+mi}{3}\PY{p}{;}
@@ -479,7 +490,7 @@ y =
     \end{Verbatim}
 
     \begin{Verbatim}[commandchars=\\\{\}]
-{\color{incolor}In [{\color{incolor}19}]:} \PY{n}{K1}\PY{p}{=}\PY{p}{[}\PY{n}{K} \PY{n}{y}\PY{p}{]}\PY{p}{;}
+{\color{incolor}In [{\color{incolor}11}]:} \PY{n}{K1}\PY{p}{=}\PY{p}{[}\PY{n}{K} \PY{n}{y}\PY{p}{]}\PY{p}{;}
          \PY{n}{K1}\PY{p}{(}\PY{l+m+mi}{2}\PY{p}{,}\PY{p}{:}\PY{p}{)}\PY{p}{=}\PY{n}{K1}\PY{p}{(}\PY{l+m+mi}{1}\PY{p}{,}\PY{p}{:}\PY{p}{)}\PY{o}{/}\PY{l+m+mi}{2}\PY{o}{+}\PY{n}{K1}\PY{p}{(}\PY{l+m+mi}{2}\PY{p}{,}\PY{p}{:}\PY{p}{)}
 \end{Verbatim}
 
@@ -495,7 +506,7 @@ K1 =
     \end{Verbatim}
 
     \begin{Verbatim}[commandchars=\\\{\}]
-{\color{incolor}In [{\color{incolor}20}]:} \PY{n}{K2}\PY{p}{=}\PY{n}{K1}\PY{p}{;}
+{\color{incolor}In [{\color{incolor}12}]:} \PY{n}{K2}\PY{p}{=}\PY{n}{K1}\PY{p}{;}
          \PY{n}{K2}\PY{p}{(}\PY{l+m+mi}{3}\PY{p}{,}\PY{p}{:}\PY{p}{)}\PY{p}{=}\PY{n}{K1}\PY{p}{(}\PY{l+m+mi}{2}\PY{p}{,}\PY{p}{:}\PY{p}{)}\PY{o}{*}\PY{l+m+mi}{2}\PY{o}{/}\PY{l+m+mi}{3}\PY{o}{+}\PY{n}{K1}\PY{p}{(}\PY{l+m+mi}{3}\PY{p}{,}\PY{p}{:}\PY{p}{)}
 \end{Verbatim}
 
@@ -511,7 +522,7 @@ K2 =
     \end{Verbatim}
 
     \begin{Verbatim}[commandchars=\\\{\}]
-{\color{incolor}In [{\color{incolor}21}]:} \PY{n}{K2}\PY{p}{(}\PY{l+m+mi}{4}\PY{p}{,}\PY{p}{:}\PY{p}{)}\PY{p}{=}\PY{o}{\PYZhy{}}\PY{n}{K2}\PY{p}{(}\PY{l+m+mi}{3}\PY{p}{,}\PY{p}{:}\PY{p}{)}\PY{o}{*}\PY{n}{K2}\PY{p}{(}\PY{l+m+mi}{4}\PY{p}{,}\PY{l+m+mi}{3}\PY{p}{)}\PY{o}{/}\PY{n}{K2}\PY{p}{(}\PY{l+m+mi}{3}\PY{p}{,}\PY{l+m+mi}{3}\PY{p}{)}\PY{o}{+}\PY{n}{K2}\PY{p}{(}\PY{l+m+mi}{4}\PY{p}{,}\PY{p}{:}\PY{p}{)}
+{\color{incolor}In [{\color{incolor}13}]:} \PY{n}{K2}\PY{p}{(}\PY{l+m+mi}{4}\PY{p}{,}\PY{p}{:}\PY{p}{)}\PY{p}{=}\PY{o}{\PYZhy{}}\PY{n}{K2}\PY{p}{(}\PY{l+m+mi}{3}\PY{p}{,}\PY{p}{:}\PY{p}{)}\PY{o}{*}\PY{n}{K2}\PY{p}{(}\PY{l+m+mi}{4}\PY{p}{,}\PY{l+m+mi}{3}\PY{p}{)}\PY{o}{/}\PY{n}{K2}\PY{p}{(}\PY{l+m+mi}{3}\PY{p}{,}\PY{l+m+mi}{3}\PY{p}{)}\PY{o}{+}\PY{n}{K2}\PY{p}{(}\PY{l+m+mi}{4}\PY{p}{,}\PY{p}{:}\PY{p}{)}
 \end{Verbatim}
 
     \begin{Verbatim}[commandchars=\\\{\}]
@@ -526,7 +537,7 @@ K2 =
     \end{Verbatim}
 
     \begin{Verbatim}[commandchars=\\\{\}]
-{\color{incolor}In [{\color{incolor}22}]:} \PY{n}{yp}\PY{p}{=}\PY{n}{K2}\PY{p}{(}\PY{p}{:}\PY{p}{,}\PY{l+m+mi}{5}\PY{p}{)}\PY{p}{;}
+{\color{incolor}In [{\color{incolor}14}]:} \PY{n}{yp}\PY{p}{=}\PY{n}{K2}\PY{p}{(}\PY{p}{:}\PY{p}{,}\PY{l+m+mi}{5}\PY{p}{)}\PY{p}{;}
          \PY{n}{x4}\PY{p}{=}\PY{n}{yp}\PY{p}{(}\PY{l+m+mi}{4}\PY{p}{)}\PY{o}{/}\PY{n}{K2}\PY{p}{(}\PY{l+m+mi}{4}\PY{p}{,}\PY{l+m+mi}{4}\PY{p}{)}
          \PY{n}{x3}\PY{p}{=}\PY{p}{(}\PY{n}{yp}\PY{p}{(}\PY{l+m+mi}{3}\PY{p}{)}\PY{o}{+}\PY{l+m+mi}{10}\PY{o}{*}\PY{n}{x4}\PY{p}{)}\PY{o}{/}\PY{n}{K2}\PY{p}{(}\PY{l+m+mi}{3}\PY{p}{,}\PY{l+m+mi}{3}\PY{p}{)}
          \PY{n}{x2}\PY{p}{=}\PY{p}{(}\PY{n}{yp}\PY{p}{(}\PY{l+m+mi}{2}\PY{p}{)}\PY{o}{+}\PY{l+m+mi}{10}\PY{o}{*}\PY{n}{x3}\PY{p}{)}\PY{o}{/}\PY{n}{K2}\PY{p}{(}\PY{l+m+mi}{2}\PY{p}{,}\PY{l+m+mi}{2}\PY{p}{)}
@@ -542,7 +553,7 @@ x1 =  9.8100
     \end{Verbatim}
 
     \begin{Verbatim}[commandchars=\\\{\}]
-{\color{incolor}In [{\color{incolor}23}]:} \PY{n}{K}\PY{o}{\PYZbs{}}\PY{n}{y}
+{\color{incolor}In [{\color{incolor}15}]:} \PY{n}{K}\PY{o}{\PYZbs{}}\PY{n}{y}
 \end{Verbatim}
 
     \begin{Verbatim}[commandchars=\\\{\}]
@@ -565,7 +576,7 @@ y:
 \texttt{x=GaussNaive(A,y)}
 
     \begin{Verbatim}[commandchars=\\\{\}]
-{\color{incolor}In [{\color{incolor}24}]:} \PY{n}{x}\PY{p}{=}\PY{n}{GaussNaive}\PY{p}{(}\PY{n}{K}\PY{p}{,}\PY{n}{y}\PY{p}{)}
+{\color{incolor}In [{\color{incolor}16}]:} \PY{n}{x}\PY{p}{=}\PY{n}{GaussNaive}\PY{p}{(}\PY{n}{K}\PY{p}{,}\PY{n}{y}\PY{p}{)}
 \end{Verbatim}
 
     \begin{Verbatim}[commandchars=\\\{\}]
@@ -606,7 +617,7 @@ Consider:
 \end{enumerate}
 
     \begin{Verbatim}[commandchars=\\\{\}]
-{\color{incolor}In [{\color{incolor}25}]:} \PY{n}{format} \PY{n}{short}
+{\color{incolor}In [{\color{incolor}17}]:} \PY{n}{format} \PY{n}{short}
          \PY{n}{Aa}\PY{p}{=}\PY{p}{[}\PY{l+m+mi}{0}\PY{p}{,}\PY{l+m+mi}{2}\PY{p}{,}\PY{l+m+mi}{3}\PY{p}{;}\PY{l+m+mi}{4}\PY{p}{,}\PY{l+m+mi}{6}\PY{p}{,}\PY{l+m+mi}{7}\PY{p}{;}\PY{l+m+mi}{2}\PY{p}{,}\PY{o}{\PYZhy{}}\PY{l+m+mi}{3}\PY{p}{,}\PY{l+m+mi}{6}\PY{p}{]}\PY{p}{;} \PY{n}{ya}\PY{p}{=}\PY{p}{[}\PY{l+m+mi}{8}\PY{p}{;}\PY{o}{\PYZhy{}}\PY{l+m+mi}{3}\PY{p}{;}\PY{l+m+mi}{5}\PY{p}{]}\PY{p}{;}
          \PY{n}{GaussNaive}\PY{p}{(}\PY{n}{Aa}\PY{p}{,}\PY{n}{ya}\PY{p}{)}
          \PY{n}{Aa}\PY{o}{\PYZbs{}}\PY{n}{ya}
@@ -634,7 +645,7 @@ ans =
     \end{Verbatim}
 
     \begin{Verbatim}[commandchars=\\\{\}]
-{\color{incolor}In [{\color{incolor}26}]:} \PY{p}{[}\PY{n}{x}\PY{p}{,}\PY{n}{Aug}\PY{p}{,}\PY{n}{npivots}\PY{p}{]}\PY{p}{=}\PY{n}{GaussPivot}\PY{p}{(}\PY{n}{Aa}\PY{p}{,}\PY{n}{ya}\PY{p}{)}
+{\color{incolor}In [{\color{incolor}32}]:} \PY{p}{[}\PY{n}{x}\PY{p}{,}\PY{n}{Aug}\PY{p}{,}\PY{n}{npivots}\PY{p}{]}\PY{p}{=}\PY{n}{GaussPivot}\PY{p}{(}\PY{n}{Aa}\PY{p}{,}\PY{n}{ya}\PY{p}{)}
 \end{Verbatim}
 
     \begin{Verbatim}[commandchars=\\\{\}]
@@ -655,7 +666,7 @@ npivots =  2
     \end{Verbatim}
 
     \begin{Verbatim}[commandchars=\\\{\}]
-{\color{incolor}In [{\color{incolor}27}]:} \PY{n}{format} \PY{n}{long}
+{\color{incolor}In [{\color{incolor}33}]:} \PY{n}{format} \PY{n}{long}
          \PY{n}{Ab}\PY{p}{=}\PY{p}{[}\PY{l+m+mf}{0.3E\PYZhy{}13}\PY{p}{,}\PY{l+m+mf}{3.0000}\PY{p}{;}\PY{l+m+mf}{1.0000}\PY{p}{,}\PY{l+m+mf}{1.0000}\PY{p}{]}\PY{p}{;}\PY{n}{yb}\PY{p}{=}\PY{p}{[}\PY{l+m+mi}{2}\PY{o}{+}\PY{l+m+mf}{0.1e\PYZhy{}13}\PY{p}{;}\PY{l+m+mf}{1.0000}\PY{p}{]}\PY{p}{;}
          \PY{n}{GaussNaive}\PY{p}{(}\PY{n}{Ab}\PY{p}{,}\PY{n}{yb}\PY{p}{)}
          \PY{n}{Ab}\PY{o}{\PYZbs{}}\PY{n}{yb}
@@ -676,7 +687,7 @@ ans =
     \end{Verbatim}
 
     \begin{Verbatim}[commandchars=\\\{\}]
-{\color{incolor}In [{\color{incolor}28}]:} \PY{p}{[}\PY{n}{x}\PY{p}{,}\PY{n}{Aug}\PY{p}{,}\PY{n}{npivots}\PY{p}{]}\PY{p}{=}\PY{n}{GaussPivot}\PY{p}{(}\PY{n}{Ab}\PY{p}{,}\PY{n}{yb}\PY{p}{)}
+{\color{incolor}In [{\color{incolor}34}]:} \PY{p}{[}\PY{n}{x}\PY{p}{,}\PY{n}{Aug}\PY{p}{,}\PY{n}{npivots}\PY{p}{]}\PY{p}{=}\PY{n}{GaussPivot}\PY{p}{(}\PY{n}{Ab}\PY{p}{,}\PY{n}{yb}\PY{p}{)}
          \PY{n}{Ab}\PY{o}{\PYZbs{}}\PY{n}{yb}
          \PY{n}{format} \PY{n}{short}
 \end{Verbatim}
@@ -698,6 +709,18 @@ ans =
    0.333333333333333
    0.666666666666667
 
+
+    \end{Verbatim}
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}36}]:} \PY{c}{\PYZpc{} determinant is (\PYZhy{}1)\PYZca{}(number\PYZus{}of\PYZus{}pivots)*diagonal\PYZus{}elements}
+         \PY{n+nb}{det}\PY{p}{(}\PY{n}{Ab}\PY{p}{)}
+         \PY{n}{Aug}\PY{p}{(}\PY{l+m+mi}{1}\PY{p}{,}\PY{l+m+mi}{1}\PY{p}{)}\PY{o}{*}\PY{n}{Aug}\PY{p}{(}\PY{l+m+mi}{2}\PY{p}{,}\PY{l+m+mi}{2}\PY{p}{)}
+\end{Verbatim}
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+ans = -3.0000
+ans =  3.0000
 
     \end{Verbatim}
 
@@ -729,7 +752,7 @@ in matrix form:
 \(\left[ \begin{array}{cccc} k_1+k_2 & -k_2 & 0 & 0 \\ -k_2 & k_2+k_3 & -k_3 & 0 \\ 0 & -k_3 & k_3+k_4 & -k_4 \\ 0 & 0 & -k_4 & k_4 \end{array} \right] \left[ \begin{array}{c} x_{1} \\ x_{2} \\ x_{3} \\ x_{4} \end{array} \right]= \left[ \begin{array}{c} m_{1}g \\ m_{2}g \\ m_{3}g \\ m_{4}g \end{array} \right]\)
 
     \begin{Verbatim}[commandchars=\\\{\}]
-{\color{incolor}In [{\color{incolor}29}]:} \PY{n}{k1}\PY{p}{=}\PY{l+m+mi}{10}\PY{p}{;} \PY{n}{k2}\PY{p}{=}\PY{l+m+mi}{5}\PY{p}{;}\PY{n}{k3}\PY{p}{=}\PY{l+m+mi}{2}\PY{p}{;}\PY{n}{k4}\PY{p}{=}\PY{l+m+mi}{1}\PY{p}{;} \PY{c}{\PYZpc{} N/m}
+{\color{incolor}In [{\color{incolor}24}]:} \PY{n}{k1}\PY{p}{=}\PY{l+m+mi}{10}\PY{p}{;} \PY{n}{k2}\PY{p}{=}\PY{l+m+mi}{5}\PY{p}{;}\PY{n}{k3}\PY{p}{=}\PY{l+m+mi}{2}\PY{p}{;}\PY{n}{k4}\PY{p}{=}\PY{l+m+mi}{1}\PY{p}{;} \PY{c}{\PYZpc{} N/m}
          \PY{n}{m1}\PY{p}{=}\PY{l+m+mi}{1}\PY{p}{;} \PY{c}{\PYZpc{} kg}
          \PY{n}{m2}\PY{p}{=}\PY{l+m+mi}{2}\PY{p}{;}
          \PY{n}{m3}\PY{p}{=}\PY{l+m+mi}{3}\PY{p}{;}
@@ -782,16 +805,17 @@ method & Number of Floating point operations for
 n\(\times\)n-matrix\tabularnewline
 \midrule
 \endhead
-Naive Gauss & n-cubed\tabularnewline
+Gauss & n-cubed\tabularnewline
 Tridiagonal & n\tabularnewline
 \bottomrule
 \end{longtable}
 
     \begin{Verbatim}[commandchars=\\\{\}]
-{\color{incolor}In [{\color{incolor}30}]:} \PY{n+nb}{e}\PY{p}{=}\PY{p}{[}\PY{l+m+mi}{0}\PY{p}{;}\PY{o}{\PYZhy{}}\PY{l+m+mi}{5}\PY{p}{;}\PY{o}{\PYZhy{}}\PY{l+m+mi}{2}\PY{p}{;}\PY{o}{\PYZhy{}}\PY{l+m+mi}{1}\PY{p}{]}\PY{p}{;}
+{\color{incolor}In [{\color{incolor}25}]:} \PY{n+nb}{e}\PY{p}{=}\PY{p}{[}\PY{l+m+mi}{0}\PY{p}{;}\PY{o}{\PYZhy{}}\PY{l+m+mi}{5}\PY{p}{;}\PY{o}{\PYZhy{}}\PY{l+m+mi}{2}\PY{p}{;}\PY{o}{\PYZhy{}}\PY{l+m+mi}{1}\PY{p}{]}\PY{p}{;}
          \PY{n}{g}\PY{p}{=}\PY{p}{[}\PY{o}{\PYZhy{}}\PY{l+m+mi}{5}\PY{p}{;}\PY{o}{\PYZhy{}}\PY{l+m+mi}{2}\PY{p}{;}\PY{o}{\PYZhy{}}\PY{l+m+mi}{1}\PY{p}{;}\PY{l+m+mi}{0}\PY{p}{]}\PY{p}{;}
          \PY{n}{f}\PY{p}{=}\PY{p}{[}\PY{l+m+mi}{15}\PY{p}{;}\PY{l+m+mi}{7}\PY{p}{;}\PY{l+m+mi}{3}\PY{p}{;}\PY{l+m+mi}{1}\PY{p}{]}\PY{p}{;}
          \PY{n}{Tridiag}\PY{p}{(}\PY{n+nb}{e}\PY{p}{,}\PY{n}{f}\PY{p}{,}\PY{n}{g}\PY{p}{,}\PY{n}{y}\PY{p}{)}
+         \PY{n}{K}\PY{o}{\PYZbs{}}\PY{n}{y}
 \end{Verbatim}
 
     \begin{Verbatim}[commandchars=\\\{\}]
@@ -799,11 +823,18 @@ ans =
 
      9.8100    27.4680    61.8030   101.0430
 
+ans =
+
+     9.8100
+    27.4680
+    61.8030
+   101.0430
+
 
     \end{Verbatim}
 
     \begin{Verbatim}[commandchars=\\\{\}]
-{\color{incolor}In [{\color{incolor}12}]:} \PY{c}{\PYZpc{} tic ... t=toc }
+{\color{incolor}In [{\color{incolor}26}]:} \PY{c}{\PYZpc{} tic ... t=toc }
          \PY{c}{\PYZpc{} is Matlab timer used for debugging programs}
          \PY{n}{t\PYZus{}GE} \PY{p}{=} \PY{n+nb}{zeros}\PY{p}{(}\PY{l+m+mi}{1}\PY{p}{,}\PY{l+m+mi}{100}\PY{p}{)}\PY{p}{;}
          \PY{n}{t\PYZus{}GE\PYZus{}tridiag} \PY{p}{=} \PY{n+nb}{zeros}\PY{p}{(}\PY{l+m+mi}{1}\PY{p}{,}\PY{l+m+mi}{100}\PY{p}{)}\PY{p}{;}
@@ -820,7 +851,7 @@ ans =
              \PY{n}{x} \PY{p}{=} \PY{n}{GaussPivot}\PY{p}{(}\PY{n}{A}\PY{p}{,}\PY{n}{b}\PY{p}{)}\PY{p}{;}
              \PY{n}{t\PYZus{}GE}\PY{p}{(}\PY{n}{n}\PY{p}{)} \PY{p}{=} \PY{n+nb}{toc}\PY{p}{;}
              \PY{n+nb}{tic}\PY{p}{;}
-             \PY{n}{x} \PY{p}{=} \PY{n}{GaussPivot}\PY{p}{(}\PY{n}{Atd}\PY{p}{,}\PY{n}{b}\PY{p}{)}\PY{p}{;}
+             \PY{n}{x} \PY{p}{=} \PY{n}{A}\PY{o}{\PYZbs{}}\PY{n}{b}\PY{p}{;}
              \PY{n}{t\PYZus{}GE\PYZus{}tridiag}\PY{p}{(}\PY{n}{n}\PY{p}{)} \PY{p}{=} \PY{n+nb}{toc}\PY{p}{;}
              \PY{n+nb}{tic}\PY{p}{;}
              \PY{n}{x} \PY{p}{=} \PY{n}{Tridiag}\PY{p}{(}\PY{n+nb}{e}\PY{p}{,}\PY{n}{f}\PY{p}{,}\PY{n}{g}\PY{p}{,}\PY{n}{b}\PY{p}{)}\PY{p}{;}
@@ -829,17 +860,67 @@ ans =
 \end{Verbatim}
 
     \begin{Verbatim}[commandchars=\\\{\}]
-{\color{incolor}In [{\color{incolor}13}]:} \PY{n}{n}\PY{p}{=}\PY{l+m+mi}{1}\PY{p}{:}\PY{l+m+mi}{200}\PY{p}{;}
+{\color{incolor}In [{\color{incolor}28}]:} \PY{n}{n}\PY{p}{=}\PY{l+m+mi}{1}\PY{p}{:}\PY{l+m+mi}{100}\PY{p}{;}
          \PY{n+nb}{loglog}\PY{p}{(}\PY{n}{n}\PY{p}{,}\PY{n}{t\PYZus{}GE}\PY{p}{,}\PY{n}{n}\PY{p}{,}\PY{n}{t\PYZus{}TD}\PY{p}{,}\PY{n}{n}\PY{p}{,}\PY{n}{t\PYZus{}GE\PYZus{}tridiag}\PY{p}{)}
+         \PY{n+nb}{legend}\PY{p}{(}\PY{l+s}{\PYZsq{}}\PY{l+s}{Gauss elim\PYZsq{}}\PY{p}{,}\PY{l+s}{\PYZsq{}}\PY{l+s}{Matlab \PYZbs{}\PYZsq{}}\PY{p}{,}\PY{l+s}{\PYZsq{}}\PY{l+s}{TriDiag\PYZsq{}}\PY{p}{)}
          \PY{n+nb}{xlabel}\PY{p}{(}\PY{l+s}{\PYZsq{}}\PY{l+s}{number of elements\PYZsq{}}\PY{p}{)}
          \PY{n+nb}{ylabel}\PY{p}{(}\PY{l+s}{\PYZsq{}}\PY{l+s}{time (s)\PYZsq{}}\PY{p}{)}
 \end{Verbatim}
 
     \begin{center}
-    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{lecture_10_files/lecture_10_27_0.pdf}
+    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{lecture_10_files/lecture_10_29_0.pdf}
     \end{center}
     { \hspace*{\fill} \\}
     
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}29}]:} \PY{p}{[}\PY{n}{x}\PY{p}{,}\PY{n}{Aug}\PY{p}{,}\PY{n}{npivots}\PY{p}{]}\PY{p}{=}\PY{n}{GaussPivot}\PY{p}{(}\PY{n}{K}\PY{p}{,}\PY{n}{y}\PY{p}{)}
+\end{Verbatim}
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+x =
+
+     9.8100
+    27.4680
+    61.8030
+   101.0430
+
+Aug =
+
+   15.00000   -5.00000    0.00000    0.00000    9.81000
+    0.00000    5.33333   -2.00000    0.00000   22.89000
+    0.00000    0.00000    2.25000   -1.00000   38.01375
+    0.00000    0.00000    0.00000    0.55556   56.13500
+
+npivots = 0
+
+    \end{Verbatim}
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}30}]:} \PY{n}{A}\PY{p}{=}\PY{n}{Aug}\PY{p}{(}\PY{l+m+mi}{1}\PY{p}{:}\PY{l+m+mi}{4}\PY{p}{,}\PY{l+m+mi}{1}\PY{p}{:}\PY{l+m+mi}{4}\PY{p}{)}
+\end{Verbatim}
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+A =
+
+   15.00000   -5.00000    0.00000    0.00000
+    0.00000    5.33333   -2.00000    0.00000
+    0.00000    0.00000    2.25000   -1.00000
+    0.00000    0.00000    0.00000    0.55556
+
+
+    \end{Verbatim}
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}31}]:} \PY{n+nb}{det}\PY{p}{(}\PY{n}{A}\PY{p}{)}
+         \PY{n}{detA}\PY{p}{=}\PY{n}{A}\PY{p}{(}\PY{l+m+mi}{1}\PY{p}{,}\PY{l+m+mi}{1}\PY{p}{)}\PY{o}{*}\PY{n}{A}\PY{p}{(}\PY{l+m+mi}{2}\PY{p}{,}\PY{l+m+mi}{2}\PY{p}{)}\PY{o}{*}\PY{n}{A}\PY{p}{(}\PY{l+m+mi}{3}\PY{p}{,}\PY{l+m+mi}{3}\PY{p}{)}\PY{o}{*}\PY{n}{A}\PY{p}{(}\PY{l+m+mi}{4}\PY{p}{,}\PY{l+m+mi}{4}\PY{p}{)}
+\end{Verbatim}
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+ans =  100.00
+detA =  100.00
+
+    \end{Verbatim}
+
     \begin{Verbatim}[commandchars=\\\{\}]
 {\color{incolor}In [{\color{incolor} }]:} 
 \end{Verbatim}
