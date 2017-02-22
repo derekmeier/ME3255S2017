@@ -21,7 +21,7 @@ heading `# Homework #4` in your `README.md` file
 
     PE_s=1/2\*K \*(DL)^2
 
-    where DL = 0.5 - sqrt(0.5^2+(0.5-x_C)^2)
+    where DL = 0.5 - sqrt(0.5^2+(0.5-x_C)^2) and K=30 N/m.
 
     b. Use the `goldmin.m` function to solve for the minimum potential energy at xc when
     theta=0. *create an anonymous function with `@(x) collar_potential_energy(x,theta)` in
