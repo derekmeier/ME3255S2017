@@ -79,10 +79,10 @@ general, I will not post homework solutions.
 |   |2/16|8|Linear Algebra|
 |6|2/21|9|Linear systems: Gauss elimination|
 |   |2/23|10|Linear Systems: LU factorization|
-|7|2/28||Midterm Review|
-|   |3/2||Midterm|
-|8|3/7|11|Linear Systems: Error analysis|
-|   |3/9|13|Eigenvalues|
+|7|2/28|11|Linear Systems: Error analysis|
+|   |3/2|12|Eigenvalues|
+|8|3/7|1-10 |Midterm Review|
+|   |3/9|1-10|Midterm|
 |9|3/14| N/A |Spring Break!|
 |   |3/16| N/A |Spring Break!|
 |10|3/21|12|Linear Systems: Iterative methods|
