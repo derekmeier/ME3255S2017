@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2017.1.11)  22 FEB 2017 22:01
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2017.1.11)  27 FEB 2017 11:55
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -734,76 +734,89 @@ LaTeX Font Info:    Try loading font information for T1+cmtt on input line 279.
 (/usr/share/texlive/texmf-dist/tex/latex/base/t1cmtt.fd
 File: t1cmtt.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
-LaTeX Font Info:    Font shape `T1/ppl/bx/n' in size <14.4> not available
-(Font)              Font shape `T1/ppl/b/n' tried instead on input line 287.
+LaTeX Font Info:    Font shape `T1/ppl/bx/n' in size <12> not available
+(Font)              Font shape `T1/ppl/b/n' tried instead on input line 288.
+LaTeX Font Info:    Font shape `U/msa/m/n' will be
+(Font)              scaled to size 11.40997pt on input line 290.
+LaTeX Font Info:    Font shape `U/msa/m/n' will be
+(Font)              scaled to size 8.33606pt on input line 290.
+LaTeX Font Info:    Font shape `U/msa/m/n' will be
+(Font)              scaled to size 6.25204pt on input line 290.
+LaTeX Font Info:    Font shape `U/msb/m/n' will be
+(Font)              scaled to size 11.40997pt on input line 290.
+LaTeX Font Info:    Font shape `U/msb/m/n' will be
+(Font)              scaled to size 8.33606pt on input line 290.
+LaTeX Font Info:    Font shape `U/msb/m/n' will be
+(Font)              scaled to size 6.25204pt on input line 290.
+
+<det_A.png, id=36, 704.6325pt x 379.4175pt>
+File: det_A.png Graphic file (type png)
+ <use det_A.png>
+Package pdftex.def Info: det_A.png used on input line 294.
+(pdftex.def)             Requested size: 375.80544pt x 202.3582pt.
+ [1
+
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map} <./det_A.png>]
+<midterm_date.png, id=55, 839.135pt x 383.4325pt>
+File: midterm_date.png Graphic file (type png)
+ <use midterm_date.png>
+Package pdftex.def Info: midterm_date.png used on input line 324.
+(pdftex.def)             Requested size: 375.80544pt x 171.71808pt.
 LaTeX Font Info:    Font shape `T1/ppl/bx/n' in size <10.95> not available
-(Font)              Font shape `T1/ppl/b/n' tried instead on input line 290.
+(Font)              Font shape `T1/ppl/b/n' tried instead on input line 328.
+LaTeX Font Info:    Font shape `T1/ppl/bx/n' in size <14.4> not available
+(Font)              Font shape `T1/ppl/b/n' tried instead on input line 342.
 
 
 Package hyperref Warning: Difference (2) between bookmark levels is greater 
-(hyperref)                than one, level fixed on input line 290.
+(hyperref)                than one, level fixed on input line 345.
 
-LaTeX Font Info:    Font shape `U/msa/m/n' will be
-(Font)              scaled to size 11.40997pt on input line 294.
-LaTeX Font Info:    Font shape `U/msa/m/n' will be
-(Font)              scaled to size 8.33606pt on input line 294.
-LaTeX Font Info:    Font shape `U/msa/m/n' will be
-(Font)              scaled to size 6.25204pt on input line 294.
-LaTeX Font Info:    Font shape `U/msb/m/n' will be
-(Font)              scaled to size 11.40997pt on input line 294.
-LaTeX Font Info:    Font shape `U/msb/m/n' will be
-(Font)              scaled to size 8.33606pt on input line 294.
-LaTeX Font Info:    Font shape `U/msb/m/n' will be
-(Font)              scaled to size 6.25204pt on input line 294.
-[1
-
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
-LaTeX Font Info:    Font shape `T1/ppl/bx/n' in size <12> not available
-(Font)              Font shape `T1/ppl/b/n' tried instead on input line 372.
-LaTeX Font Info:    Try loading font information for TS1+cmtt on input line 387
+[2 <./midterm_date.png>] [3]
+LaTeX Font Info:    Try loading font information for TS1+cmtt on input line 461
 .
 
 (/usr/share/texlive/texmf-dist/tex/latex/base/ts1cmtt.fd
 File: ts1cmtt.fd 2014/09/29 v2.5h Standard LaTeX font definitions
-) [2] [3]
+) [4] [5]
 LaTeX Font Info:    Font shape `T1/cmtt/bx/n' in size <10.95> not available
-(Font)              Font shape `T1/cmtt/m/n' tried instead on input line 473.
+(Font)              Font shape `T1/cmtt/m/n' tried instead on input line 547.
 
-<lecture_11_files/lecture_11_6_0.pdf, id=42, 449.68pt x 337.26pt>
-File: lecture_11_files/lecture_11_6_0.pdf Graphic file (type pdf)
+<lecture_11_files/lecture_11_8_0.pdf, id=79, 449.68pt x 337.26pt>
+File: lecture_11_files/lecture_11_8_0.pdf Graphic file (type pdf)
 
-<use lecture_11_files/lecture_11_6_0.pdf>
-Package pdftex.def Info: lecture_11_files/lecture_11_6_0.pdf used on input line
- 487.
+<use lecture_11_files/lecture_11_8_0.pdf>
+Package pdftex.def Info: lecture_11_files/lecture_11_8_0.pdf used on input line
+ 561.
 (pdftex.def)             Requested size: 449.6789pt x 337.25917pt.
- [4]
-Underfull \hbox (badness 10000) in paragraph at lines 489--490
+
+Underfull \hbox (badness 10000) in paragraph at lines 563--564
 
  []
 
-<mass_springs.png, id=47, 112.42pt x 190.7125pt>
-File: mass_springs.png Graphic file (type png)
- <use mass_springs.png>
-Package pdftex.def Info: mass_springs.png used on input line 497.
+<../lecture_09/mass_springs.png, id=80, 112.42pt x 190.7125pt>
+File: ../lecture_09/mass_springs.png Graphic file (type png)
+
+<use ../lecture_09/mass_springs.png>
+Package pdftex.def Info: ../lecture_09/mass_springs.png used on input line 571.
+
 (pdftex.def)             Requested size: 89.93611pt x 152.576pt.
-
-[5 <./lecture_11_files/lecture_11_6_0.pdf> <./mass_springs.png>] [6] [7]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 656.
-
-[8]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 656.
+ [6 <./lecture_11_files/lecture_11_8_0.pdf>] [7 <../lecture_09/mass_springs.png
+>] [8]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 734.
+ [9]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 734.
  (./lecture_11.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 656.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 656.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 734.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 734.
 Package rerunfilecheck Info: File `lecture_11.out' has not changed.
-(rerunfilecheck)             Checksum: 06B2288B56AA590C3216AAE67971C54B;297.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 656.
+(rerunfilecheck)             Checksum: 41743ED7C91140C56E53FBD51DB19D65;568.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 734.
  ) 
 Here is how much of TeX's memory you used:
- 10920 strings out of 493029
- 163179 string characters out of 6136234
- 268780 words of memory out of 5000000
- 14206 multiletter control sequences out of 15000+600000
+ 10955 strings out of 493029
+ 163773 string characters out of 6136234
+ 268999 words of memory out of 5000000
+ 14228 multiletter control sequences out of 15000+600000
  39052 words of font info for 103 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  36i,9n,77p,460b,465s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -817,10 +830,10 @@ hare/texmf/fonts/type1/public/cm-super/sfit1095.pfb></usr/share/texmf/fonts/typ
 e1/public/cm-super/sftt1095.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/
 palatino/uplb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/palatino/upl
 r8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/palatino/uplri8a.pfb>
-Output written on lecture_11.pdf (8 pages, 154124 bytes).
+Output written on lecture_11.pdf (9 pages, 191934 bytes).
 PDF statistics:
- 117 PDF objects out of 1000 (max. 8388607)
- 92 compressed objects within 1 object stream
- 14 named destinations out of 1000 (max. 500000)
- 43 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 152 PDF objects out of 1000 (max. 8388607)
+ 121 compressed objects within 2 object streams
+ 27 named destinations out of 1000 (max. 500000)
+ 85 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -277,12 +277,67 @@
 
     
     \begin{Verbatim}[commandchars=\\\{\}]
-{\color{incolor}In [{\color{incolor}18}]:} \PY{c}{\PYZpc{}plot \PYZhy{}\PYZhy{}format svg}
+{\color{incolor}In [{\color{incolor}1}]:} \PY{c}{\PYZpc{}plot \PYZhy{}\PYZhy{}format svg}
 \end{Verbatim}
 
     \begin{Verbatim}[commandchars=\\\{\}]
-{\color{incolor}In [{\color{incolor}19}]:} \PY{n}{setdefaults}
+{\color{incolor}In [{\color{incolor}2}]:} \PY{n}{setdefaults}
 \end{Verbatim}
+
+    \subsection{My question from last
+class}\label{my-question-from-last-class}
+
+\(A=\left[ \begin{array}{ccc} 10 & 2 & 1 \\ 0 & 1 & 1 \\ 0 & 0 & 10\end{array} \right]\)
+
+\begin{figure}[htbp]
+\centering
+\includegraphics{det_A.png}
+\caption{responses to determinant of A}
+\end{figure}
+
+\subsection{Your questions from last
+class}\label{your-questions-from-last-class}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\item
+  Need more linear algebra review
+
+  -We will keep doing Linear Algebra, try the practice problems in
+  'linear\_algebra'
+\item
+  How do I do HW3?
+
+  -demo today
+\item
+  For hw4 is the spring constant (K) suppose to be given?
+
+  -yes, its 30 N/m
+\item
+  Deapool or Joker?
+\end{enumerate}
+
+\subsection{Midterm preference}\label{midterm-preference}
+
+\begin{figure}[htbp]
+\centering
+\includegraphics{midterm_date.png}
+\caption{responses to midterm date}
+\end{figure}
+
+\subsubsection{Midterm Questions}\label{midterm-questions}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\item
+  Notes allowed
+
+  -no
+\item
+  Will there be a review/study sheet
+
+  -yes
+\end{enumerate}
 
     \section{LU Decomposition}\label{lu-decomposition}
 
@@ -365,6 +420,25 @@ y =
    1
    1
 
+
+    \end{Verbatim}
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}5}]:} \PY{c}{\PYZpc{} what is the determinant of L, U and A?}
+        
+        \PY{n+nb}{det}\PY{p}{(}\PY{n}{A}\PY{p}{)}
+        \PY{n+nb}{det}\PY{p}{(}\PY{n}{L}\PY{p}{)}
+        \PY{n+nb}{det}\PY{p}{(}\PY{n}{U}\PY{p}{)}
+        \PY{n+nb}{det}\PY{p}{(}\PY{n}{L}\PY{p}{)}\PY{o}{*}\PY{n+nb}{det}\PY{p}{(}\PY{n}{U}\PY{p}{)}
+        \PY{n+nb}{det}\PY{p}{(}\PY{n}{L}\PY{o}{*}\PY{n}{U}\PY{p}{)}
+\end{Verbatim}
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+ans =  5.0000
+ans =  1
+ans =  5
+ans =  5
+ans =  5.0000
 
     \end{Verbatim}
 
@@ -467,24 +541,24 @@ mailing list.
     \end{Verbatim}
 
     \begin{Verbatim}[commandchars=\\\{\}]
-{\color{incolor}In [{\color{incolor}22}]:} \PY{c}{\PYZpc{} time LU solution vs backslash}
-         \PY{n}{t\PYZus{}lu}\PY{p}{=}\PY{n+nb}{zeros}\PY{p}{(}\PY{l+m+mi}{100}\PY{p}{,}\PY{l+m+mi}{1}\PY{p}{)}\PY{p}{;}
-         \PY{n}{t\PYZus{}bs}\PY{p}{=}\PY{n+nb}{zeros}\PY{p}{(}\PY{l+m+mi}{100}\PY{p}{,}\PY{l+m+mi}{1}\PY{p}{)}\PY{p}{;}
-         \PY{k}{for} \PY{n}{N}\PY{p}{=}\PY{l+m+mi}{1}\PY{p}{:}\PY{l+m+mi}{100}
-             \PY{n}{A}\PY{p}{=}\PY{n+nb}{rand}\PY{p}{(}\PY{n}{N}\PY{p}{,}\PY{n}{N}\PY{p}{)}\PY{p}{;}
-             \PY{n}{y}\PY{p}{=}\PY{n+nb}{rand}\PY{p}{(}\PY{n}{N}\PY{p}{,}\PY{l+m+mi}{1}\PY{p}{)}\PY{p}{;}
-             \PY{p}{[}\PY{n}{L}\PY{p}{,}\PY{n}{U}\PY{p}{,}\PY{n}{P}\PY{p}{]}\PY{p}{=}\PY{n+nb}{lu}\PY{p}{(}\PY{n}{A}\PY{p}{)}\PY{p}{;}
-         
-             \PY{n+nb}{tic}\PY{p}{;} \PY{n}{d}\PY{p}{=}\PY{n}{L}\PY{o}{\PYZbs{}}\PY{n}{y}\PY{p}{;} \PY{n}{x}\PY{p}{=}\PY{n}{U}\PY{o}{\PYZbs{}}\PY{n}{d}\PY{p}{;} \PY{n}{t\PYZus{}lu}\PY{p}{(}\PY{n}{N}\PY{p}{)}\PY{p}{=}\PY{n+nb}{toc}\PY{p}{;}
-         
-             \PY{n+nb}{tic}\PY{p}{;} \PY{n}{x}\PY{p}{=}\PY{n}{A}\PY{o}{\PYZbs{}}\PY{n}{y}\PY{p}{;} \PY{n}{t\PYZus{}bs}\PY{p}{(}\PY{n}{N}\PY{p}{)}\PY{p}{=}\PY{n+nb}{toc}\PY{p}{;}
-         \PY{k}{end}
-         \PY{n+nb}{plot}\PY{p}{(}\PY{p}{[}\PY{l+m+mi}{1}\PY{p}{:}\PY{l+m+mi}{100}\PY{p}{]}\PY{p}{,}\PY{n}{t\PYZus{}lu}\PY{p}{,}\PY{p}{[}\PY{l+m+mi}{1}\PY{p}{:}\PY{l+m+mi}{100}\PY{p}{]}\PY{p}{,}\PY{n}{t\PYZus{}bs}\PY{p}{)} 
-         \PY{n+nb}{legend}\PY{p}{(}\PY{l+s}{\PYZsq{}}\PY{l+s}{LU decomp\PYZsq{}}\PY{p}{,}\PY{l+s}{\PYZsq{}}\PY{l+s}{Octave \PYZbs{}\PYZbs{}\PYZsq{}}\PY{p}{)}
+{\color{incolor}In [{\color{incolor}9}]:} \PY{c}{\PYZpc{} time LU solution vs backslash}
+        \PY{n}{t\PYZus{}lu}\PY{p}{=}\PY{n+nb}{zeros}\PY{p}{(}\PY{l+m+mi}{100}\PY{p}{,}\PY{l+m+mi}{1}\PY{p}{)}\PY{p}{;}
+        \PY{n}{t\PYZus{}bs}\PY{p}{=}\PY{n+nb}{zeros}\PY{p}{(}\PY{l+m+mi}{100}\PY{p}{,}\PY{l+m+mi}{1}\PY{p}{)}\PY{p}{;}
+        \PY{k}{for} \PY{n}{N}\PY{p}{=}\PY{l+m+mi}{1}\PY{p}{:}\PY{l+m+mi}{100}
+            \PY{n}{A}\PY{p}{=}\PY{n+nb}{rand}\PY{p}{(}\PY{n}{N}\PY{p}{,}\PY{n}{N}\PY{p}{)}\PY{p}{;}
+            \PY{n}{y}\PY{p}{=}\PY{n+nb}{rand}\PY{p}{(}\PY{n}{N}\PY{p}{,}\PY{l+m+mi}{1}\PY{p}{)}\PY{p}{;}
+            \PY{p}{[}\PY{n}{L}\PY{p}{,}\PY{n}{U}\PY{p}{,}\PY{n}{P}\PY{p}{]}\PY{p}{=}\PY{n+nb}{lu}\PY{p}{(}\PY{n}{A}\PY{p}{)}\PY{p}{;}
+        
+            \PY{n+nb}{tic}\PY{p}{;} \PY{n}{d}\PY{p}{=}\PY{n+nb}{inv}\PY{p}{(}\PY{n}{L}\PY{p}{)}\PY{o}{*}\PY{n}{y}\PY{p}{;} \PY{n}{x}\PY{p}{=}\PY{n+nb}{inv}\PY{p}{(}\PY{n}{U}\PY{p}{)}\PY{o}{*}\PY{n}{d}\PY{p}{;} \PY{n}{t\PYZus{}lu}\PY{p}{(}\PY{n}{N}\PY{p}{)}\PY{p}{=}\PY{n+nb}{toc}\PY{p}{;}
+        
+            \PY{n+nb}{tic}\PY{p}{;} \PY{n}{x}\PY{p}{=}\PY{n+nb}{inv}\PY{p}{(}\PY{n}{A}\PY{p}{)}\PY{o}{*}\PY{n}{y}\PY{p}{;} \PY{n}{t\PYZus{}bs}\PY{p}{(}\PY{n}{N}\PY{p}{)}\PY{p}{=}\PY{n+nb}{toc}\PY{p}{;}
+        \PY{k}{end}
+        \PY{n+nb}{plot}\PY{p}{(}\PY{p}{[}\PY{l+m+mi}{1}\PY{p}{:}\PY{l+m+mi}{100}\PY{p}{]}\PY{p}{,}\PY{n}{t\PYZus{}lu}\PY{p}{,}\PY{p}{[}\PY{l+m+mi}{1}\PY{p}{:}\PY{l+m+mi}{100}\PY{p}{]}\PY{p}{,}\PY{n}{t\PYZus{}bs}\PY{p}{)} 
+        \PY{n+nb}{legend}\PY{p}{(}\PY{l+s}{\PYZsq{}}\PY{l+s}{LU decomp\PYZsq{}}\PY{p}{,}\PY{l+s}{\PYZsq{}}\PY{l+s}{Octave \PYZbs{}\PYZbs{}\PYZsq{}}\PY{p}{)}
 \end{Verbatim}
 
     \begin{center}
-    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{lecture_11_files/lecture_11_6_0.pdf}
+    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{lecture_11_files/lecture_11_8_0.pdf}
     \end{center}
     { \hspace*{\fill} \\}
     
@@ -494,7 +568,7 @@ positions of the masses?
 
 \begin{figure}[htbp]
 \centering
-\includegraphics{mass_springs.png}
+\includegraphics{../lecture_09/mass_springs.png}
 \caption{Springs-masses}
 \end{figure}
 
@@ -514,7 +588,7 @@ in matrix form:
 \(\left[ \begin{array}{cccc} 2k & -k & 0 & 0 \\ -k & 2k & -k & 0 \\ 0 & -k & 2k & -k \\ 0 & 0 & -k & k \end{array} \right] \left[ \begin{array}{c} x_{1} \\ x_{2} \\ x_{3} \\ x_{4} \end{array} \right]= \left[ \begin{array}{c} m_{1}g \\ m_{2}g \\ m_{3}g \\ m_{4}g \end{array} \right]\)
 
     \begin{Verbatim}[commandchars=\\\{\}]
-{\color{incolor}In [{\color{incolor}24}]:} \PY{n}{k}\PY{p}{=}\PY{l+m+mi}{10}\PY{p}{;} \PY{c}{\PYZpc{} N/m}
+{\color{incolor}In [{\color{incolor}10}]:} \PY{n}{k}\PY{p}{=}\PY{l+m+mi}{10}\PY{p}{;} \PY{c}{\PYZpc{} N/m}
          \PY{n}{m1}\PY{p}{=}\PY{l+m+mi}{1}\PY{p}{;} \PY{c}{\PYZpc{} kg}
          \PY{n}{m2}\PY{p}{=}\PY{l+m+mi}{2}\PY{p}{;}
          \PY{n}{m3}\PY{p}{=}\PY{l+m+mi}{3}\PY{p}{;}
@@ -565,7 +639,7 @@ equations:
 so for K
 
     \begin{Verbatim}[commandchars=\\\{\}]
-{\color{incolor}In [{\color{incolor}25}]:} \PY{n}{K}
+{\color{incolor}In [{\color{incolor}11}]:} \PY{n}{K}
 \end{Verbatim}
 
     \begin{Verbatim}[commandchars=\\\{\}]
@@ -580,7 +654,7 @@ K =
     \end{Verbatim}
 
     \begin{Verbatim}[commandchars=\\\{\}]
-{\color{incolor}In [{\color{incolor}26}]:} \PY{n}{u11}\PY{p}{=}\PY{n+nb}{sqrt}\PY{p}{(}\PY{n}{K}\PY{p}{(}\PY{l+m+mi}{1}\PY{p}{,}\PY{l+m+mi}{1}\PY{p}{)}\PY{p}{)}
+{\color{incolor}In [{\color{incolor}12}]:} \PY{n}{u11}\PY{p}{=}\PY{n+nb}{sqrt}\PY{p}{(}\PY{n}{K}\PY{p}{(}\PY{l+m+mi}{1}\PY{p}{,}\PY{l+m+mi}{1}\PY{p}{)}\PY{p}{)}
          \PY{n}{u12}\PY{p}{=}\PY{p}{(}\PY{n}{K}\PY{p}{(}\PY{l+m+mi}{1}\PY{p}{,}\PY{l+m+mi}{2}\PY{p}{)}\PY{p}{)}\PY{o}{/}\PY{n}{u11}
          \PY{n}{u13}\PY{p}{=}\PY{p}{(}\PY{n}{K}\PY{p}{(}\PY{l+m+mi}{1}\PY{p}{,}\PY{l+m+mi}{3}\PY{p}{)}\PY{p}{)}\PY{o}{/}\PY{n}{u11}
          \PY{n}{u14}\PY{p}{=}\PY{p}{(}\PY{n}{K}\PY{p}{(}\PY{l+m+mi}{1}\PY{p}{,}\PY{l+m+mi}{4}\PY{p}{)}\PY{p}{)}\PY{o}{/}\PY{n}{u11}
@@ -615,22 +689,22 @@ U =
     \end{Verbatim}
 
     \begin{Verbatim}[commandchars=\\\{\}]
-{\color{incolor}In [{\color{incolor}27}]:} \PY{n}{U}\PY{o}{\PYZsq{}}\PY{o}{*}\PY{n}{U}
+{\color{incolor}In [{\color{incolor}17}]:} \PY{p}{(}\PY{n}{U}\PY{o}{\PYZsq{}}\PY{o}{*}\PY{n}{U}\PY{p}{)}\PY{o}{\PYZsq{}}\PY{o}{==}\PY{n}{U}\PY{o}{\PYZsq{}}\PY{o}{*}\PY{n}{U}
 \end{Verbatim}
 
     \begin{Verbatim}[commandchars=\\\{\}]
 ans =
 
-   20.00000  -10.00000    0.00000    0.00000
-  -10.00000   20.00000  -10.00000    0.00000
-    0.00000  -10.00000   20.00000  -10.00000
-    0.00000    0.00000  -10.00000   10.00000
+   1   1   1   1
+   1   1   1   1
+   1   1   1   1
+   1   1   1   1
 
 
     \end{Verbatim}
 
     \begin{Verbatim}[commandchars=\\\{\}]
-{\color{incolor}In [{\color{incolor}37}]:} \PY{c}{\PYZpc{} time solution for Cholesky vs backslash}
+{\color{incolor}In [{\color{incolor}18}]:} \PY{c}{\PYZpc{} time solution for Cholesky vs backslash}
          \PY{n}{t\PYZus{}chol}\PY{p}{=}\PY{n+nb}{zeros}\PY{p}{(}\PY{l+m+mi}{1000}\PY{p}{,}\PY{l+m+mi}{1}\PY{p}{)}\PY{p}{;}
          \PY{n}{t\PYZus{}bs}\PY{p}{=}\PY{n+nb}{zeros}\PY{p}{(}\PY{l+m+mi}{1000}\PY{p}{,}\PY{l+m+mi}{1}\PY{p}{)}\PY{p}{;}
          \PY{k}{for} \PY{n}{i}\PY{p}{=}\PY{l+m+mi}{1}\PY{p}{:}\PY{l+m+mi}{1000}
@@ -643,10 +717,14 @@ ans =
 \end{Verbatim}
 
     \begin{Verbatim}[commandchars=\\\{\}]
-average time spent for Cholesky factored solution = 1.623154e-05+/-1.166726e-05
-average time spent for backslash solution         = 1.675844e-05+/-1.187234e-05
+average time spent for Cholesky factored solution = 1.465964e-05+/-9.806001e-06
+average time spent for backslash solution         = 1.555967e-05+/-1.048561e-05
 
     \end{Verbatim}
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor} }]:} 
+\end{Verbatim}
 
 
     % Add a bibliography block to the postdoc
