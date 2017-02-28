@@ -9,6 +9,75 @@
 setdefaults
 ```
 
+
+```octave
+A=rand(4,4)
+
+[L,U,P]=lu(A)
+
+det(L)
+```
+
+    A =
+    
+       0.447394   0.357071   0.720915   0.499926
+       0.648313   0.323276   0.521677   0.288345
+       0.084982   0.581513   0.466420   0.142342
+       0.576580   0.658089   0.916987   0.923165
+    
+    L =
+    
+       1.00000   0.00000   0.00000   0.00000
+       0.13108   1.00000   0.00000   0.00000
+       0.69009   0.24851   1.00000   0.00000
+       0.88935   0.68736   0.68488   1.00000
+    
+    U =
+    
+       0.64831   0.32328   0.52168   0.28834
+       0.00000   0.53914   0.39804   0.10455
+       0.00000   0.00000   0.26199   0.27496
+       0.00000   0.00000   0.00000   0.40655
+    
+    P =
+    
+    Permutation Matrix
+    
+       0   1   0   0
+       0   0   1   0
+       1   0   0   0
+       0   0   0   1
+    
+    ans =  1
+
+
+
+```octave
+A=rand(4,100)';
+A=A'*A;
+size(A)
+min(min(A))
+max(max(A))
+cond(A)
+C=chol(A)
+```
+
+    ans =
+    
+       4   4
+    
+    ans =  23.586
+    ans =  35.826
+    ans =  14.869
+    C =
+    
+       5.98549   4.28555   4.35707   4.31359
+       0.00000   3.63950   1.35005   1.45342
+       0.00000   0.00000   3.62851   1.50580
+       0.00000   0.00000   0.00000   3.21911
+    
+
+
 ## My question from last class 
 
 ![q1](det_L.png)
@@ -68,7 +137,7 @@ x_{2} \end{array}\right]=
 1\end{array}\right]$
 
 $A^{-1}=\frac{1}{2*3-1*1}\left[ \begin{array}{cc}
-3 & 1 \\
+3 & -1 \\
 -1 & 2 \end{array} \right]=
 \left[ \begin{array}{cc}
 3/5 & -1/5 \\
@@ -156,7 +225,7 @@ Which we can solve for each $a_{n}$ with LU-decomposition, knowing the lower and
 
 $A^{-1}=\left[ \begin{array}{cccc}
 | & | &  & | \\
-a_{1} & a_{2} & \cdots & a_{3} \\
+a_{1} & a_{2} & \cdots & a_{n} \\
 | & | &  & | \end{array} \right]$
 
 
@@ -188,6 +257,18 @@ $A=\left[ \begin{array}{ccc}
 -1 & 2 & -1\\
 0 & -1 & 1 \end{array} \right]$
 
+
+#### Note on solving for $A^{-1}$ column 1
+
+$Aa_1=I(:,1)$
+
+$LUa_1=I(:,1)$
+
+$(LUa_1-I(:,1))=0$
+
+$L(Ua_1-d_1)=0$
+
+$I(:,1)=Ld_1$
 
 
 ```octave
@@ -245,8 +326,18 @@ $Ld_{1}=\left[\begin{array}{c}
 1 \\ 
 0 \\ 
 \vdots \\
-0 \end{array} \right]$
-$;~Ua_{1}=d_{1}$
+0 \end{array} \right]=
+\left[\begin{array}{ccc} 
+1 & 0 & 0 \\ 
+-1/2 & 1 & 0 \\
+0 & -2/3 & 1 \end{array} \right]\left[\begin{array}{c} 
+d1(1) \\ 
+d1(2) \\ 
+d1(3)\end{array} \right]=\left[\begin{array}{c} 
+1 \\ 
+0 \\ 
+0 \end{array} \right]
+;~Ua_{1}=d_{1}$
 
 
 ```octave
@@ -349,7 +440,11 @@ Final solution for $A^{-1}$ is $[a_{1}~a_{2}~a_{3}]$
 
 ```octave
 invA=[a1,a2,a3]
-A*invA
+I_app=A*invA
+I_app(2,3)
+eps
+
+2^-8
 ```
 
     invA =
@@ -358,12 +453,15 @@ A*invA
        1.00000   2.00000   2.00000
        1.00000   2.00000   3.00000
     
-    ans =
+    I_app =
     
        1.00000   0.00000   0.00000
        0.00000   1.00000  -0.00000
       -0.00000  -0.00000   1.00000
     
+    ans =   -4.4409e-16
+    ans =    2.2204e-16
+    ans =  0.0039062
 
 
 Now the solution of $x$ to $Ax=y$ is $x=A^{-1}y$
@@ -430,7 +528,7 @@ legend('inversion','backslash','multiplication','Location','NorthWest')
 ```
 
 
-![svg](lecture_12_files/lecture_12_21_0.svg)
+![svg](lecture_12_files/lecture_12_24_0.svg)
 
 
 ## Condition of a matrix 
