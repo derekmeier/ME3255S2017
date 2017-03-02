@@ -293,10 +293,12 @@ class}\label{my-question-from-last-class}
 \caption{q1}
 \end{figure}
 
-$A=\left[\begin{array}{ccc}
+
+  $A=\left[\begin{array}{ccc}
   2 & -2 & 0\\
   -1& 5 & 1 \\
-3 &4 & 5 \end{array}\right]$
+  3 &4 & 5 \end{array}\right]$
+
 
 \begin{figure}[htbp]
 \centering
@@ -349,6 +351,21 @@ class}\label{your-questions-from-last-class}
   in Jupyter - https://anaconda.org/pypi/octave\_kernel}
 \end{enumerate}
 
+    \section{Markdown examples}\label{markdown-examples}
+
+\texttt{"\ \textquotesingle{}} `
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{x=linspace(}\FloatTok{0}\NormalTok{,}\FloatTok{1}\NormalTok{);}
+\NormalTok{y=x.^}\FloatTok{2}\NormalTok{;}
+\NormalTok{plot(x,y)}
+\NormalTok{for i = }\FloatTok{1}\NormalTok{:}\FloatTok{10}
+    \NormalTok{fprintf(}\StringTok{'markdown is pretty'}\NormalTok{)}
+\NormalTok{end}
+\end{Highlighting}
+\end{Shaded}
+
     \subsection{Condition of a matrix}\label{condition-of-a-matrix}
 
 \subsubsection{\texorpdfstring{\emph{just checked in to see what
@@ -365,7 +382,7 @@ $||x||_{e}=\sqrt{\sum_{i=1}^{n}x_{i}^{2}}$
 
 For a matrix, A, the same norm is called the Frobenius norm:
 
-$||A||_{f}=\sqrt{\sum_{i=1}^{n}\sum_{i=1}^{m}A_{i,j}^{2}}$
+$||A||_{f}=\sqrt{\sum_{i=1}^{n}\sum_{j=1}^{m}A_{i,j}^{2}}$
 
 In general we can calculate any $p$-norm where
 
@@ -390,15 +407,15 @@ An estimate of the rounding error is based on the condition of A:
 
 $\frac{||\Delta x||}{x} \le Cond(A) \frac{||\Delta A||}{||A||}$
 
-So if the coefficients of A have accuracy to \$10\^{}\{-t\}
+So if the coefficients of A have accuracy to $10^{-t}$
 
 and the condition of A, $Cond(A)=10^{c}$
 
 then the solution for x can have rounding errors up to $10^{c-t}$
 
     \begin{Verbatim}[commandchars=\\\{\}]
-{\color{incolor}In [{\color{incolor}72}]:} \PY{n}{A}\PY{p}{=}\PY{p}{[}\PY{l+m+mi}{1}\PY{p}{,}\PY{l+m+mi}{1}\PY{o}{/}\PY{l+m+mi}{2}\PY{p}{,}\PY{l+m+mi}{1}\PY{o}{/}\PY{l+m+mi}{3}\PY{p}{;}\PY{l+m+mi}{1}\PY{o}{/}\PY{l+m+mi}{2}\PY{p}{,}\PY{l+m+mi}{1}\PY{o}{/}\PY{l+m+mi}{3}\PY{p}{,}\PY{l+m+mi}{1}\PY{o}{/}\PY{l+m+mi}{4}\PY{p}{;}\PY{l+m+mi}{1}\PY{o}{/}\PY{l+m+mi}{3}\PY{p}{,}\PY{l+m+mi}{1}\PY{o}{/}\PY{l+m+mi}{4}\PY{p}{,}\PY{l+m+mi}{1}\PY{o}{/}\PY{l+m+mi}{5}\PY{p}{]}
-         \PY{p}{[}\PY{n}{L}\PY{p}{,}\PY{n}{U}\PY{p}{]}\PY{p}{=}\PY{n}{LU\PYZus{}naive}\PY{p}{(}\PY{n}{A}\PY{p}{)}
+{\color{incolor}In [{\color{incolor}7}]:} \PY{n}{A}\PY{p}{=}\PY{p}{[}\PY{l+m+mi}{1}\PY{p}{,}\PY{l+m+mi}{1}\PY{o}{/}\PY{l+m+mi}{2}\PY{p}{,}\PY{l+m+mi}{1}\PY{o}{/}\PY{l+m+mi}{3}\PY{p}{;}\PY{l+m+mi}{1}\PY{o}{/}\PY{l+m+mi}{2}\PY{p}{,}\PY{l+m+mi}{1}\PY{o}{/}\PY{l+m+mi}{3}\PY{p}{,}\PY{l+m+mi}{1}\PY{o}{/}\PY{l+m+mi}{4}\PY{p}{;}\PY{l+m+mi}{1}\PY{o}{/}\PY{l+m+mi}{3}\PY{p}{,}\PY{l+m+mi}{1}\PY{o}{/}\PY{l+m+mi}{4}\PY{p}{,}\PY{l+m+mi}{1}\PY{o}{/}\PY{l+m+mi}{5}\PY{p}{]}
+        \PY{p}{[}\PY{n}{L}\PY{p}{,}\PY{n}{U}\PY{p}{]}\PY{p}{=}\PY{n}{LU\PYZus{}naive}\PY{p}{(}\PY{n}{A}\PY{p}{)}
 \end{Verbatim}
 
     \begin{Verbatim}[commandchars=\\\{\}]
@@ -429,14 +446,14 @@ $Ld_{1}=\left[\begin{array}{c} 1 \\ 0 \\ 0 \end{array}\right]$,
 $Ux_{1}=d_{1}$ ...
 
     \begin{Verbatim}[commandchars=\\\{\}]
-{\color{incolor}In [{\color{incolor}75}]:} \PY{n}{invA}\PY{p}{=}\PY{n+nb}{zeros}\PY{p}{(}\PY{l+m+mi}{3}\PY{p}{,}\PY{l+m+mi}{3}\PY{p}{)}\PY{p}{;}
-         \PY{n}{d1}\PY{p}{=}\PY{n}{L}\PY{o}{\PYZbs{}}\PY{p}{[}\PY{l+m+mi}{1}\PY{p}{;}\PY{l+m+mi}{0}\PY{p}{;}\PY{l+m+mi}{0}\PY{p}{]}\PY{p}{;}
-         \PY{n}{d2}\PY{p}{=}\PY{n}{L}\PY{o}{\PYZbs{}}\PY{p}{[}\PY{l+m+mi}{0}\PY{p}{;}\PY{l+m+mi}{1}\PY{p}{;}\PY{l+m+mi}{0}\PY{p}{]}\PY{p}{;}
-         \PY{n}{d3}\PY{p}{=}\PY{n}{L}\PY{o}{\PYZbs{}}\PY{p}{[}\PY{l+m+mi}{0}\PY{p}{;}\PY{l+m+mi}{0}\PY{p}{;}\PY{l+m+mi}{1}\PY{p}{]}\PY{p}{;}
-         \PY{n}{invA}\PY{p}{(}\PY{p}{:}\PY{p}{,}\PY{l+m+mi}{1}\PY{p}{)}\PY{p}{=}\PY{n}{U}\PY{o}{\PYZbs{}}\PY{n}{d1}\PY{p}{;}
-         \PY{n}{invA}\PY{p}{(}\PY{p}{:}\PY{p}{,}\PY{l+m+mi}{2}\PY{p}{)}\PY{p}{=}\PY{n}{U}\PY{o}{\PYZbs{}}\PY{n}{d2}\PY{p}{;}
-         \PY{n}{invA}\PY{p}{(}\PY{p}{:}\PY{p}{,}\PY{l+m+mi}{3}\PY{p}{)}\PY{p}{=}\PY{n}{U}\PY{o}{\PYZbs{}}\PY{n}{d3}
-         \PY{n}{invA}\PY{o}{*}\PY{n}{A}
+{\color{incolor}In [{\color{incolor}8}]:} \PY{n}{invA}\PY{p}{=}\PY{n+nb}{zeros}\PY{p}{(}\PY{l+m+mi}{3}\PY{p}{,}\PY{l+m+mi}{3}\PY{p}{)}\PY{p}{;}
+        \PY{n}{d1}\PY{p}{=}\PY{n}{L}\PY{o}{\PYZbs{}}\PY{p}{[}\PY{l+m+mi}{1}\PY{p}{;}\PY{l+m+mi}{0}\PY{p}{;}\PY{l+m+mi}{0}\PY{p}{]}\PY{p}{;}
+        \PY{n}{d2}\PY{p}{=}\PY{n}{L}\PY{o}{\PYZbs{}}\PY{p}{[}\PY{l+m+mi}{0}\PY{p}{;}\PY{l+m+mi}{1}\PY{p}{;}\PY{l+m+mi}{0}\PY{p}{]}\PY{p}{;}
+        \PY{n}{d3}\PY{p}{=}\PY{n}{L}\PY{o}{\PYZbs{}}\PY{p}{[}\PY{l+m+mi}{0}\PY{p}{;}\PY{l+m+mi}{0}\PY{p}{;}\PY{l+m+mi}{1}\PY{p}{]}\PY{p}{;}
+        \PY{n}{invA}\PY{p}{(}\PY{p}{:}\PY{p}{,}\PY{l+m+mi}{1}\PY{p}{)}\PY{p}{=}\PY{n}{U}\PY{o}{\PYZbs{}}\PY{n}{d1}\PY{p}{;} \PY{c}{\PYZpc{} shortcut invA(:,1)=A\PYZbs{}[1;0;0]}
+        \PY{n}{invA}\PY{p}{(}\PY{p}{:}\PY{p}{,}\PY{l+m+mi}{2}\PY{p}{)}\PY{p}{=}\PY{n}{U}\PY{o}{\PYZbs{}}\PY{n}{d2}\PY{p}{;}
+        \PY{n}{invA}\PY{p}{(}\PY{p}{:}\PY{p}{,}\PY{l+m+mi}{3}\PY{p}{)}\PY{p}{=}\PY{n}{U}\PY{o}{\PYZbs{}}\PY{n}{d3}
+        \PY{n}{invA}\PY{o}{*}\PY{n}{A}
 \end{Verbatim}
 
     \begin{Verbatim}[commandchars=\\\{\}]
@@ -458,27 +475,27 @@ ans =
     Find the condition of A, $cond(A)$
 
     \begin{Verbatim}[commandchars=\\\{\}]
-{\color{incolor}In [{\color{incolor}74}]:} \PY{c}{\PYZpc{} Frobenius norm}
-         \PY{n}{normf\PYZus{}A} \PY{p}{=} \PY{n+nb}{sqrt}\PY{p}{(}\PY{n+nb}{sum}\PY{p}{(}\PY{n+nb}{sum}\PY{p}{(}\PY{n}{A}\PY{o}{.\PYZca{}}\PY{l+m+mi}{2}\PY{p}{)}\PY{p}{)}\PY{p}{)}
-         \PY{n}{normf\PYZus{}invA} \PY{p}{=} \PY{n+nb}{sqrt}\PY{p}{(}\PY{n+nb}{sum}\PY{p}{(}\PY{n+nb}{sum}\PY{p}{(}\PY{n}{invA}\PY{o}{.\PYZca{}}\PY{l+m+mi}{2}\PY{p}{)}\PY{p}{)}\PY{p}{)}
-         
-         \PY{n}{cond\PYZus{}f\PYZus{}A} \PY{p}{=} \PY{n}{normf\PYZus{}A}\PY{o}{*}\PY{n}{normf\PYZus{}invA}
-         
-         \PY{n+nb}{norm}\PY{p}{(}\PY{n}{A}\PY{p}{,}\PY{l+s}{\PYZsq{}}\PY{l+s}{fro\PYZsq{}}\PY{p}{)}
-         
-         \PY{c}{\PYZpc{} p=1, column sum norm}
-         \PY{n}{norm1\PYZus{}A} \PY{p}{=} \PY{n+nb}{max}\PY{p}{(}\PY{n+nb}{sum}\PY{p}{(}\PY{n}{A}\PY{p}{,}\PY{l+m+mi}{2}\PY{p}{)}\PY{p}{)}
-         \PY{n}{norm1\PYZus{}invA} \PY{p}{=} \PY{n+nb}{max}\PY{p}{(}\PY{n+nb}{sum}\PY{p}{(}\PY{n}{invA}\PY{p}{,}\PY{l+m+mi}{2}\PY{p}{)}\PY{p}{)}
-         \PY{n+nb}{norm}\PY{p}{(}\PY{n}{A}\PY{p}{,}\PY{l+m+mi}{1}\PY{p}{)}
-         
-         \PY{n}{cond\PYZus{}1\PYZus{}A}\PY{p}{=}\PY{n}{norm1\PYZus{}A}\PY{o}{*}\PY{n}{norm1\PYZus{}invA}
-         
-         \PY{c}{\PYZpc{} p=inf, row sum norm}
-         \PY{n}{norminf\PYZus{}A} \PY{p}{=} \PY{n+nb}{max}\PY{p}{(}\PY{n+nb}{sum}\PY{p}{(}\PY{n}{A}\PY{p}{,}\PY{l+m+mi}{1}\PY{p}{)}\PY{p}{)}
-         \PY{n}{norminf\PYZus{}invA} \PY{p}{=} \PY{n+nb}{max}\PY{p}{(}\PY{n+nb}{sum}\PY{p}{(}\PY{n}{invA}\PY{p}{,}\PY{l+m+mi}{1}\PY{p}{)}\PY{p}{)}
-         \PY{n+nb}{norm}\PY{p}{(}\PY{n}{A}\PY{p}{,}\PY{n+nb}{inf}\PY{p}{)}
-         
-         \PY{n}{cond\PYZus{}inf\PYZus{}A}\PY{p}{=}\PY{n}{norminf\PYZus{}A}\PY{o}{*}\PY{n}{norminf\PYZus{}invA}
+{\color{incolor}In [{\color{incolor}9}]:} \PY{c}{\PYZpc{} Frobenius norm}
+        \PY{n}{normf\PYZus{}A} \PY{p}{=} \PY{n+nb}{sqrt}\PY{p}{(}\PY{n+nb}{sum}\PY{p}{(}\PY{n+nb}{sum}\PY{p}{(}\PY{n}{A}\PY{o}{.\PYZca{}}\PY{l+m+mi}{2}\PY{p}{)}\PY{p}{)}\PY{p}{)}
+        \PY{n}{normf\PYZus{}invA} \PY{p}{=} \PY{n+nb}{sqrt}\PY{p}{(}\PY{n+nb}{sum}\PY{p}{(}\PY{n+nb}{sum}\PY{p}{(}\PY{n}{invA}\PY{o}{.\PYZca{}}\PY{l+m+mi}{2}\PY{p}{)}\PY{p}{)}\PY{p}{)}
+        
+        \PY{n}{cond\PYZus{}f\PYZus{}A} \PY{p}{=} \PY{n}{normf\PYZus{}A}\PY{o}{*}\PY{n}{normf\PYZus{}invA}
+        
+        \PY{n+nb}{norm}\PY{p}{(}\PY{n}{A}\PY{p}{,}\PY{l+s}{\PYZsq{}}\PY{l+s}{fro\PYZsq{}}\PY{p}{)}
+        
+        \PY{c}{\PYZpc{} p=1, column sum norm}
+        \PY{n}{norm1\PYZus{}A} \PY{p}{=} \PY{n+nb}{max}\PY{p}{(}\PY{n+nb}{sum}\PY{p}{(}\PY{n}{A}\PY{p}{,}\PY{l+m+mi}{2}\PY{p}{)}\PY{p}{)}
+        \PY{n}{norm1\PYZus{}invA} \PY{p}{=} \PY{n+nb}{max}\PY{p}{(}\PY{n+nb}{sum}\PY{p}{(}\PY{n}{invA}\PY{p}{,}\PY{l+m+mi}{2}\PY{p}{)}\PY{p}{)}
+        \PY{n+nb}{norm}\PY{p}{(}\PY{n}{A}\PY{p}{,}\PY{l+m+mi}{1}\PY{p}{)}
+        
+        \PY{n}{cond\PYZus{}1\PYZus{}A}\PY{p}{=}\PY{n}{norm1\PYZus{}A}\PY{o}{*}\PY{n}{norm1\PYZus{}invA}
+        
+        \PY{c}{\PYZpc{} p=inf, row sum norm}
+        \PY{n}{norminf\PYZus{}A} \PY{p}{=} \PY{n+nb}{max}\PY{p}{(}\PY{n+nb}{sum}\PY{p}{(}\PY{n}{A}\PY{p}{,}\PY{l+m+mi}{1}\PY{p}{)}\PY{p}{)}
+        \PY{n}{norminf\PYZus{}invA} \PY{p}{=} \PY{n+nb}{max}\PY{p}{(}\PY{n+nb}{sum}\PY{p}{(}\PY{n}{invA}\PY{p}{,}\PY{l+m+mi}{1}\PY{p}{)}\PY{p}{)}
+        \PY{n+nb}{norm}\PY{p}{(}\PY{n}{A}\PY{p}{,}\PY{n+nb}{inf}\PY{p}{)}
+        
+        \PY{n}{cond\PYZus{}inf\PYZus{}A}\PY{p}{=}\PY{n}{norminf\PYZus{}A}\PY{o}{*}\PY{n}{norminf\PYZus{}invA}
 \end{Verbatim}
 
     \begin{Verbatim}[commandchars=\\\{\}]
@@ -523,7 +540,7 @@ in matrix form:
 $\left[ \begin{array}{cccc} k_{1}+k_{2} & -k_{2} & 0 & 0 \\ -k_{2} & k_{2}+k_{3} & -k_{3} & 0 \\ 0 & -k_{3} & k_{3}+k_{4} & -k_{4} \\ 0 & 0 & -k_{4} & k_{4} \end{array} \right] \left[ \begin{array}{c} x_{1} \\ x_{2} \\ x_{3} \\ x_{4} \end{array} \right]= \left[ \begin{array}{c} m_{1}g \\ m_{2}g \\ m_{3}g \\ m_{4}g \end{array} \right]$
 
     \begin{Verbatim}[commandchars=\\\{\}]
-{\color{incolor}In [{\color{incolor}21}]:} \PY{n}{k1}\PY{p}{=}\PY{l+m+mi}{10}\PY{p}{;} \PY{c}{\PYZpc{} N/m}
+{\color{incolor}In [{\color{incolor}10}]:} \PY{n}{k1}\PY{p}{=}\PY{l+m+mi}{10}\PY{p}{;} \PY{c}{\PYZpc{} N/m}
          \PY{n}{k2}\PY{p}{=}\PY{l+m+mi}{100000}\PY{p}{;}
          \PY{n}{k3}\PY{p}{=}\PY{l+m+mi}{10}\PY{p}{;}
          \PY{n}{k4}\PY{p}{=}\PY{l+m+mi}{1}\PY{p}{;}
@@ -555,7 +572,7 @@ y =
     \end{Verbatim}
 
     \begin{Verbatim}[commandchars=\\\{\}]
-{\color{incolor}In [{\color{incolor}25}]:} \PY{n+nb}{cond}\PY{p}{(}\PY{n}{K}\PY{p}{,}\PY{n+nb}{inf}\PY{p}{)}
+{\color{incolor}In [{\color{incolor}11}]:} \PY{n+nb}{cond}\PY{p}{(}\PY{n}{K}\PY{p}{,}\PY{n+nb}{inf}\PY{p}{)}
          \PY{n+nb}{cond}\PY{p}{(}\PY{n}{K}\PY{p}{,}\PY{l+m+mi}{1}\PY{p}{)}
          \PY{n+nb}{cond}\PY{p}{(}\PY{n}{K}\PY{p}{,}\PY{l+s}{\PYZsq{}}\PY{l+s}{fro\PYZsq{}}\PY{p}{)}
          \PY{n+nb}{cond}\PY{p}{(}\PY{n}{K}\PY{p}{,}\PY{l+m+mi}{2}\PY{p}{)}
@@ -586,6 +603,11 @@ ans =    2.5293e+05
 
     \end{Verbatim}
 
+    \subsection{P=2 norm is ratio of biggest eigenvalue to smallest
+eigenvalue!}\label{p2-norm-is-ratio-of-biggest-eigenvalue-to-smallest-eigenvalue}
+
+no need to calculate the inv(K)
+
     \section{Iterative Methods}\label{iterative-methods}
 
 \subsection{Gauss-Seidel method}\label{gauss-seidel-method}
@@ -600,17 +622,17 @@ $Ax=b$
 
 $\left[ \begin{array}{ccc} 3 & -0.1 & -0.2 \\ 0.1 & 7 & -0.3 \\ 0.3 & -0.2 & 10 \end{array} \right] \left[ \begin{array}{c} x_{1} \\ x_{2} \\ x_{3} \end{array} \right]= \left[ \begin{array}{c} 7.85 \\ -19.3 \\ 71.4\end{array} \right]$
 
-$x_{1}=\frac{7.85+0.1x_{2}+0.3x_{3}}{3}$
+$x_{1}=\frac{7.85+0.1x_{2}+0.2x_{3}}{3}$
 
 $x_{2}=\frac{-19.3-0.1x_{1}+0.3x_{3}}{7}$
 
 $x_{3}=\frac{71.4+0.1x_{1}+0.2x_{2}}{10}$
 
     \begin{Verbatim}[commandchars=\\\{\}]
-{\color{incolor}In [{\color{incolor}9}]:} \PY{n}{A}\PY{p}{=}\PY{p}{[}\PY{l+m+mi}{3} \PY{o}{\PYZhy{}}\PY{l+m+mf}{0.1} \PY{o}{\PYZhy{}}\PY{l+m+mf}{0.2}\PY{p}{;}\PY{l+m+mf}{0.1} \PY{l+m+mi}{7} \PY{o}{\PYZhy{}}\PY{l+m+mf}{0.3}\PY{p}{;}\PY{l+m+mf}{0.3} \PY{o}{\PYZhy{}}\PY{l+m+mf}{0.2} \PY{l+m+mi}{10}\PY{p}{]}
-        \PY{n}{b}\PY{p}{=}\PY{p}{[}\PY{l+m+mf}{7.85}\PY{p}{;}\PY{o}{\PYZhy{}}\PY{l+m+mf}{19.3}\PY{p}{;}\PY{l+m+mf}{71.4}\PY{p}{]}
-        
-        \PY{n}{x}\PY{p}{=}\PY{n}{A}\PY{o}{\PYZbs{}}\PY{n}{b}
+{\color{incolor}In [{\color{incolor}12}]:} \PY{n}{A}\PY{p}{=}\PY{p}{[}\PY{l+m+mi}{3} \PY{o}{\PYZhy{}}\PY{l+m+mf}{0.1} \PY{o}{\PYZhy{}}\PY{l+m+mf}{0.2}\PY{p}{;}\PY{l+m+mf}{0.1} \PY{l+m+mi}{7} \PY{o}{\PYZhy{}}\PY{l+m+mf}{0.3}\PY{p}{;}\PY{l+m+mf}{0.3} \PY{o}{\PYZhy{}}\PY{l+m+mf}{0.2} \PY{l+m+mi}{10}\PY{p}{]}
+         \PY{n}{b}\PY{p}{=}\PY{p}{[}\PY{l+m+mf}{7.85}\PY{p}{;}\PY{o}{\PYZhy{}}\PY{l+m+mf}{19.3}\PY{p}{;}\PY{l+m+mf}{71.4}\PY{p}{]}
+         
+         \PY{n}{x}\PY{p}{=}\PY{n}{A}\PY{o}{\PYZbs{}}\PY{n}{b}
 \end{Verbatim}
 
     \begin{Verbatim}[commandchars=\\\{\}]
@@ -670,7 +692,7 @@ $x_{3}^{i}=\frac{71.4+0.1x_{1}^{i-1}+0.2x_{2}^{i-1}}{10}$
 
 Here the solution is a matrix multiplication and vector addition
 
-$\left[ \begin{array}{c} x_{1}^{i} \\ x_{2}^{i} \\ x_{3}^{i} \end{array} \right]= \left[ \begin{array}{c} 7.85/3 \\ -19.3/7 \\ 71.4/10\end{array} \right]- \left[ \begin{array}{ccc} 0 & -0.1 & -0.2 \\ 0.1 & 0 & -0.3 \\ 0.3 & -0.2 & 0 \end{array} \right] \left[ \begin{array}{c} x_{1}^{i-1} \\ x_{2}^{i-1} \\ x_{3}^{i-1} \end{array} \right]$
+$\left[ \begin{array}{c} x_{1}^{i} \\ x_{2}^{i} \\ x_{3}^{i} \end{array} \right]= \left[ \begin{array}{c} 7.85/3 \\ -19.3/7 \\ 71.4/10\end{array} \right]- \left[ \begin{array}{ccc} 0 & 0.1/3 & 0.2/3 \\ 0.1/7 & 0 & -0.3/7 \\ 0.3/10 & -0.2/10 & 0 \end{array} \right] \left[ \begin{array}{c} x_{1}^{i-1} \\ x_{2}^{i-1} \\ x_{3}^{i-1} \end{array} \right]$
 
 \begin{longtable}[c]{@{}llll@{}}
 \toprule
@@ -725,7 +747,7 @@ $\frac{71.4+0.1x_{1}^{i}+0.2x_{2}^{i}}{10}$
 \end{longtable}
 
     \begin{Verbatim}[commandchars=\\\{\}]
-{\color{incolor}In [{\color{incolor}15}]:} \PY{n}{ba}\PY{p}{=}\PY{n}{b}\PY{o}{./}\PY{n+nb}{diag}\PY{p}{(}\PY{n}{A}\PY{p}{)} \PY{c}{\PYZpc{} or ba=b./[A(1,1);A(2,2);A(3,3)]}
+{\color{incolor}In [{\color{incolor}14}]:} \PY{n}{ba}\PY{p}{=}\PY{n}{b}\PY{o}{./}\PY{n+nb}{diag}\PY{p}{(}\PY{n}{A}\PY{p}{)} \PY{c}{\PYZpc{} or ba=b./[A(1,1);A(2,2);A(3,3)]}
          \PY{n}{sA}\PY{p}{=}\PY{n}{A}\PY{o}{\PYZhy{}}\PY{n+nb}{diag}\PY{p}{(}\PY{n+nb}{diag}\PY{p}{(}\PY{n}{A}\PY{p}{)}\PY{p}{)} \PY{c}{\PYZpc{} A with zeros on diagonal}
          \PY{n}{sA}\PY{p}{(}\PY{l+m+mi}{1}\PY{p}{,}\PY{p}{:}\PY{p}{)}\PY{p}{=}\PY{n}{sA}\PY{p}{(}\PY{l+m+mi}{1}\PY{p}{,}\PY{p}{:}\PY{p}{)}\PY{o}{/}\PY{n}{A}\PY{p}{(}\PY{l+m+mi}{1}\PY{p}{,}\PY{l+m+mi}{1}\PY{p}{)}\PY{p}{;}
          \PY{n}{sA}\PY{p}{(}\PY{l+m+mi}{2}\PY{p}{,}\PY{p}{:}\PY{p}{)}\PY{p}{=}\PY{n}{sA}\PY{p}{(}\PY{l+m+mi}{2}\PY{p}{,}\PY{p}{:}\PY{p}{)}\PY{o}{/}\PY{n}{A}\PY{p}{(}\PY{l+m+mi}{2}\PY{p}{,}\PY{l+m+mi}{2}\PY{p}{)}\PY{p}{;}
@@ -808,7 +830,7 @@ $|a_{ii}|>\sum_{j=1,j\ne i}^{n}|a_{ij}|$
 If this condition is true, then Jacobi or Gauss-Seidel should converge
 
     \begin{Verbatim}[commandchars=\\\{\}]
-{\color{incolor}In [{\color{incolor}17}]:} \PY{n}{A}\PY{p}{=}\PY{p}{[}\PY{l+m+mf}{0.1}\PY{p}{,}\PY{l+m+mi}{1}\PY{p}{,}\PY{l+m+mi}{3}\PY{p}{;}\PY{l+m+mi}{1}\PY{p}{,}\PY{l+m+mf}{0.2}\PY{p}{,}\PY{l+m+mi}{3}\PY{p}{;}\PY{l+m+mi}{5}\PY{p}{,}\PY{l+m+mi}{2}\PY{p}{,}\PY{l+m+mf}{0.3}\PY{p}{]}
+{\color{incolor}In [{\color{incolor}15}]:} \PY{n}{A}\PY{p}{=}\PY{p}{[}\PY{l+m+mf}{0.1}\PY{p}{,}\PY{l+m+mi}{1}\PY{p}{,}\PY{l+m+mi}{3}\PY{p}{;}\PY{l+m+mi}{1}\PY{p}{,}\PY{l+m+mf}{0.2}\PY{p}{,}\PY{l+m+mi}{3}\PY{p}{;}\PY{l+m+mi}{5}\PY{p}{,}\PY{l+m+mi}{2}\PY{p}{,}\PY{l+m+mf}{0.3}\PY{p}{]}
          \PY{n}{b}\PY{p}{=}\PY{p}{[}\PY{l+m+mi}{12}\PY{p}{;}\PY{l+m+mi}{2}\PY{p}{;}\PY{l+m+mi}{4}\PY{p}{]}
          \PY{n}{A}\PY{o}{\PYZbs{}}\PY{n}{b}
 \end{Verbatim}
@@ -836,7 +858,7 @@ ans =
     \end{Verbatim}
 
     \begin{Verbatim}[commandchars=\\\{\}]
-{\color{incolor}In [{\color{incolor}20}]:} \PY{n}{ba}\PY{p}{=}\PY{n}{b}\PY{o}{./}\PY{n+nb}{diag}\PY{p}{(}\PY{n}{A}\PY{p}{)} \PY{c}{\PYZpc{} or ba=b./[A(1,1);A(2,2);A(3,3)]}
+{\color{incolor}In [{\color{incolor}16}]:} \PY{n}{ba}\PY{p}{=}\PY{n}{b}\PY{o}{./}\PY{n+nb}{diag}\PY{p}{(}\PY{n}{A}\PY{p}{)} \PY{c}{\PYZpc{} or ba=b./[A(1,1);A(2,2);A(3,3)]}
          \PY{n}{sA}\PY{p}{=}\PY{n}{A}\PY{o}{\PYZhy{}}\PY{n+nb}{diag}\PY{p}{(}\PY{n+nb}{diag}\PY{p}{(}\PY{n}{A}\PY{p}{)}\PY{p}{)} \PY{c}{\PYZpc{} A with zeros on diagonal}
          \PY{n}{sA}\PY{p}{(}\PY{l+m+mi}{1}\PY{p}{,}\PY{p}{:}\PY{p}{)}\PY{p}{=}\PY{n}{sA}\PY{p}{(}\PY{l+m+mi}{1}\PY{p}{,}\PY{p}{:}\PY{p}{)}\PY{o}{/}\PY{n}{A}\PY{p}{(}\PY{l+m+mi}{1}\PY{p}{,}\PY{l+m+mi}{1}\PY{p}{)}\PY{p}{;}
          \PY{n}{sA}\PY{p}{(}\PY{l+m+mi}{2}\PY{p}{,}\PY{p}{:}\PY{p}{)}\PY{p}{=}\PY{n}{sA}\PY{p}{(}\PY{l+m+mi}{2}\PY{p}{,}\PY{p}{:}\PY{p}{)}\PY{o}{/}\PY{n}{A}\PY{p}{(}\PY{l+m+mi}{2}\PY{p}{,}\PY{l+m+mi}{2}\PY{p}{)}\PY{p}{;}
@@ -903,16 +925,16 @@ after solving for x, lambda weights the current approximation with the
 previous approximation for the updated x
 
     \begin{Verbatim}[commandchars=\\\{\}]
-{\color{incolor}In [{\color{incolor}105}]:} \PY{c}{\PYZpc{} rearrange A and b}
-          \PY{n}{A}\PY{p}{=}\PY{p}{[}\PY{l+m+mi}{3} \PY{o}{\PYZhy{}}\PY{l+m+mf}{0.1} \PY{o}{\PYZhy{}}\PY{l+m+mf}{0.2}\PY{p}{;}\PY{l+m+mf}{0.1} \PY{l+m+mi}{7} \PY{o}{\PYZhy{}}\PY{l+m+mf}{0.3}\PY{p}{;}\PY{l+m+mf}{0.3} \PY{o}{\PYZhy{}}\PY{l+m+mf}{0.2} \PY{l+m+mi}{10}\PY{p}{]}
-          \PY{n}{b}\PY{p}{=}\PY{p}{[}\PY{l+m+mf}{7.85}\PY{p}{;}\PY{o}{\PYZhy{}}\PY{l+m+mf}{19.3}\PY{p}{;}\PY{l+m+mf}{71.4}\PY{p}{]}
-          
-          \PY{n}{iters}\PY{p}{=}\PY{n+nb}{zeros}\PY{p}{(}\PY{l+m+mi}{100}\PY{p}{,}\PY{l+m+mi}{1}\PY{p}{)}\PY{p}{;}
-          \PY{k}{for} \PY{n}{i}\PY{p}{=}\PY{l+m+mi}{1}\PY{p}{:}\PY{l+m+mi}{100}
-              \PY{n}{lambda}\PY{p}{=}\PY{l+m+mi}{2}\PY{o}{/}\PY{l+m+mi}{100}\PY{o}{*}\PY{n}{i}\PY{p}{;}
-              \PY{p}{[}\PY{n}{x}\PY{p}{,}\PY{n}{ea}\PY{p}{,}\PY{n}{iters}\PY{p}{(}\PY{n}{i}\PY{p}{)}\PY{p}{]}\PY{p}{=}\PY{n}{Jacobi\PYZus{}rel}\PY{p}{(}\PY{n}{A}\PY{p}{,}\PY{n}{b}\PY{p}{,}\PY{n}{lambda}\PY{p}{)}\PY{p}{;}
-          \PY{k}{end}
-          \PY{n+nb}{plot}\PY{p}{(}\PY{p}{[}\PY{l+m+mi}{1}\PY{p}{:}\PY{l+m+mi}{100}\PY{p}{]}\PY{o}{*}\PY{l+m+mi}{2}\PY{o}{/}\PY{l+m+mi}{100}\PY{p}{,}\PY{n}{iters}\PY{p}{)}
+{\color{incolor}In [{\color{incolor}17}]:} \PY{c}{\PYZpc{} rearrange A and b}
+         \PY{n}{A}\PY{p}{=}\PY{p}{[}\PY{l+m+mi}{3} \PY{o}{\PYZhy{}}\PY{l+m+mf}{0.1} \PY{o}{\PYZhy{}}\PY{l+m+mf}{0.2}\PY{p}{;}\PY{l+m+mf}{0.1} \PY{l+m+mi}{7} \PY{o}{\PYZhy{}}\PY{l+m+mf}{0.3}\PY{p}{;}\PY{l+m+mf}{0.3} \PY{o}{\PYZhy{}}\PY{l+m+mf}{0.2} \PY{l+m+mi}{10}\PY{p}{]}
+         \PY{n}{b}\PY{p}{=}\PY{p}{[}\PY{l+m+mf}{7.85}\PY{p}{;}\PY{o}{\PYZhy{}}\PY{l+m+mf}{19.3}\PY{p}{;}\PY{l+m+mf}{71.4}\PY{p}{]}
+         
+         \PY{n}{iters}\PY{p}{=}\PY{n+nb}{zeros}\PY{p}{(}\PY{l+m+mi}{100}\PY{p}{,}\PY{l+m+mi}{1}\PY{p}{)}\PY{p}{;}
+         \PY{k}{for} \PY{n}{i}\PY{p}{=}\PY{l+m+mi}{1}\PY{p}{:}\PY{l+m+mi}{100}
+             \PY{n}{lambda}\PY{p}{=}\PY{l+m+mi}{2}\PY{o}{/}\PY{l+m+mi}{100}\PY{o}{*}\PY{n}{i}\PY{p}{;}
+             \PY{p}{[}\PY{n}{x}\PY{p}{,}\PY{n}{ea}\PY{p}{,}\PY{n}{iters}\PY{p}{(}\PY{n}{i}\PY{p}{)}\PY{p}{]}\PY{p}{=}\PY{n}{Jacobi\PYZus{}rel}\PY{p}{(}\PY{n}{A}\PY{p}{,}\PY{n}{b}\PY{p}{,}\PY{n}{lambda}\PY{p}{)}\PY{p}{;}
+         \PY{k}{end}
+         \PY{n+nb}{plot}\PY{p}{(}\PY{p}{[}\PY{l+m+mi}{1}\PY{p}{:}\PY{l+m+mi}{100}\PY{p}{]}\PY{o}{*}\PY{l+m+mi}{2}\PY{o}{/}\PY{l+m+mi}{100}\PY{p}{,}\PY{n}{iters}\PY{p}{)}
 \end{Verbatim}
 
     \begin{Verbatim}[commandchars=\\\{\}]
@@ -932,7 +954,7 @@ b =
     \end{Verbatim}
 
     \begin{center}
-    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{lecture_13_files/lecture_13_22_1.pdf}
+    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{lecture_13_files/lecture_13_24_1.pdf}
     \end{center}
     { \hspace*{\fill} \\}
     
@@ -1005,20 +1027,22 @@ $x_{2}+3x_{1}x_{2}^{2}=57$
 Graphically, we are looking for the solution:
 
     \begin{Verbatim}[commandchars=\\\{\}]
-{\color{incolor}In [{\color{incolor}121}]:} \PY{n}{x11}\PY{p}{=}\PY{n+nb}{linspace}\PY{p}{(}\PY{l+m+mf}{0.5}\PY{p}{,}\PY{l+m+mi}{3}\PY{p}{)}\PY{p}{;}
-          \PY{n}{x12}\PY{p}{=}\PY{p}{(}\PY{l+m+mi}{10}\PY{o}{\PYZhy{}}\PY{n}{x11}\PY{o}{.\PYZca{}}\PY{l+m+mi}{2}\PY{p}{)}\PY{o}{./}\PY{n}{x11}\PY{p}{;}
-          
-          \PY{n}{x22}\PY{p}{=}\PY{n+nb}{linspace}\PY{p}{(}\PY{l+m+mi}{2}\PY{p}{,}\PY{l+m+mi}{8}\PY{p}{)}\PY{p}{;}
-          \PY{n}{x21}\PY{p}{=}\PY{p}{(}\PY{l+m+mi}{57}\PY{o}{\PYZhy{}}\PY{n}{x22}\PY{p}{)}\PY{o}{.*}\PY{n}{x22}\PY{o}{.\PYZca{}}\PY{o}{\PYZhy{}}\PY{l+m+mi}{2}\PY{o}{/}\PY{l+m+mi}{3}\PY{p}{;}
-          
-          \PY{n+nb}{plot}\PY{p}{(}\PY{n}{x11}\PY{p}{,}\PY{n}{x12}\PY{p}{,}\PY{n}{x21}\PY{p}{,}\PY{n}{x22}\PY{p}{)}
-          \PY{c}{\PYZpc{} Solution at x\PYZus{}1=2, x\PYZus{}2=3}
-          \PY{n+nb}{hold} \PY{n}{on}\PY{p}{;}
-          \PY{n+nb}{plot}\PY{p}{(}\PY{l+m+mi}{2}\PY{p}{,}\PY{l+m+mi}{3}\PY{p}{,}\PY{l+s}{\PYZsq{}}\PY{l+s}{o\PYZsq{}}\PY{p}{)}
+{\color{incolor}In [{\color{incolor}19}]:} \PY{n}{x11}\PY{p}{=}\PY{n+nb}{linspace}\PY{p}{(}\PY{l+m+mf}{0.5}\PY{p}{,}\PY{l+m+mi}{3}\PY{p}{)}\PY{p}{;}
+         \PY{n}{x12}\PY{p}{=}\PY{p}{(}\PY{l+m+mi}{10}\PY{o}{\PYZhy{}}\PY{n}{x11}\PY{o}{.\PYZca{}}\PY{l+m+mi}{2}\PY{p}{)}\PY{o}{./}\PY{n}{x11}\PY{p}{;}
+         
+         \PY{n}{x22}\PY{p}{=}\PY{n+nb}{linspace}\PY{p}{(}\PY{l+m+mi}{2}\PY{p}{,}\PY{l+m+mi}{8}\PY{p}{)}\PY{p}{;}
+         \PY{n}{x21}\PY{p}{=}\PY{p}{(}\PY{l+m+mi}{57}\PY{o}{\PYZhy{}}\PY{n}{x22}\PY{p}{)}\PY{o}{.*}\PY{n}{x22}\PY{o}{.\PYZca{}}\PY{o}{\PYZhy{}}\PY{l+m+mi}{2}\PY{o}{/}\PY{l+m+mi}{3}\PY{p}{;}
+         
+         \PY{n+nb}{plot}\PY{p}{(}\PY{n}{x11}\PY{p}{,}\PY{n}{x12}\PY{p}{,}\PY{n}{x21}\PY{p}{,}\PY{n}{x22}\PY{p}{)}
+         \PY{c}{\PYZpc{} Solution at x\PYZus{}1=2, x\PYZus{}2=3}
+         \PY{n+nb}{hold} \PY{n}{on}\PY{p}{;}
+         \PY{n+nb}{plot}\PY{p}{(}\PY{l+m+mi}{2}\PY{p}{,}\PY{l+m+mi}{3}\PY{p}{,}\PY{l+s}{\PYZsq{}}\PY{l+s}{o\PYZsq{}}\PY{p}{)}
+         \PY{n+nb}{xlabel}\PY{p}{(}\PY{l+s}{\PYZsq{}}\PY{l+s}{x\PYZus{}1\PYZsq{}}\PY{p}{)}
+         \PY{n+nb}{ylabel}\PY{p}{(}\PY{l+s}{\PYZsq{}}\PY{l+s}{x\PYZus{}2\PYZsq{}}\PY{p}{)}
 \end{Verbatim}
 
     \begin{center}
-    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{lecture_13_files/lecture_13_27_0.pdf}
+    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{lecture_13_files/lecture_13_29_0.pdf}
     \end{center}
     { \hspace*{\fill} \\}
     
@@ -1038,7 +1062,7 @@ need to determine the Jacobian
 
 $[J]=\left[ \begin{array}{cccc} \frac{\partial f_{1,i}}{\partial x_{1}} & \frac{\partial f_{1,i}}{\partial x_{2}} & \cdots & \frac{\partial f_{1,i}}{\partial x_{n}} \\ \frac{\partial f_{2,i}}{\partial x_{1}} & \frac{\partial f_{2,i}}{\partial x_{2}} & \cdots & \frac{\partial f_{2,i}}{\partial x_{n}} \\ \vdots & \vdots & & \vdots \\ \frac{\partial f_{n,i}}{\partial x_{1}} & \frac{\partial f_{n,i}}{\partial x_{2}} & \cdots & \frac{\partial f_{n,i}}{\partial x_{n}} \\ \end{array} \right]$
 
-$\left[ \begin{array}{c} f_{1,i+1} \\ f_{2,i+1} \\ \vdots \\ f_{n,i+1}\end{array} \right]= \left[ \begin{array}{c} f_{1,i} \\ f_{2,i} \\ \vdots \\ f_{n,i}\end{array} \right]+ \left[ \begin{array}{cccc} \frac{\partial f_{1,i}}{\partial x_{1}} & \frac{\partial f_{1,i}}{\partial x_{2}} & \cdots & \frac{\partial f_{1,i}}{\partial x_{n}} \\ \frac{\partial f_{2,i}}{\partial x_{1}} & \frac{\partial f_{2,i}}{\partial x_{2}} & \cdots & \frac{\partial f_{2,i}}{\partial x_{n}} \\ \vdots & \vdots & & \vdots \\ \frac{\partial f_{n,i}}{\partial x_{1}} & \frac{\partial f_{n,i}}{\partial x_{2}} & \cdots & \frac{\partial f_{n,i}}{\partial x_{n}} \\ \end{array} \right] \left( \left[ \begin{array}{c} x_{i+1} \\ x_{i+1} \\ \vdots \\ x_{i+1}\end{array} \right]- \left[ \begin{array}{c} f_{1,i} \\ f_{2,i} \\ \vdots \\ f_{n,i}\end{array} \right]\right)$
+$\left[ \begin{array}{c} f_{1,i+1} \\ f_{2,i+1} \\ \vdots \\ f_{n,i+1}\end{array} \right]= \left[ \begin{array}{c} f_{1,i} \\ f_{2,i} \\ \vdots \\ f_{n,i}\end{array} \right]+ \left[ \begin{array}{cccc} \frac{\partial f_{1,i}}{\partial x_{1}} & \frac{\partial f_{1,i}}{\partial x_{2}} & \cdots & \frac{\partial f_{1,i}}{\partial x_{n}} \\ \frac{\partial f_{2,i}}{\partial x_{1}} & \frac{\partial f_{2,i}}{\partial x_{2}} & \cdots & \frac{\partial f_{2,i}}{\partial x_{n}} \\ \vdots & \vdots & & \vdots \\ \frac{\partial f_{n,i}}{\partial x_{1}} & \frac{\partial f_{n,i}}{\partial x_{2}} & \cdots & \frac{\partial f_{n,i}}{\partial x_{n}} \\ \end{array} \right] \left( \left[ \begin{array}{c} x_{i+1} \\ x_{i+1} \\ \vdots \\ x_{i+1}\end{array} \right]- \left[ \begin{array}{c} x_{1,i} \\ x_{2,i} \\ \vdots \\ x_{n,i}\end{array} \right]\right)$
 
 \subsubsection{Solution is again in the form
 Ax=b}\label{solution-is-again-in-the-form-axb}
@@ -1057,7 +1081,7 @@ series}\label{nonlinear-springs-supporting-two-masses-in-series}
 
 Two springs are connected to two masses, with $m_1$=1 kg and
 $m_{2}$=2 kg. The springs are identical, but they have nonlinear
-spring constants, of $k_1$=10 N/m and $k_2$=-4 N/m
+spring constants, of $k_1$=100 N/m and $k_2$=-10 N/m
 
 We want to solve for the final position of the masses ($x_1$ and
 $x_2$)
@@ -1074,35 +1098,33 @@ $J(2,1)=\frac{\partial f_2}{\partial x_{1}}=k_{1}+2k_{2}(x_{2}-x_{1})$
 
 $J(2,2)=\frac{\partial f_2}{\partial x_{2}}=-k_{1}-2k_{2}(x_{2}-x_{1})$
 
-Use an initial guess of $x_1=x_2=0$
-
     \begin{Verbatim}[commandchars=\\\{\}]
 {\color{incolor}In [{\color{incolor} }]:} \PY{n}{m1}\PY{p}{=}\PY{l+m+mi}{1}\PY{p}{;} \PY{c}{\PYZpc{} kg }
         \PY{n}{m2}\PY{p}{=}\PY{l+m+mi}{2}\PY{p}{;} \PY{c}{\PYZpc{} kg}
-        \PY{n}{k1}\PY{p}{=}\PY{l+m+mi}{10}\PY{p}{;} \PY{c}{\PYZpc{} N/m}
-        \PY{n}{k2}\PY{p}{=}\PY{o}{\PYZhy{}}\PY{l+m+mi}{4}\PY{p}{;} \PY{c}{\PYZpc{} N/m\PYZca{}2}
+        \PY{n}{k1}\PY{p}{=}\PY{l+m+mi}{100}\PY{p}{;} \PY{c}{\PYZpc{} N/m}
+        \PY{n}{k2}\PY{p}{=}\PY{o}{\PYZhy{}}\PY{l+m+mi}{10}\PY{p}{;} \PY{c}{\PYZpc{} N/m\PYZca{}2}
 \end{Verbatim}
 
     \begin{Verbatim}[commandchars=\\\{\}]
-{\color{incolor}In [{\color{incolor}214}]:} \PY{k}{function}\PY{+w}{ }[f,J]\PY{p}{=}\PY{n+nf}{mass\PYZus{}spring}\PY{p}{(}x\PY{p}{)}
-          \PY{+w}{    }\PY{c}{\PYZpc{} Function to calculate function values f1 and f2 as well as Jacobian }
-              \PY{c}{\PYZpc{} for 2 masses and 2 identical nonlinear springs}
-              \PY{n}{m1}\PY{p}{=}\PY{l+m+mi}{1}\PY{p}{;} \PY{c}{\PYZpc{} kg }
-              \PY{n}{m2}\PY{p}{=}\PY{l+m+mi}{2}\PY{p}{;} \PY{c}{\PYZpc{} kg}
-              \PY{n}{k1}\PY{p}{=}\PY{l+m+mi}{100}\PY{p}{;} \PY{c}{\PYZpc{} N/m}
-              \PY{n}{k2}\PY{p}{=}\PY{o}{\PYZhy{}}\PY{l+m+mi}{10}\PY{p}{;} \PY{c}{\PYZpc{} N/m\PYZca{}2}
-              \PY{n}{g}\PY{p}{=}\PY{l+m+mf}{9.81}\PY{p}{;} \PY{c}{\PYZpc{} m/s\PYZca{}2}
-              \PY{n}{x1}\PY{p}{=}\PY{n}{x}\PY{p}{(}\PY{l+m+mi}{1}\PY{p}{)}\PY{p}{;}
-              \PY{n}{x2}\PY{p}{=}\PY{n}{x}\PY{p}{(}\PY{l+m+mi}{2}\PY{p}{)}\PY{p}{;}
-              \PY{n}{J}\PY{p}{=}\PY{p}{[}\PY{o}{\PYZhy{}}\PY{n}{k1}\PY{o}{\PYZhy{}}\PY{l+m+mi}{2}\PY{o}{*}\PY{n}{k2}\PY{o}{*}\PY{p}{(}\PY{n}{x2}\PY{o}{\PYZhy{}}\PY{n}{x1}\PY{p}{)}\PY{o}{\PYZhy{}}\PY{n}{k1}\PY{o}{\PYZhy{}}\PY{l+m+mi}{2}\PY{o}{*}\PY{n}{k2}\PY{o}{*}\PY{n}{x1}\PY{p}{,}\PY{n}{k1}\PY{o}{+}\PY{l+m+mi}{2}\PY{o}{*}\PY{n}{k2}\PY{o}{*}\PY{p}{(}\PY{n}{x2}\PY{o}{\PYZhy{}}\PY{n}{x1}\PY{p}{)}\PY{p}{;}
-                  \PY{n}{k1}\PY{o}{+}\PY{l+m+mi}{2}\PY{o}{*}\PY{n}{k2}\PY{o}{*}\PY{p}{(}\PY{n}{x2}\PY{o}{\PYZhy{}}\PY{n}{x1}\PY{p}{)}\PY{p}{,}\PY{o}{\PYZhy{}}\PY{n}{k1}\PY{o}{\PYZhy{}}\PY{l+m+mi}{2}\PY{o}{*}\PY{n}{k2}\PY{o}{*}\PY{p}{(}\PY{n}{x2}\PY{o}{\PYZhy{}}\PY{n}{x1}\PY{p}{)}\PY{p}{]}\PY{p}{;}
-              \PY{n}{f}\PY{p}{=}\PY{p}{[}\PY{n}{m1}\PY{o}{*}\PY{n}{g}\PY{o}{+}\PY{n}{k1}\PY{o}{*}\PY{p}{(}\PY{n}{x2}\PY{o}{\PYZhy{}}\PY{n}{x1}\PY{p}{)}\PY{o}{+}\PY{n}{k2}\PY{o}{*}\PY{p}{(}\PY{n}{x2}\PY{o}{\PYZhy{}}\PY{n}{x1}\PY{p}{)}\PY{o}{.\PYZca{}}\PY{l+m+mi}{2}\PY{o}{\PYZhy{}}\PY{n}{k1}\PY{o}{*}\PY{n}{x1}\PY{o}{\PYZhy{}}\PY{n}{k2}\PY{o}{*}\PY{n}{x1}\PYZca{}\PY{l+m+mi}{2}\PY{p}{;}
-                 \PY{n}{m2}\PY{o}{*}\PY{n}{g}\PY{o}{\PYZhy{}}\PY{n}{k1}\PY{o}{*}\PY{p}{(}\PY{n}{x2}\PY{o}{\PYZhy{}}\PY{n}{x1}\PY{p}{)}\PY{o}{\PYZhy{}}\PY{n}{k2}\PY{o}{*}\PY{p}{(}\PY{n}{x2}\PY{o}{\PYZhy{}}\PY{n}{x1}\PY{p}{)}\PY{o}{.\PYZca{}}\PY{l+m+mi}{2}\PY{p}{]}\PY{p}{;}
-          \PY{k}{end}
+{\color{incolor}In [{\color{incolor}20}]:} \PY{k}{function}\PY{+w}{ }[f,J]\PY{p}{=}\PY{n+nf}{mass\PYZus{}spring}\PY{p}{(}x\PY{p}{)}
+         \PY{+w}{    }\PY{c}{\PYZpc{} Function to calculate function values f1 and f2 as well as Jacobian }
+             \PY{c}{\PYZpc{} for 2 masses and 2 identical nonlinear springs}
+             \PY{n}{m1}\PY{p}{=}\PY{l+m+mi}{1}\PY{p}{;} \PY{c}{\PYZpc{} kg }
+             \PY{n}{m2}\PY{p}{=}\PY{l+m+mi}{2}\PY{p}{;} \PY{c}{\PYZpc{} kg}
+             \PY{n}{k1}\PY{p}{=}\PY{l+m+mi}{100}\PY{p}{;} \PY{c}{\PYZpc{} N/m}
+             \PY{n}{k2}\PY{p}{=}\PY{o}{\PYZhy{}}\PY{l+m+mi}{10}\PY{p}{;} \PY{c}{\PYZpc{} N/m\PYZca{}2}
+             \PY{n}{g}\PY{p}{=}\PY{l+m+mf}{9.81}\PY{p}{;} \PY{c}{\PYZpc{} m/s\PYZca{}2}
+             \PY{n}{x1}\PY{p}{=}\PY{n}{x}\PY{p}{(}\PY{l+m+mi}{1}\PY{p}{)}\PY{p}{;}
+             \PY{n}{x2}\PY{p}{=}\PY{n}{x}\PY{p}{(}\PY{l+m+mi}{2}\PY{p}{)}\PY{p}{;}
+             \PY{n}{J}\PY{p}{=}\PY{p}{[}\PY{o}{\PYZhy{}}\PY{n}{k1}\PY{o}{\PYZhy{}}\PY{l+m+mi}{2}\PY{o}{*}\PY{n}{k2}\PY{o}{*}\PY{p}{(}\PY{n}{x2}\PY{o}{\PYZhy{}}\PY{n}{x1}\PY{p}{)}\PY{o}{\PYZhy{}}\PY{n}{k1}\PY{o}{\PYZhy{}}\PY{l+m+mi}{2}\PY{o}{*}\PY{n}{k2}\PY{o}{*}\PY{n}{x1}\PY{p}{,}\PY{n}{k1}\PY{o}{+}\PY{l+m+mi}{2}\PY{o}{*}\PY{n}{k2}\PY{o}{*}\PY{p}{(}\PY{n}{x2}\PY{o}{\PYZhy{}}\PY{n}{x1}\PY{p}{)}\PY{p}{;}
+                 \PY{n}{k1}\PY{o}{+}\PY{l+m+mi}{2}\PY{o}{*}\PY{n}{k2}\PY{o}{*}\PY{p}{(}\PY{n}{x2}\PY{o}{\PYZhy{}}\PY{n}{x1}\PY{p}{)}\PY{p}{,}\PY{o}{\PYZhy{}}\PY{n}{k1}\PY{o}{\PYZhy{}}\PY{l+m+mi}{2}\PY{o}{*}\PY{n}{k2}\PY{o}{*}\PY{p}{(}\PY{n}{x2}\PY{o}{\PYZhy{}}\PY{n}{x1}\PY{p}{)}\PY{p}{]}\PY{p}{;}
+             \PY{n}{f}\PY{p}{=}\PY{p}{[}\PY{n}{m1}\PY{o}{*}\PY{n}{g}\PY{o}{+}\PY{n}{k1}\PY{o}{*}\PY{p}{(}\PY{n}{x2}\PY{o}{\PYZhy{}}\PY{n}{x1}\PY{p}{)}\PY{o}{+}\PY{n}{k2}\PY{o}{*}\PY{p}{(}\PY{n}{x2}\PY{o}{\PYZhy{}}\PY{n}{x1}\PY{p}{)}\PY{o}{.\PYZca{}}\PY{l+m+mi}{2}\PY{o}{\PYZhy{}}\PY{n}{k1}\PY{o}{*}\PY{n}{x1}\PY{o}{\PYZhy{}}\PY{n}{k2}\PY{o}{*}\PY{n}{x1}\PYZca{}\PY{l+m+mi}{2}\PY{p}{;}
+                \PY{n}{m2}\PY{o}{*}\PY{n}{g}\PY{o}{\PYZhy{}}\PY{n}{k1}\PY{o}{*}\PY{p}{(}\PY{n}{x2}\PY{o}{\PYZhy{}}\PY{n}{x1}\PY{p}{)}\PY{o}{\PYZhy{}}\PY{n}{k2}\PY{o}{*}\PY{p}{(}\PY{n}{x2}\PY{o}{\PYZhy{}}\PY{n}{x1}\PY{p}{)}\PY{o}{.\PYZca{}}\PY{l+m+mi}{2}\PY{p}{]}\PY{p}{;}
+         \PY{k}{end}
 \end{Verbatim}
 
     \begin{Verbatim}[commandchars=\\\{\}]
-{\color{incolor}In [{\color{incolor}217}]:} \PY{p}{[}\PY{n}{f}\PY{p}{,}\PY{n}{J}\PY{p}{]}\PY{p}{=}\PY{n}{mass\PYZus{}spring}\PY{p}{(}\PY{p}{[}\PY{l+m+mi}{1}\PY{p}{,}\PY{l+m+mi}{0}\PY{p}{]}\PY{p}{)}
+{\color{incolor}In [{\color{incolor}21}]:} \PY{p}{[}\PY{n}{f}\PY{p}{,}\PY{n}{J}\PY{p}{]}\PY{p}{=}\PY{n}{mass\PYZus{}spring}\PY{p}{(}\PY{p}{[}\PY{l+m+mi}{1}\PY{p}{,}\PY{l+m+mi}{0}\PY{p}{]}\PY{p}{)}
 \end{Verbatim}
 
     \begin{Verbatim}[commandchars=\\\{\}]
@@ -1120,23 +1142,23 @@ J =
     \end{Verbatim}
 
     \begin{Verbatim}[commandchars=\\\{\}]
-{\color{incolor}In [{\color{incolor}227}]:} \PY{n}{x0}\PY{p}{=}\PY{p}{[}\PY{l+m+mi}{3}\PY{p}{;}\PY{l+m+mi}{2}\PY{p}{]}\PY{p}{;}
-          \PY{p}{[}\PY{n}{f0}\PY{p}{,}\PY{n}{J0}\PY{p}{]}\PY{p}{=}\PY{n}{mass\PYZus{}spring}\PY{p}{(}\PY{n}{x0}\PY{p}{)}\PY{p}{;}
-          \PY{n}{x1}\PY{p}{=}\PY{n}{x0}\PY{o}{\PYZhy{}}\PY{n}{J0}\PY{o}{\PYZbs{}}\PY{n}{f0}
-          \PY{n}{ea}\PY{p}{=}\PY{p}{(}\PY{n}{x1}\PY{o}{\PYZhy{}}\PY{n}{x0}\PY{p}{)}\PY{o}{./}\PY{n}{x1}
-          \PY{p}{[}\PY{n}{f1}\PY{p}{,}\PY{n}{J1}\PY{p}{]}\PY{p}{=}\PY{n}{mass\PYZus{}spring}\PY{p}{(}\PY{n}{x1}\PY{p}{)}\PY{p}{;}
-          \PY{n}{x2}\PY{p}{=}\PY{n}{x1}\PY{o}{\PYZhy{}}\PY{n}{J1}\PY{o}{\PYZbs{}}\PY{n}{f1}
-          \PY{n}{ea}\PY{p}{=}\PY{p}{(}\PY{n}{x2}\PY{o}{\PYZhy{}}\PY{n}{x1}\PY{p}{)}\PY{o}{./}\PY{n}{x2}
-          \PY{p}{[}\PY{n}{f2}\PY{p}{,}\PY{n}{J2}\PY{p}{]}\PY{p}{=}\PY{n}{mass\PYZus{}spring}\PY{p}{(}\PY{n}{x2}\PY{p}{)}\PY{p}{;}
-          \PY{n}{x3}\PY{p}{=}\PY{n}{x2}\PY{o}{\PYZhy{}}\PY{n}{J2}\PY{o}{\PYZbs{}}\PY{n}{f2}
-          \PY{n}{ea}\PY{p}{=}\PY{p}{(}\PY{n}{x3}\PY{o}{\PYZhy{}}\PY{n}{x2}\PY{p}{)}\PY{o}{./}\PY{n}{x3}
-          \PY{n}{x}\PY{p}{=}\PY{n}{x3}
-          \PY{k}{for} \PY{n}{i}\PY{p}{=}\PY{l+m+mi}{1}\PY{p}{:}\PY{l+m+mi}{3}
-              \PY{n}{xold}\PY{p}{=}\PY{n}{x}\PY{p}{;}
-              \PY{p}{[}\PY{n}{f}\PY{p}{,}\PY{n}{J}\PY{p}{]}\PY{p}{=}\PY{n}{mass\PYZus{}spring}\PY{p}{(}\PY{n}{x}\PY{p}{)}\PY{p}{;}
-              \PY{n}{x}\PY{p}{=}\PY{n}{x}\PY{o}{\PYZhy{}}\PY{n}{J}\PY{o}{\PYZbs{}}\PY{n}{f}\PY{p}{;}
-              \PY{n}{ea}\PY{p}{=}\PY{p}{(}\PY{n}{x}\PY{o}{\PYZhy{}}\PY{n}{xold}\PY{p}{)}\PY{o}{./}\PY{n}{x}
-          \PY{k}{end}
+{\color{incolor}In [{\color{incolor}22}]:} \PY{n}{x0}\PY{p}{=}\PY{p}{[}\PY{l+m+mi}{3}\PY{p}{;}\PY{l+m+mi}{2}\PY{p}{]}\PY{p}{;}
+         \PY{p}{[}\PY{n}{f0}\PY{p}{,}\PY{n}{J0}\PY{p}{]}\PY{p}{=}\PY{n}{mass\PYZus{}spring}\PY{p}{(}\PY{n}{x0}\PY{p}{)}\PY{p}{;}
+         \PY{n}{x1}\PY{p}{=}\PY{n}{x0}\PY{o}{\PYZhy{}}\PY{n}{J0}\PY{o}{\PYZbs{}}\PY{n}{f0}
+         \PY{n}{ea}\PY{p}{=}\PY{p}{(}\PY{n}{x1}\PY{o}{\PYZhy{}}\PY{n}{x0}\PY{p}{)}\PY{o}{./}\PY{n}{x1}
+         \PY{p}{[}\PY{n}{f1}\PY{p}{,}\PY{n}{J1}\PY{p}{]}\PY{p}{=}\PY{n}{mass\PYZus{}spring}\PY{p}{(}\PY{n}{x1}\PY{p}{)}\PY{p}{;}
+         \PY{n}{x2}\PY{p}{=}\PY{n}{x1}\PY{o}{\PYZhy{}}\PY{n}{J1}\PY{o}{\PYZbs{}}\PY{n}{f1}
+         \PY{n}{ea}\PY{p}{=}\PY{p}{(}\PY{n}{x2}\PY{o}{\PYZhy{}}\PY{n}{x1}\PY{p}{)}\PY{o}{./}\PY{n}{x2}
+         \PY{p}{[}\PY{n}{f2}\PY{p}{,}\PY{n}{J2}\PY{p}{]}\PY{p}{=}\PY{n}{mass\PYZus{}spring}\PY{p}{(}\PY{n}{x2}\PY{p}{)}\PY{p}{;}
+         \PY{n}{x3}\PY{p}{=}\PY{n}{x2}\PY{o}{\PYZhy{}}\PY{n}{J2}\PY{o}{\PYZbs{}}\PY{n}{f2}
+         \PY{n}{ea}\PY{p}{=}\PY{p}{(}\PY{n}{x3}\PY{o}{\PYZhy{}}\PY{n}{x2}\PY{p}{)}\PY{o}{./}\PY{n}{x3}
+         \PY{n}{x}\PY{p}{=}\PY{n}{x3}
+         \PY{k}{for} \PY{n}{i}\PY{p}{=}\PY{l+m+mi}{1}\PY{p}{:}\PY{l+m+mi}{3}
+             \PY{n}{xold}\PY{p}{=}\PY{n}{x}\PY{p}{;}
+             \PY{p}{[}\PY{n}{f}\PY{p}{,}\PY{n}{J}\PY{p}{]}\PY{p}{=}\PY{n}{mass\PYZus{}spring}\PY{p}{(}\PY{n}{x}\PY{p}{)}\PY{p}{;}
+             \PY{n}{x}\PY{p}{=}\PY{n}{x}\PY{o}{\PYZhy{}}\PY{n}{J}\PY{o}{\PYZbs{}}\PY{n}{f}\PY{p}{;}
+             \PY{n}{ea}\PY{p}{=}\PY{p}{(}\PY{n}{x}\PY{o}{\PYZhy{}}\PY{n}{xold}\PY{p}{)}\PY{o}{./}\PY{n}{x}
+         \PY{k}{end}
 \end{Verbatim}
 
     \begin{Verbatim}[commandchars=\\\{\}]
@@ -1194,8 +1216,8 @@ ea =
     \end{Verbatim}
 
     \begin{Verbatim}[commandchars=\\\{\}]
-{\color{incolor}In [{\color{incolor}228}]:} \PY{n}{x}
-          \PY{n}{X0}\PY{p}{=}\PY{n+nb}{fsolve}\PY{p}{(}\PY{p}{@}\PY{p}{(}\PY{n}{x}\PY{p}{)} \PY{n}{mass\PYZus{}spring}\PY{p}{(}\PY{n}{x}\PY{p}{)}\PY{p}{,}\PY{p}{[}\PY{l+m+mi}{3}\PY{p}{;}\PY{l+m+mi}{5}\PY{p}{]}\PY{p}{)}
+{\color{incolor}In [{\color{incolor}23}]:} \PY{n}{x}
+         \PY{n}{X0}\PY{p}{=}\PY{n+nb}{fsolve}\PY{p}{(}\PY{p}{@}\PY{p}{(}\PY{n}{x}\PY{p}{)} \PY{n}{mass\PYZus{}spring}\PY{p}{(}\PY{n}{x}\PY{p}{)}\PY{p}{,}\PY{p}{[}\PY{l+m+mi}{3}\PY{p}{;}\PY{l+m+mi}{5}\PY{p}{]}\PY{p}{)}
 \end{Verbatim}
 
     \begin{Verbatim}[commandchars=\\\{\}]
@@ -1213,33 +1235,34 @@ X0 =
     \end{Verbatim}
 
     \begin{Verbatim}[commandchars=\\\{\}]
-{\color{incolor}In [{\color{incolor}236}]:} \PY{p}{[}\PY{n}{X}\PY{p}{,}\PY{n}{Y}\PY{p}{]}\PY{p}{=}\PY{n+nb}{meshgrid}\PY{p}{(}\PY{n+nb}{linspace}\PY{p}{(}\PY{l+m+mi}{0}\PY{p}{,}\PY{l+m+mi}{1}\PY{p}{,}\PY{l+m+mi}{20}\PY{p}{)}\PY{p}{,}\PY{n+nb}{linspace}\PY{p}{(}\PY{l+m+mi}{0}\PY{p}{,}\PY{l+m+mi}{1}\PY{p}{,}\PY{l+m+mi}{20}\PY{p}{)}\PY{p}{)}\PY{p}{;}
-          \PY{p}{[}\PY{n}{N}\PY{p}{,}\PY{n}{M}\PY{p}{]}\PY{p}{=}\PY{n+nb}{size}\PY{p}{(}\PY{n}{X}\PY{p}{)}\PY{p}{;}
-          \PY{n}{F}\PY{p}{=}\PY{n+nb}{zeros}\PY{p}{(}\PY{n+nb}{size}\PY{p}{(}\PY{n}{X}\PY{p}{)}\PY{p}{)}\PY{p}{;}
-          \PY{k}{for} \PY{n}{i}\PY{p}{=}\PY{l+m+mi}{1}\PY{p}{:}\PY{n}{N}
-              \PY{k}{for} \PY{n}{j}\PY{p}{=}\PY{l+m+mi}{1}\PY{p}{:}\PY{n}{M}
-                  \PY{p}{[}\PY{n}{f}\PY{p}{,}\PY{o}{\PYZti{}}\PY{p}{]}\PY{p}{=}\PY{n}{mass\PYZus{}spring}\PY{p}{(}\PY{p}{[}\PY{n}{X}\PY{p}{(}\PY{n}{i}\PY{p}{,}\PY{n}{j}\PY{p}{)}\PY{p}{,}\PY{n}{Y}\PY{p}{(}\PY{n}{i}\PY{p}{,}\PY{n}{j}\PY{p}{)}\PY{p}{]}\PY{p}{)}\PY{p}{;}
-                  \PY{n}{F}\PY{p}{(}\PY{n}{i}\PY{p}{,}\PY{n}{j}\PY{p}{)}\PY{p}{=}\PY{n}{f}\PY{p}{(}\PY{l+m+mi}{1}\PY{p}{)}\PY{p}{;}
-              \PY{k}{end}
-          \PY{k}{end}
-          \PY{n+nb}{pcolor}\PY{p}{(}\PY{n}{X}\PY{p}{,}\PY{n}{Y}\PY{p}{,}\PY{n}{F}\PY{p}{)}
-          \PY{n+nb}{xlabel}\PY{p}{(}\PY{l+s}{\PYZsq{}}\PY{l+s}{x\PYZus{}1\PYZsq{}}\PY{p}{)}
-          \PY{n+nb}{ylabel}\PY{p}{(}\PY{l+s}{\PYZsq{}}\PY{l+s}{x\PYZus{}2\PYZsq{}}\PY{p}{)}
-          \PY{n+nb}{colorbar}\PY{p}{(}\PY{p}{)}
-          \PY{n+nb}{figure}\PY{p}{(}\PY{p}{)}
-          \PY{n+nb}{pcolor}\PY{p}{(}\PY{n}{X}\PY{p}{,}\PY{n}{Y}\PY{p}{,}\PY{n}{F}\PY{p}{)}
-          \PY{n+nb}{xlabel}\PY{p}{(}\PY{l+s}{\PYZsq{}}\PY{l+s}{x\PYZus{}1\PYZsq{}}\PY{p}{)}
-          \PY{n+nb}{ylabel}\PY{p}{(}\PY{l+s}{\PYZsq{}}\PY{l+s}{x\PYZus{}2\PYZsq{}}\PY{p}{)}
-          \PY{n+nb}{colorbar}\PY{p}{(}\PY{p}{)}
+{\color{incolor}In [{\color{incolor}26}]:} \PY{p}{[}\PY{n}{X}\PY{p}{,}\PY{n}{Y}\PY{p}{]}\PY{p}{=}\PY{n+nb}{meshgrid}\PY{p}{(}\PY{n+nb}{linspace}\PY{p}{(}\PY{l+m+mi}{0}\PY{p}{,}\PY{l+m+mi}{10}\PY{p}{,}\PY{l+m+mi}{20}\PY{p}{)}\PY{p}{,}\PY{n+nb}{linspace}\PY{p}{(}\PY{l+m+mi}{0}\PY{p}{,}\PY{l+m+mi}{10}\PY{p}{,}\PY{l+m+mi}{20}\PY{p}{)}\PY{p}{)}\PY{p}{;}
+         \PY{p}{[}\PY{n}{N}\PY{p}{,}\PY{n}{M}\PY{p}{]}\PY{p}{=}\PY{n+nb}{size}\PY{p}{(}\PY{n}{X}\PY{p}{)}\PY{p}{;}
+         \PY{n}{F}\PY{p}{=}\PY{n+nb}{zeros}\PY{p}{(}\PY{n+nb}{size}\PY{p}{(}\PY{n}{X}\PY{p}{)}\PY{p}{)}\PY{p}{;}
+         \PY{k}{for} \PY{n}{i}\PY{p}{=}\PY{l+m+mi}{1}\PY{p}{:}\PY{n}{N}
+             \PY{k}{for} \PY{n}{j}\PY{p}{=}\PY{l+m+mi}{1}\PY{p}{:}\PY{n}{M}
+                 \PY{p}{[}\PY{n}{f}\PY{p}{,}\PY{o}{\PYZti{}}\PY{p}{]}\PY{p}{=}\PY{n}{mass\PYZus{}spring}\PY{p}{(}\PY{p}{[}\PY{n}{X}\PY{p}{(}\PY{n}{i}\PY{p}{,}\PY{n}{j}\PY{p}{)}\PY{p}{,}\PY{n}{Y}\PY{p}{(}\PY{n}{i}\PY{p}{,}\PY{n}{j}\PY{p}{)}\PY{p}{]}\PY{p}{)}\PY{p}{;}
+                 \PY{n}{F1}\PY{p}{(}\PY{n}{i}\PY{p}{,}\PY{n}{j}\PY{p}{)}\PY{p}{=}\PY{n}{f}\PY{p}{(}\PY{l+m+mi}{1}\PY{p}{)}\PY{p}{;}
+                 \PY{n}{F2}\PY{p}{(}\PY{n}{i}\PY{p}{,}\PY{n}{j}\PY{p}{)}\PY{p}{=}\PY{n}{f}\PY{p}{(}\PY{l+m+mi}{2}\PY{p}{)}\PY{p}{;}
+             \PY{k}{end}
+         \PY{k}{end}
+         \PY{n+nb}{mesh}\PY{p}{(}\PY{n}{X}\PY{p}{,}\PY{n}{Y}\PY{p}{,}\PY{n}{F1}\PY{p}{)}
+         \PY{n+nb}{xlabel}\PY{p}{(}\PY{l+s}{\PYZsq{}}\PY{l+s}{x\PYZus{}1\PYZsq{}}\PY{p}{)}
+         \PY{n+nb}{ylabel}\PY{p}{(}\PY{l+s}{\PYZsq{}}\PY{l+s}{x\PYZus{}2\PYZsq{}}\PY{p}{)}
+         \PY{n+nb}{colorbar}\PY{p}{(}\PY{p}{)}
+         \PY{n+nb}{figure}\PY{p}{(}\PY{p}{)}
+         \PY{n+nb}{mesh}\PY{p}{(}\PY{n}{X}\PY{p}{,}\PY{n}{Y}\PY{p}{,}\PY{n}{F2}\PY{p}{)}
+         \PY{n+nb}{xlabel}\PY{p}{(}\PY{l+s}{\PYZsq{}}\PY{l+s}{x\PYZus{}1\PYZsq{}}\PY{p}{)}
+         \PY{n+nb}{ylabel}\PY{p}{(}\PY{l+s}{\PYZsq{}}\PY{l+s}{x\PYZus{}2\PYZsq{}}\PY{p}{)}
+         \PY{n+nb}{colorbar}\PY{p}{(}\PY{p}{)}
 \end{Verbatim}
 
     \begin{center}
-    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{lecture_13_files/lecture_13_34_0.pdf}
+    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{lecture_13_files/lecture_13_36_0.pdf}
     \end{center}
     { \hspace*{\fill} \\}
     
     \begin{center}
-    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{lecture_13_files/lecture_13_34_1.pdf}
+    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{lecture_13_files/lecture_13_36_1.pdf}
     \end{center}
     { \hspace*{\fill} \\}
     

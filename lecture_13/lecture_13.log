@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2017.1.11)  2 MAR 2017 09:22
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2017.1.11)  2 MAR 2017 11:41
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -737,138 +737,138 @@ File: t1cmtt.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 LaTeX Font Info:    Font shape `T1/ppl/bx/n' in size <12> not available
 (Font)              Font shape `T1/ppl/b/n' tried instead on input line 288.
 
-<efficient_soln.png, id=68, 891.33pt x 476.78125pt>
+<efficient_soln.png, id=76, 891.33pt x 476.78125pt>
 File: efficient_soln.png Graphic file (type png)
  <use efficient_soln.png>
 Package pdftex.def Info: efficient_soln.png used on input line 292.
 (pdftex.def)             Requested size: 375.80544pt x 201.02519pt.
 LaTeX Font Info:    Font shape `U/msa/m/n' will be
-(Font)              scaled to size 11.40997pt on input line 296.
+(Font)              scaled to size 11.40997pt on input line 297.
 LaTeX Font Info:    Font shape `U/msa/m/n' will be
-(Font)              scaled to size 8.33606pt on input line 296.
+(Font)              scaled to size 8.33606pt on input line 297.
 LaTeX Font Info:    Font shape `U/msa/m/n' will be
-(Font)              scaled to size 6.25204pt on input line 296.
+(Font)              scaled to size 6.25204pt on input line 297.
 LaTeX Font Info:    Font shape `U/msb/m/n' will be
-(Font)              scaled to size 11.40997pt on input line 296.
+(Font)              scaled to size 11.40997pt on input line 297.
 LaTeX Font Info:    Font shape `U/msb/m/n' will be
-(Font)              scaled to size 8.33606pt on input line 296.
+(Font)              scaled to size 8.33606pt on input line 297.
 LaTeX Font Info:    Font shape `U/msb/m/n' will be
-(Font)              scaled to size 6.25204pt on input line 296.
+(Font)              scaled to size 6.25204pt on input line 297.
 
-<norm_A.png, id=70, 911.405pt x 430.60875pt>
+<norm_A.png, id=78, 911.405pt x 430.60875pt>
 File: norm_A.png Graphic file (type png)
  <use norm_A.png>
-Package pdftex.def Info: norm_A.png used on input line 303.
+Package pdftex.def Info: norm_A.png used on input line 305.
 (pdftex.def)             Requested size: 375.80544pt x 177.55602pt.
  [1
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map} <./efficient_soln.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 341--343
+Underfull \hbox (badness 10000) in paragraph at lines 343--345
 []\T1/ppl/m/n/10.95 -[][]Installing Python and Jupyter Note-book (via Ana-conda
 ) -
  []
 
 
-Underfull \hbox (badness 1681) in paragraph at lines 344--347
+Underfull \hbox (badness 1681) in paragraph at lines 346--349
 []\T1/ppl/m/n/10.95 -[][]Running Mat-lab ker-nel in Jupyter - https://anneurai.
 net/2015/11/12/matlab-based-
  []
 
-LaTeX Font Info:    Font shape `T1/ppl/bx/n' in size <10.95> not available
-(Font)              Font shape `T1/ppl/b/n' tried instead on input line 356.
-LaTeX Font Info:    Font shape `T1/ppl/bx/it' in size <10.95> not available
-(Font)              Font shape `T1/ppl/b/it' tried instead on input line 356.
-[2 <./norm_A.png>] [3]
-LaTeX Font Info:    Try loading font information for TS1+cmtt on input line 467
+LaTeX Font Info:    Font shape `T1/ppl/bx/n' in size <14.4> not available
+(Font)              Font shape `T1/ppl/b/n' tried instead on input line 354.
+LaTeX Font Info:    Try loading font information for TS1+cmtt on input line 356
 .
- (/usr/share/texlive/texmf-dist/tex/latex/base/ts1cmtt.fd
+(/usr/share/texlive/texmf-dist/tex/latex/base/ts1cmtt.fd
 File: ts1cmtt.fd 2014/09/29 v2.5h Standard LaTeX font definitions
-) [4] <../lecture_09/mass_springs.png, id=114, 112.42pt x 190.7125pt>
+)
+LaTeX Font Info:    Font shape `T1/ppl/bx/n' in size <10.95> not available
+(Font)              Font shape `T1/ppl/b/n' tried instead on input line 373.
+LaTeX Font Info:    Font shape `T1/ppl/bx/it' in size <10.95> not available
+(Font)              Font shape `T1/ppl/b/it' tried instead on input line 373.
+ [2 <./norm_A.png>]
+[3] [4] <../lecture_09/mass_springs.png, id=122, 112.42pt x 190.7125pt>
 File: ../lecture_09/mass_springs.png Graphic file (type png)
 
 <use ../lecture_09/mass_springs.png>
-Package pdftex.def Info: ../lecture_09/mass_springs.png used on input line 506.
+Package pdftex.def Info: ../lecture_09/mass_springs.png used on input line 523.
 
 (pdftex.def)             Requested size: 89.93611pt x 152.576pt.
  [5 <../lecture_09/mass_springs.png>]
-LaTeX Font Info:    Font shape `T1/ppl/bx/n' in size <14.4> not available
-(Font)              Font shape `T1/ppl/b/n' tried instead on input line 589.
-
 [6] [7] [8] [9] [10]
 LaTeX Font Info:    Font shape `T1/cmtt/bx/n' in size <10.95> not available
-(Font)              Font shape `T1/cmtt/m/n' tried instead on input line 911.
-
-<lecture_13_files/lecture_13_22_1.pdf, id=144, 449.68pt x 337.26pt>
-File: lecture_13_files/lecture_13_22_1.pdf Graphic file (type pdf)
-
-<use lecture_13_files/lecture_13_22_1.pdf>
-Package pdftex.def Info: lecture_13_files/lecture_13_22_1.pdf used on input lin
-e 935.
-(pdftex.def)             Requested size: 449.6789pt x 337.25917pt.
+(Font)              Font shape `T1/cmtt/m/n' tried instead on input line 933.
  [11]
-Underfull \hbox (badness 10000) in paragraph at lines 937--938
+<lecture_13_files/lecture_13_24_1.pdf, id=157, 449.68pt x 337.26pt>
+File: lecture_13_files/lecture_13_24_1.pdf Graphic file (type pdf)
 
- []
-
-[12 <./lecture_13_files/lecture_13_22_1.pdf>]
-<lecture_13_files/lecture_13_27_0.pdf, id=163, 449.68pt x 337.26pt>
-File: lecture_13_files/lecture_13_27_0.pdf Graphic file (type pdf)
-
-<use lecture_13_files/lecture_13_27_0.pdf>
-Package pdftex.def Info: lecture_13_files/lecture_13_27_0.pdf used on input lin
-e 1021.
-(pdftex.def)             Requested size: 449.6789pt x 337.25917pt.
- [13]
-Underfull \hbox (badness 10000) in paragraph at lines 1023--1024
-
- []
-
-[14 <./lecture_13_files/lecture_13_27_0.pdf>] [15] [16] [17]
-<lecture_13_files/lecture_13_34_0.pdf, id=193, 449.68pt x 337.26pt>
-File: lecture_13_files/lecture_13_34_0.pdf Graphic file (type pdf)
-
-<use lecture_13_files/lecture_13_34_0.pdf>
-Package pdftex.def Info: lecture_13_files/lecture_13_34_0.pdf used on input lin
-e 1237.
+<use lecture_13_files/lecture_13_24_1.pdf>
+Package pdftex.def Info: lecture_13_files/lecture_13_24_1.pdf used on input lin
+e 957.
 (pdftex.def)             Requested size: 449.6789pt x 337.25917pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 1239--1240
+Underfull \hbox (badness 10000) in paragraph at lines 959--960
 
  []
 
-<lecture_13_files/lecture_13_34_1.pdf, id=194, 449.68pt x 337.26pt>
-File: lecture_13_files/lecture_13_34_1.pdf Graphic file (type pdf)
+[12 <./lecture_13_files/lecture_13_24_1.pdf>] [13]
+<lecture_13_files/lecture_13_29_0.pdf, id=176, 449.68pt x 337.26pt>
+File: lecture_13_files/lecture_13_29_0.pdf Graphic file (type pdf)
 
-<use lecture_13_files/lecture_13_34_1.pdf>
-Package pdftex.def Info: lecture_13_files/lecture_13_34_1.pdf used on input lin
-e 1242.
+<use lecture_13_files/lecture_13_29_0.pdf>
+Package pdftex.def Info: lecture_13_files/lecture_13_29_0.pdf used on input lin
+e 1045.
 (pdftex.def)             Requested size: 449.6789pt x 337.25917pt.
- [18 <./lecture_13_files/lecture_13_34_0.pdf>]
-Underfull \hbox (badness 10000) in paragraph at lines 1244--1245
+
+Underfull \hbox (badness 10000) in paragraph at lines 1047--1048
 
  []
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1255.
-[19 <./lecture_13_files/lecture_13_34_1.pdf>]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 1255.
+[14 <./lecture_13_files/lecture_13_29_0.pdf>] [15] [16] [17]
+<lecture_13_files/lecture_13_36_0.pdf, id=201, 449.68pt x 337.26pt>
+File: lecture_13_files/lecture_13_36_0.pdf Graphic file (type pdf)
+
+<use lecture_13_files/lecture_13_36_0.pdf>
+Package pdftex.def Info: lecture_13_files/lecture_13_36_0.pdf used on input lin
+e 1260.
+(pdftex.def)             Requested size: 449.6789pt x 337.25917pt.
+ [18]
+Underfull \hbox (badness 10000) in paragraph at lines 1262--1263
+
+ []
+
+<lecture_13_files/lecture_13_36_1.pdf, id=206, 449.68pt x 337.26pt>
+File: lecture_13_files/lecture_13_36_1.pdf Graphic file (type pdf)
+
+<use lecture_13_files/lecture_13_36_1.pdf>
+Package pdftex.def Info: lecture_13_files/lecture_13_36_1.pdf used on input lin
+e 1265.
+(pdftex.def)             Requested size: 449.6789pt x 337.25917pt.
+ [19 <./lecture_13_files/lecture_13_36_0.pdf>]
+Underfull \hbox (badness 10000) in paragraph at lines 1267--1268
+
+ []
+
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1278.
+[20 <./lecture_13_files/lecture_13_36_1.pdf>]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 1278.
  (./lecture_13.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1255.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1255.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1278.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1278.
 
 Package rerunfilecheck Info: File `lecture_13.out' has not changed.
-(rerunfilecheck)             Checksum: 3327085CC63CD3D2D32FC014A9388EB9;1247.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1255.
+(rerunfilecheck)             Checksum: 5887D69934ACBC48543EBFE830C6564B;1422.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1278.
  ) 
 Here is how much of TeX's memory you used:
- 11003 strings out of 493029
- 164927 string characters out of 6136234
- 273636 words of memory out of 5000000
- 14260 multiletter control sequences out of 15000+600000
+ 11009 strings out of 493029
+ 165053 string characters out of 6136234
+ 275769 words of memory out of 5000000
+ 14263 multiletter control sequences out of 15000+600000
  39435 words of font info for 100 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 36i,10n,77p,867b,465s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-ts1.enc}{/usr/share/texli
-ve/texmf-dist/fonts/enc/dvips/base/8r.enc}{/usr/share/texmf/fonts/enc/dvips/cm-
+ 36i,10n,77p,878b,465s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}{/usr/share/texmf/
+fonts/enc/dvips/cm-super/cm-super-ts1.enc}{/usr/share/texmf/fonts/enc/dvips/cm-
 super/cm-super-t1.enc}</usr/share/texlive/texmf-dist/fonts/type1/public/amsfont
 s/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/c
 mmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.p
@@ -880,10 +880,10 @@ per/sftt1095.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/palatino/uplb8a
 .pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/palatino/uplbi8a.pfb></usr/
 share/texlive/texmf-dist/fonts/type1/urw/palatino/uplr8a.pfb></usr/share/texliv
 e/texmf-dist/fonts/type1/urw/palatino/uplri8a.pfb>
-Output written on lecture_13.pdf (19 pages, 265779 bytes).
+Output written on lecture_13.pdf (20 pages, 274185 bytes).
 PDF statistics:
- 281 PDF objects out of 1000 (max. 8388607)
- 225 compressed objects within 3 object streams
- 46 named destinations out of 1000 (max. 500000)
- 164 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 294 PDF objects out of 1000 (max. 8388607)
+ 237 compressed objects within 3 object streams
+ 49 named destinations out of 1000 (max. 500000)
+ 180 words of extra memory for PDF output out of 10000 (max. 10000000)
 

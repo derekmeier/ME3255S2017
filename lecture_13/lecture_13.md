@@ -50,6 +50,19 @@ setdefaults
     
     
 
+# Markdown examples
+
+` " ' ` `
+
+```matlab
+x=linspace(0,1);
+y=x.^2;
+plot(x,y)
+for i = 1:10
+    fprintf('markdown is pretty')
+end
+```
+
 ## Condition of a matrix 
 ### *just checked in to see what condition my condition was in*
 ### Matrix norms
@@ -60,7 +73,7 @@ $||x||_{e}=\sqrt{\sum_{i=1}^{n}x_{i}^{2}}$
 
 For a matrix, A, the same norm is called the Frobenius norm:
 
-$||A||_{f}=\sqrt{\sum_{i=1}^{n}\sum_{i=1}^{m}A_{i,j}^{2}}$
+$||A||_{f}=\sqrt{\sum_{i=1}^{n}\sum_{j=1}^{m}A_{i,j}^{2}}$
 
 In general we can calculate any $p$-norm where
 
@@ -130,7 +143,7 @@ invA=zeros(3,3);
 d1=L\[1;0;0];
 d2=L\[0;1;0];
 d3=L\[0;0;1];
-invA(:,1)=U\d1;
+invA(:,1)=U\d1; % shortcut invA(:,1)=A\[1;0;0]
 invA(:,2)=U\d2;
 invA(:,3)=U\d3
 invA*A
@@ -285,6 +298,10 @@ max(e)/min(e)
     ans =    2.5293e+05
 
 
+## P=2 norm is ratio of biggest eigenvalue to smallest eigenvalue!
+
+no need to calculate the inv(K)
+
 # Iterative Methods
 
 ## Gauss-Seidel method
@@ -308,7 +325,7 @@ x_{3} \end{array} \right]=
 -19.3 \\
 71.4\end{array} \right]$
 
-$x_{1}=\frac{7.85+0.1x_{2}+0.3x_{3}}{3}$
+$x_{1}=\frac{7.85+0.1x_{2}+0.2x_{3}}{3}$
 
 $x_{2}=\frac{-19.3-0.1x_{1}+0.3x_{3}}{7}$
 
@@ -383,9 +400,9 @@ x_{3}^{i} \end{array} \right]=
 -19.3/7 \\
 71.4/10\end{array} \right]-
 \left[ \begin{array}{ccc}
-0 & -0.1 & -0.2  \\
-0.1 & 0 & -0.3  \\
-0.3 & -0.2 & 0 \end{array} \right]
+0 & 0.1/3 & 0.2/3  \\
+0.1/7 & 0 & -0.3/7  \\
+0.3/10 & -0.2/10 & 0 \end{array} \right]
 \left[ \begin{array}{c}
 x_{1}^{i-1} \\
 x_{2}^{i-1} \\
@@ -600,7 +617,7 @@ plot([1:100]*2/100,iters)
 
 
 
-![svg](lecture_13_files/lecture_13_22_1.svg)
+![svg](lecture_13_files/lecture_13_24_1.svg)
 
 
 
@@ -682,10 +699,12 @@ plot(x11,x12,x21,x22)
 % Solution at x_1=2, x_2=3
 hold on;
 plot(2,3,'o')
+xlabel('x_1')
+ylabel('x_2')
 ```
 
 
-![svg](lecture_13_files/lecture_13_27_0.svg)
+![svg](lecture_13_files/lecture_13_29_0.svg)
 
 
 ## Newton-Raphson part II
@@ -735,10 +754,10 @@ x_{i+1} \\
 \vdots \\
 x_{i+1}\end{array} \right]-
 \left[ \begin{array}{c}
-f_{1,i} \\
-f_{2,i} \\
+x_{1,i} \\
+x_{2,i} \\
 \vdots \\
-f_{n,i}\end{array} \right]\right)$
+x_{n,i}\end{array} \right]\right)$
 
 ### Solution is again in the form Ax=b
 
@@ -752,7 +771,7 @@ $[x_{i+1}]= [x_{i}]-[J]^{-1}[f]$
 
 ### Nonlinear springs supporting two masses in series
 
-Two springs are connected to two masses, with $m_1$=1 kg and $m_{2}$=2 kg. The springs are identical, but they have nonlinear spring constants, of $k_1$=10 N/m and $k_2$=-4 N/m
+Two springs are connected to two masses, with $m_1$=1 kg and $m_{2}$=2 kg. The springs are identical, but they have nonlinear spring constants, of $k_1$=100 N/m and $k_2$=-10 N/m
 
 We want to solve for the final position of the masses ($x_1$ and $x_2$)
 
@@ -768,15 +787,14 @@ $J(2,1)=\frac{\partial f_2}{\partial x_{1}}=k_{1}+2k_{2}(x_{2}-x_{1})$
 
 $J(2,2)=\frac{\partial f_2}{\partial x_{2}}=-k_{1}-2k_{2}(x_{2}-x_{1})$
 
-Use an initial guess of $x_1=x_2=0$
 
 
 
 ```octave
 m1=1; % kg 
 m2=2; % kg
-k1=10; % N/m
-k2=-4; % N/m^2
+k1=100; % N/m
+k2=-10; % N/m^2
 ```
 
 
@@ -909,32 +927,33 @@ X0=fsolve(@(x) mass_spring(x),[3;5])
 
 
 ```octave
-[X,Y]=meshgrid(linspace(0,1,20),linspace(0,1,20));
+[X,Y]=meshgrid(linspace(0,10,20),linspace(0,10,20));
 [N,M]=size(X);
 F=zeros(size(X));
 for i=1:N
     for j=1:M
         [f,~]=mass_spring([X(i,j),Y(i,j)]);
-        F(i,j)=f(1);
+        F1(i,j)=f(1);
+        F2(i,j)=f(2);
     end
 end
-pcolor(X,Y,F)
+mesh(X,Y,F1)
 xlabel('x_1')
 ylabel('x_2')
 colorbar()
 figure()
-pcolor(X,Y,F)
+mesh(X,Y,F2)
 xlabel('x_1')
 ylabel('x_2')
 colorbar()
 ```
 
 
-![svg](lecture_13_files/lecture_13_34_0.svg)
+![svg](lecture_13_files/lecture_13_36_0.svg)
 
 
 
-![svg](lecture_13_files/lecture_13_34_1.svg)
+![svg](lecture_13_files/lecture_13_36_1.svg)
 
 
 
