@@ -1,6 +1,7 @@
 # Computational Mechanics
 ## ME 3255 Spring 2017
 ### Github page: [https://github.uconn.edu/rcc02007/ME3255S2017.git]
+### Public (ipynb rendering)[https://github.com/cooperrc/ME3255S2017]
 
 ### Course Description
 This course introduces students to scientific programming utilizing Matlab/Octave.
