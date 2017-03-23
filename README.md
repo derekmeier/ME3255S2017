@@ -49,7 +49,7 @@ Jupiter notebook (with matlab or octave kernel)
 
 ### Note on Homework and online forms
 
-The Homeworks are graded based upon effort and completeness. The forms are not graded at
+The Homeworks are graded based upon effort, correctness, and completeness. The forms are not graded at
 all, if they are completed you get credit. It is *your* responsibility to make sure your
 answers are correct. Use the homeworks and forms as a study guide for the exams. In
 general, I will not post homework solutions. 
